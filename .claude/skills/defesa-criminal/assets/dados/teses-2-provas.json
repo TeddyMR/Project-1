@@ -1,0 +1,996 @@
+[
+  {
+    "id": "busca-domiciliar",
+    "titulo": "Ingresso em domicílio sem mandado e sem fundadas razões",
+    "secao": "preliminar",
+    "ordem": 40,
+    "natureza": "prova ilícita",
+    "fase": [
+      "investigacao"
+    ],
+    "art5": [
+      "XI",
+      "LVI"
+    ],
+    "cf_outros": [],
+    "tratados": [
+      "CADH, art. 11.2",
+      "PIDCP, art. 17"
+    ],
+    "lei": [
+      "CPP, art. 157",
+      "CPP, arts. 240 a 248",
+      "CPP, art. 245"
+    ],
+    "precedentes": [
+      "stf-tema-280",
+      "stj-hc-598051"
+    ],
+    "base": "domicilio",
+    "acusacao": "O objeto ilícito foi apreendido dentro da residência. O crime é permanente, e o flagrante autorizava a entrada.",
+    "detectar": [
+      "Havia mandado judicial? Foi cumprido de dia, no endereço e nos limites indicados?",
+      "Sem mandado: que fatos, anteriores à entrada, indicavam flagrante dentro da casa? Eles estão descritos no auto de prisão e nos depoimentos, ou só se menciona o que foi encontrado?",
+      "Qual foi o motivo declarado para entrar: denúncia anônima, fuga para dentro de casa, nervosismo, “atitude suspeita”? Ele está descrito com fatos concretos ou em fórmula genérica?",
+      "Alega-se consentimento do morador? Há registro escrito ou em áudio e vídeo? Quem consentiu e em que condições?",
+      "Existem câmeras corporais, registro de localização da viatura ou testemunhas que não sejam os policiais?"
+    ],
+    "nucleo": "A casa é asilo inviolável. Sem mandado, a entrada só é lícita quando há fundadas razões, anteriores ao ingresso e passíveis de demonstração posterior, de que ocorre flagrante delito no interior do imóvel. O que se encontra depois não legitima a entrada. Quando o Estado alega consentimento do morador, cabe a ele prová-lo.",
+    "prejuizo": "A apreensão realizada no imóvel é a prova da materialidade. Mostre que, sem ela, não resta elemento que sustente a acusação.",
+    "replicas": [
+      {
+        "a": "Tráfico e posse de arma são crimes permanentes; o estado de flagrância se prolonga.",
+        "r": "A natureza permanente do crime não dispensa as fundadas razões prévias. A justificativa deve existir antes da entrada; a descoberta do ilícito não a convalida."
+      },
+      {
+        "a": "O morador autorizou a entrada.",
+        "r": "Em caso de dúvida, cabe ao Estado provar que o consentimento foi livre. A exigência de gravação em áudio e vídeo, fixada pela Sexta Turma do STJ no HC nº 598.051/SP, foi afastada pelo STF em decisão monocrática, e a Quinta Turma do STJ aceita o consentimento verbal. Sustente a falta de qualquer registro como motivo de dúvida sobre a versão dos agentes, e não como requisito legal."
+      },
+      {
+        "a": "O acusado correu para dentro de casa ao ver a polícia.",
+        "r": "Em 2025, o Plenário do STF validou ingresso apoiado em nervosismo, tentativa de fuga e autorização de moradora, e a Sexta Turma do STJ passou a aceitar a fuga para o interior do imóvel como fundada razão. Examine se a fuga está descrita de forma coerente nos depoimentos e se há outro elemento que a confirme. A prova do motivo é ônus do Estado."
+      },
+      {
+        "a": "A prova seria descoberta de qualquer forma (CPP, art. 157, § 2º).",
+        "r": "A fonte independente exige demonstração concreta de que os trâmites normais da investigação levariam à mesma prova. A suposição não basta, e o ônus é da acusação."
+      }
+    ],
+    "pedido": "declarar a ilicitude da busca domiciliar e das provas dela derivadas (art. 5º, caput, inciso LVI, da Constituição; art. 157, caput e § 1º, do CPP) e determinar seu desentranhamento",
+    "pecas": [
+      "resposta",
+      "nulidade",
+      "hc"
+    ],
+    "texto": [
+      "A casa é asilo inviolável do indivíduo: ninguém nela pode entrar sem consentimento do morador, salvo em caso de flagrante delito ou desastre, para prestar socorro ou, durante o dia, por determinação judicial (art. 5º, caput, inciso XI, da {CF}). São inadmissíveis, no processo, as provas obtidas por meios ilícitos (art. 5º, caput, inciso LVI, da {CF}; art. 157, caput, do {CPP}).",
+      "{FATO}",
+      "Os agentes não tinham mandado judicial. Os autos não registram fato objetivo, anterior à entrada, que indicasse a ocorrência de flagrante no interior do imóvel. Também não há registro que comprove o consentimento livre do morador.",
+      "A apreensão resulta de ingresso ilícito em domicílio. A prova é inadmissível, assim como as que dela derivam (art. 157, § 1º, do {CPP})."
+    ],
+    "opcionais": [
+      "stj-hc-663055"
+    ],
+    "limites": [
+      "stf-re-1492256",
+      "stj-agrg-rhc-200123",
+      "stj-agrg-hc-1035519"
+    ]
+  },
+  {
+    "id": "busca-pessoal",
+    "titulo": "Busca pessoal sem fundada suspeita",
+    "secao": "preliminar",
+    "ordem": 42,
+    "natureza": "prova ilícita",
+    "fase": [
+      "investigacao"
+    ],
+    "art5": [
+      "X",
+      "XV",
+      "LVI"
+    ],
+    "cf_outros": [],
+    "tratados": [
+      "CADH, arts. 7 e 11"
+    ],
+    "lei": [
+      "CPP, art. 240, § 2º",
+      "CPP, art. 244",
+      "CPP, art. 157"
+    ],
+    "precedentes": [
+      "stj-rhc-158580",
+      "stf-hc-208240"
+    ],
+    "base": "abordagem",
+    "acusacao": "O objeto ilícito foi encontrado com o acusado em abordagem policial de rotina.",
+    "detectar": [
+      "Qual foi o motivo declarado da abordagem? “Atitude suspeita”, “nervosismo”, “local conhecido como ponto de tráfico”, denúncia anônima não verificada?",
+      "Os agentes descrevem dado objetivo e anterior à revista (volume aparente na cintura, ato de venda presenciado, descarte de objeto)?",
+      "A abordagem foi feita por guarda municipal? O STF admite o policiamento ostensivo pelas guardas (Tema 656). A exigência de fundada suspeita é a mesma.",
+      "Há indício de que a pessoa foi selecionada pela cor da pele, pela aparência ou pelo local de moradia?",
+      "Os depoimentos dos agentes sobre o motivo da abordagem coincidem entre si e entre a fase policial e a judicial?"
+    ],
+    "nucleo": "A busca pessoal sem mandado depende de fundada suspeita de que a pessoa esteja na posse de arma proibida ou de objetos que constituam corpo de delito (CPP, art. 244). A suspeita deve se apoiar em dados objetivos, existir antes da revista e ser descrita com precisão. O resultado da busca não a justifica retroativamente. Os parâmetros estão em discussão: o STJ afetou a recurso repetitivo os temas da fuga, do nervosismo e da denúncia anônima (Temas 1438, 1439 e 1441), ainda sem julgamento.",
+    "prejuizo": "O objeto apreendido na revista é a prova da materialidade. Mostre que não há outra prova independente da abordagem.",
+    "replicas": [
+      {
+        "a": "A apreensão confirma que a suspeita era fundada.",
+        "r": "A suspeita deve ser aferida com o que os agentes sabiam antes da revista. Validar a busca pelo resultado equivale a autorizar revistas exploratórias."
+      },
+      {
+        "a": "Tratava-se de policiamento preventivo de rotina.",
+        "r": "O art. 244 do CPP não autoriza buscas de rotina. Exige suspeita fundada e individualizada."
+      },
+      {
+        "a": "O acusado demonstrou nervosismo ao ver a viatura.",
+        "r": "O RHC nº 158.580/BA não aceita o nervosismo como fundada suspeita. Há decisão posterior da Sexta Turma do STJ, por maioria, em sentido contrário, e o tema está afetado a recurso repetitivo. Sustente que nervosismo é impressão não verificável e exija a descrição concreta do comportamento."
+      },
+      {
+        "a": "O acusado correu ao ver a viatura.",
+        "r": "A Terceira Seção do STJ admite a fuga repentina como fundada suspeita, mas exige escrutínio especial da prova desse motivo, cujo ônus é do Estado. Confronte a narrativa dos agentes com os demais elementos e aponte incoerências."
+      }
+    ],
+    "pedido": "declarar a ilicitude da busca pessoal e das provas dela derivadas (art. 5º, caput, inciso LVI, da Constituição; art. 157, caput e § 1º, do CPP) e determinar seu desentranhamento",
+    "pecas": [
+      "resposta",
+      "nulidade",
+      "hc"
+    ],
+    "texto": [
+      "Fora dos casos de prisão e de busca domiciliar, a busca pessoal sem mandado só é admitida quando houver fundada suspeita de que a pessoa esteja na posse de arma proibida ou de objetos ou papéis que constituam corpo de delito (art. 244 do {CPP}). A medida restringe a intimidade (art. 5º, caput, inciso X, da {CF}) e a liberdade de locomoção (art. 5º, caput, inciso XV, da {CF}) e não pode se apoiar em impressões subjetivas.",
+      "{FATO}",
+      "Os agentes não descrevem dado objetivo, anterior à revista, que indicasse a posse de objeto ilícito. A justificativa apresentada é genérica e serviria para abordar qualquer pessoa.",
+      "A busca foi ilegal. A prova obtida é inadmissível, assim como as que dela derivam (art. 5º, caput, inciso LVI, da {CF}; art. 157, caput e § 1º, do {CPP})."
+    ],
+    "opcionais": [],
+    "limites": [
+      "stj-hc-877943",
+      "stj-agrg-hc-888216",
+      "stf-tema-656"
+    ]
+  },
+  {
+    "id": "celular",
+    "titulo": "Acesso a dados de aparelho celular sem autorização judicial",
+    "secao": "preliminar",
+    "ordem": 44,
+    "natureza": "prova ilícita",
+    "fase": [
+      "investigacao"
+    ],
+    "art5": [
+      "X",
+      "XII",
+      "LVI",
+      "LXXIX"
+    ],
+    "cf_outros": [],
+    "tratados": [
+      "CADH, art. 11.2",
+      "PIDCP, art. 17"
+    ],
+    "lei": [
+      "Lei nº 12.965, de 2014, art. 7º, II e III",
+      "CPP, art. 157"
+    ],
+    "precedentes": [
+      "stf-tema-977",
+      "stj-rhc-51531"
+    ],
+    "base": "digital",
+    "acusacao": "Mensagens, fotos e contatos encontrados no celular do acusado comprovam o crime.",
+    "detectar": [
+      "O aparelho foi apreendido com o acusado ou encontrado no local do crime? No encontro fortuito, o STF admite o acesso apenas para identificar o dono ou esclarecer a autoria, com justificativa posterior.",
+      "O celular foi examinado no local da abordagem ou na delegacia antes de decisão judicial?",
+      "Existe decisão judicial que autorize o acesso? Ela é anterior ao acesso e está fundamentada?",
+      "Alega-se que o acusado forneceu a senha ou autorizou o exame? Há registro do consentimento e da advertência de que podia recusar?",
+      "Os agentes atenderam ligações ou responderam mensagens no aparelho do acusado?",
+      "O auto de apreensão indica o estado do aparelho (ligado, bloqueado, desbloqueado)?",
+      "Em que data ocorreu o acesso? A tese do STF vale para acessos posteriores a 25 de junho de 2025."
+    ],
+    "nucleo": "A apreensão do aparelho não autoriza, por si, o acesso ao conteúdo. Para o celular apreendido com o suspeito, o STF exige consentimento expresso e livre do titular ou decisão judicial prévia e fundamentada (Tema 977). A tese tem efeitos prospectivos, ressalvados os pedidos de defesa formulados até 25 de junho de 2025. Para fatos anteriores, o STJ já considerava ilícita a devassa do aparelho sem ordem judicial.",
+    "prejuizo": "Mostre que as mensagens ou os arquivos extraídos fundamentam a denúncia e que as demais provas foram obtidas a partir deles.",
+    "replicas": [
+      {
+        "a": "O acusado autorizou o acesso e forneceu a senha.",
+        "r": "O STF admite o acesso com consentimento expresso e livre do titular. Exija a prova desse consentimento: quem o colheu, em que condições e com que registro. O consentimento de pessoa detida, sem advogado e sem documento, não atende à exigência."
+      },
+      {
+        "a": "A apreensão do aparelho em flagrante autoriza o exame de seu conteúdo.",
+        "r": "Apreender o aparelho e acessar seu conteúdo são medidas distintas. A segunda atinge a intimidade e o sigilo de dados e exige ordem judicial."
+      },
+      {
+        "a": "Depois houve autorização judicial para a perícia.",
+        "r": "A autorização posterior não convalida o acesso anterior. Se o pedido de perícia se baseou no que os agentes já tinham visto, a prova pericial é derivada da ilícita."
+      }
+    ],
+    "pedido": "declarar a ilicitude do acesso ao conteúdo do aparelho e das provas dele derivadas e determinar seu desentranhamento",
+    "pecas": [
+      "resposta",
+      "nulidade",
+      "hc"
+    ],
+    "texto": [
+      "A {CF} protege a intimidade e a vida privada (art. 5º, caput, inciso X) e o sigilo das comunicações e dos dados (art. 5º, caput, inciso XII). A {L12965} assegura a inviolabilidade e o sigilo das comunicações privadas armazenadas, salvo por ordem judicial (art. 7º, caput, inciso III).",
+      "{FATO}",
+      "O acesso ao conteúdo do aparelho ocorreu sem ordem judicial. A apreensão do aparelho não autoriza o exame dos dados nele armazenados.",
+      "As mensagens e os arquivos obtidos são provas ilícitas, assim como as que deles derivam (art. 5º, caput, inciso LVI, da {CF}; art. 157, caput e § 1º, do {CPP})."
+    ],
+    "opcionais": [],
+    "limites": []
+  },
+  {
+    "id": "prova-digital",
+    "titulo": "Prova digital sem preservação da cadeia de custódia",
+    "secao": "preliminar",
+    "ordem": 46,
+    "natureza": "prova inadmissível ou sem confiabilidade",
+    "fase": [
+      "investigacao",
+      "instrucao"
+    ],
+    "art5": [
+      "LIV",
+      "LV",
+      "LVI"
+    ],
+    "cf_outros": [],
+    "tratados": [
+      "CADH, art. 8.2.c",
+      "CADH, art. 8.2.f"
+    ],
+    "lei": [
+      "CPP, arts. 158-A a 158-F",
+      "CPP, art. 157"
+    ],
+    "precedentes": [
+      "stj-agrg-rhc-143169",
+      "stj-agrg-hc-828054"
+    ],
+    "base": "digital",
+    "acusacao": "Capturas de tela de conversas, ou o relatório de extração de dados, comprovam os fatos.",
+    "detectar": [
+      "A prova é captura de tela entregue por particular ou pela polícia, sem apreensão e perícia do aparelho de origem?",
+      "Há registro do código hash dos arquivos extraídos, da ferramenta usada, da data e de quem manuseou o material?",
+      "A defesa recebeu a íntegra dos dados extraídos, ou só o relatório com trechos selecionados?",
+      "Houve espelhamento por aplicativo de mensagens em navegador ou acesso remoto à conta? As Turmas do STJ divergem, e o tema está afetado a recurso repetitivo (Tema 1382), ainda sem julgamento.",
+      "É possível refazer a extração a partir do aparelho original (contraprova)?"
+    ],
+    "nucleo": "O vestígio digital é facilmente alterável e não deixa marcas visíveis de adulteração. Sua confiabilidade depende da documentação da cadeia de custódia: quem coletou, como, com que ferramenta, e com que garantia de integridade. Cabe à acusação demonstrar a autenticidade e a integridade da prova que apresenta.",
+    "prejuizo": "Mostre que a falta de documentação impede a contraprova: a defesa não pode verificar se o arquivo é íntegro, completo e atribuível ao acusado.",
+    "replicas": [
+      {
+        "a": "O conteúdo das mensagens é verossímil e a defesa não apontou adulteração.",
+        "r": "Não cabe à defesa provar a adulteração de prova cuja origem não pode auditar. Cabe à acusação demonstrar a integridade do vestígio."
+      },
+      {
+        "a": "Irregularidade na cadeia de custódia não gera nulidade automática.",
+        "r": "Admita o ponto e demonstre por que, no caso, a falha retira a confiabilidade da prova: sem hash, sem perícia e sem possibilidade de contraprova, não há como aferir a integridade."
+      },
+      {
+        "a": "As capturas de tela foram confirmadas por testemunha.",
+        "r": "A testemunha confirma que viu a imagem, não que o arquivo é íntegro, completo e proveniente do aparelho do acusado. Há decisão do STJ que aceita capturas entregues por particular, confirmadas em juízo e sem indício de manipulação. Mostre o que distingue o caso: extração feita pela polícia, ausência de método, indício de edição ou impossibilidade de contraprova."
+      }
+    ],
+    "pedido": "declarar a inadmissibilidade da prova digital e determinar seu desentranhamento; subsidiariamente, negar-lhe valor probatório",
+    "pecas": [
+      "resposta",
+      "nulidade",
+      "hc"
+    ],
+    "texto": [
+      "A cadeia de custódia é o conjunto de procedimentos usados para manter e documentar a história cronológica do vestígio (art. 158-A, caput, do {CPP}). No vestígio digital, a documentação é a única garantia de que o arquivo apresentado em juízo é o mesmo que foi coletado, sem acréscimo, supressão ou alteração.",
+      "{FATO}",
+      "Não há registro do procedimento de coleta, da ferramenta usada nem de código de verificação de integridade dos arquivos. A defesa não tem como conferir a autenticidade e a completude do material, o que inviabiliza o contraditório sobre a prova (art. 5º, caput, inciso LV, da {CF})."
+    ],
+    "opcionais": [
+      "stj-rhc-99735"
+    ],
+    "limites": [
+      "stj-hc-653515",
+      "stj-agrg-aresp-2967267"
+    ]
+  },
+  {
+    "id": "cadeia-custodia",
+    "titulo": "Quebra da cadeia de custódia do vestígio",
+    "secao": "preliminar",
+    "ordem": 48,
+    "natureza": "prova inadmissível ou sem confiabilidade",
+    "fase": [
+      "investigacao",
+      "instrucao"
+    ],
+    "art5": [
+      "LIV",
+      "LV",
+      "LVI"
+    ],
+    "cf_outros": [],
+    "tratados": [
+      "CADH, art. 8.2.f"
+    ],
+    "lei": [
+      "CPP, arts. 158-A a 158-F",
+      "CPP, art. 157"
+    ],
+    "precedentes": [
+      "stj-hc-653515"
+    ],
+    "base": "pericia",
+    "acusacao": "O laudo pericial comprova a natureza e a quantidade do material apreendido.",
+    "detectar": [
+      "O auto de apreensão descreve o material, a quantidade, o lacre numerado e quem o coletou?",
+      "O número do lacre, o peso e a descrição coincidem entre o auto de apreensão, a guia de remessa e o laudo?",
+      "Há intervalo de tempo ou de guarda sem registro entre a apreensão e a perícia?",
+      "O material foi acondicionado e guardado em local apropriado?",
+      "O laudo indica as condições em que o material foi recebido (lacre íntegro ou rompido)?"
+    ],
+    "nucleo": "A cadeia de custódia documenta o percurso do vestígio desde o reconhecimento até o descarte (CPP, arts. 158-A a 158-F). Sem essa documentação, não é possível afirmar que o material periciado é o que foi apreendido com o acusado. A consequência da quebra é aferida no caso concreto, conforme o grau em que a falha compromete a confiabilidade da prova.",
+    "prejuizo": "Aponte a divergência concreta (lacre, peso, descrição, intervalo sem registro) e explique por que ela impede atribuir o material periciado ao acusado.",
+    "replicas": [
+      {
+        "a": "A quebra da cadeia de custódia não acarreta nulidade automática.",
+        "r": "Admita o ponto. Mostre a falha específica e seu efeito: a divergência não é formal, pois impede identificar o material periciado com o apreendido."
+      },
+      {
+        "a": "Os policiais confirmaram em juízo a apreensão.",
+        "r": "O depoimento prova a apreensão, não a identidade entre o que foi apreendido e o que foi periciado."
+      }
+    ],
+    "pedido": "declarar a inadmissibilidade da prova pericial e determinar seu desentranhamento; subsidiariamente, negar-lhe valor probatório",
+    "pecas": [
+      "resposta",
+      "nulidade",
+      "hc"
+    ],
+    "texto": [
+      "A cadeia de custódia é o conjunto de todos os procedimentos utilizados para manter e documentar a história cronológica do vestígio coletado, para rastrear sua posse e manuseio a partir de seu reconhecimento até o descarte (art. 158-A, caput, do {CPP}). O {CPP} disciplina cada etapa do rastreamento (art. 158-B) e as condições de coleta, acondicionamento e guarda (arts. 158-C a 158-F).",
+      "{FATO}",
+      "A falha descrita impede afirmar que o material periciado é o mesmo que foi apreendido. A dúvida sobre a identidade do vestígio compromete a prova da materialidade."
+    ],
+    "opcionais": [],
+    "limites": []
+  },
+  {
+    "id": "interceptacao",
+    "titulo": "Interceptação telefônica em desacordo com a lei",
+    "secao": "preliminar",
+    "ordem": 50,
+    "natureza": "prova ilícita",
+    "fase": [
+      "investigacao"
+    ],
+    "art5": [
+      "XII",
+      "LVI"
+    ],
+    "cf_outros": [
+      "art. 93, IX"
+    ],
+    "tratados": [
+      "CADH, art. 11.2"
+    ],
+    "lei": [
+      "Lei nº 9.296, de 1996, art. 2º",
+      "Lei nº 9.296, de 1996, art. 4º",
+      "Lei nº 9.296, de 1996, art. 5º",
+      "CPP, art. 157"
+    ],
+    "precedentes": [
+      "stf-tema-661"
+    ],
+    "base": "interceptacao",
+    "acusacao": "As conversas interceptadas, autorizadas pelo juiz, comprovam a participação do acusado.",
+    "detectar": [
+      "A interceptação foi a primeira medida da investigação, baseada só em denúncia anônima?",
+      "O pedido demonstrou que a prova não podia ser feita por outros meios (Lei nº 9.296, de 1996, art. 2º, II)?",
+      "O crime investigado é punido com reclusão (art. 2º, III)?",
+      "A decisão inicial e cada prorrogação trazem fundamentos concretos, ou repetem texto padrão?",
+      "Há períodos de escuta sem decisão judicial que os cubra? Compare as datas das decisões com as dos relatórios.",
+      "A defesa teve acesso à íntegra dos áudios?",
+      "Foram gravadas conversas entre o acusado e seu advogado?"
+    ],
+    "nucleo": "A interceptação é medida excepcional. Não é admitida quando não há indícios razoáveis de autoria, quando a prova pode ser feita por outros meios ou quando o crime é punido, no máximo, com detenção. A decisão deve ser fundamentada, sob pena de nulidade, e o prazo é de quinze dias, renovável por igual período quando comprovada a indispensabilidade do meio de prova.",
+    "prejuizo": "Mostre que as conversas interceptadas são a base da denúncia e a origem das demais provas (buscas, prisões, depoimentos).",
+    "replicas": [
+      {
+        "a": "As prorrogações sucessivas são admitidas pela jurisprudência.",
+        "r": "São admitidas quando cada decisão é fundamentada e demonstra a necessidade da medida. A prorrogação padronizada, sem referência aos resultados do período anterior, não atende ao requisito."
+      },
+      {
+        "a": "A decisão adotou os fundamentos da representação policial.",
+        "r": "A remissão exige que a decisão indique por que acolhe a representação e que esta contenha dados concretos sobre cada investigado e cada linha telefônica."
+      }
+    ],
+    "pedido": "declarar a ilicitude das interceptações e das provas delas derivadas e determinar seu desentranhamento",
+    "pecas": [
+      "resposta",
+      "nulidade",
+      "hc"
+    ],
+    "texto": [
+      "O sigilo das comunicações telefônicas só pode ser afastado por ordem judicial, nas hipóteses e na forma que a lei estabelecer (art. 5º, caput, inciso XII, da {CF}). A {L9296} não admite a interceptação quando não houver indícios razoáveis da autoria ou participação em infração penal, quando a prova puder ser feita por outros meios disponíveis ou quando o fato constituir infração punida, no máximo, com pena de detenção (art. 2º). A decisão será fundamentada, sob pena de nulidade, e a medida não poderá exceder o prazo de quinze dias, renovável por igual tempo uma vez comprovada a indispensabilidade do meio de prova (art. 5º).",
+      "{FATO}",
+      "A medida não atendeu aos requisitos legais. As conversas interceptadas são provas ilícitas, assim como as que delas derivam (art. 5º, caput, inciso LVI, da {CF}; art. 157, caput e § 1º, do {CPP})."
+    ],
+    "opcionais": [],
+    "limites": []
+  },
+  {
+    "id": "reconhecimento",
+    "titulo": "Reconhecimento de pessoa em desacordo com o art. 226 do CPP",
+    "secao": "preliminar",
+    "ordem": 52,
+    "natureza": "prova inválida",
+    "fase": [
+      "investigacao",
+      "instrucao"
+    ],
+    "art5": [
+      "LIV",
+      "LV",
+      "LVII"
+    ],
+    "cf_outros": [],
+    "tratados": [
+      "CADH, art. 8.2"
+    ],
+    "lei": [
+      "CPP, art. 226",
+      "CPP, art. 155",
+      "Resolução CNJ nº 484, de 2022"
+    ],
+    "precedentes": [
+      "stj-tema-1258",
+      "stj-hc-598886"
+    ],
+    "base": "reconhecimento",
+    "acusacao": "A vítima reconheceu o acusado, por fotografia ou pessoalmente, e confirmou o reconhecimento em juízo.",
+    "detectar": [
+      "A vítima já conhecia o acusado antes do fato? Nesse caso, o STJ dispensa o procedimento formal (Tema 1258, tese 6).",
+      "Antes do ato, a vítima descreveu a pessoa a ser reconhecida (CPP, art. 226, I)? A descrição consta do termo?",
+      "O acusado foi colocado ao lado de outras pessoas com características semelhantes (art. 226, II), ou foi exibido sozinho?",
+      "O reconhecimento foi feito por fotografia isolada, álbum de suspeitos ou imagem de rede social?",
+      "A vítima viu a imagem do acusado antes do ato (grupos de mensagens, imprensa, corredor da delegacia)?",
+      "Foi lavrado auto pormenorizado, subscrito pela autoridade, por quem reconheceu e por duas testemunhas (art. 226, IV)?",
+      "Quais eram as condições de observação (tempo, iluminação, distância, arma, máscara, capacete)? Quanto tempo passou até o reconhecimento?",
+      "Existe prova de autoria independente do reconhecimento?"
+    ],
+    "nucleo": "O reconhecimento de pessoa deve seguir o procedimento do art. 226 do CPP, na investigação e em juízo: descrição prévia, alinhamento com pessoas semelhantes e auto pormenorizado. O STJ fixou, em recurso repetitivo, que o reconhecimento inválido não serve para condenar nem para decisões de menor exigência probatória, como a prisão preventiva, o recebimento da denúncia e a pronúncia. Fixou também que o ato é irrepetível: um novo reconhecimento não corrige o primeiro (Tema 1258).",
+    "prejuizo": "Mostre que o reconhecimento é a única prova de autoria, ou que as demais provas dependem dele.",
+    "replicas": [
+      {
+        "a": "As formalidades do art. 226 são mera recomendação.",
+        "r": "Esse entendimento foi superado. O STJ fixou, em recurso repetitivo, que as regras do art. 226 do CPP são de observância obrigatória (Tema 1258)."
+      },
+      {
+        "a": "A vítima confirmou o reconhecimento em juízo.",
+        "r": "O reconhecimento é prova irrepetível. O ato viciado contamina a memória de quem reconhece, e o novo procedimento não recupera a certeza, ainda que siga a lei (Tema 1258, tese 3)."
+      },
+      {
+        "a": "Em crimes patrimoniais, a palavra da vítima tem especial valor.",
+        "r": "A sinceridade da vítima não afasta o risco de erro. A questão é a confiabilidade do método, não a boa-fé de quem reconhece."
+      },
+      {
+        "a": "Há outras provas de autoria.",
+        "r": "O juiz pode se convencer por provas independentes, sem relação de causa e efeito com o reconhecimento viciado (Tema 1258, tese 4). Examine cada prova apontada e mostre que ela decorre do reconhecimento ou não vincula o acusado ao fato."
+      }
+    ],
+    "pedido": "declarar a invalidade do reconhecimento e dos atos que dele dependem e, não havendo prova independente de autoria, rejeitar a denúncia ou absolver o acusado",
+    "pecas": [
+      "resposta",
+      "nulidade",
+      "hc"
+    ],
+    "texto": [
+      "O reconhecimento de pessoa obedece ao procedimento do art. 226 do {CPP}: a pessoa que fará o reconhecimento descreve antes quem deve ser reconhecido; a pessoa a ser reconhecida é colocada, se possível, ao lado de outras que com ela tenham semelhança; e do ato se lavra auto pormenorizado, subscrito pela autoridade, por quem reconheceu e por duas testemunhas presenciais.",
+      "{FATO}",
+      "O procedimento legal não foi observado. O reconhecimento assim realizado não é prova confiável de autoria e não pode fundamentar a acusação. A confirmação posterior, em juízo, não corrige o vício, pois reproduz a memória formada no ato irregular."
+    ],
+    "opcionais": [
+      "stj-hc-712781"
+    ],
+    "limites": []
+  },
+  {
+    "id": "confissao",
+    "titulo": "Confissão informal ou extrajudicial sem garantias",
+    "secao": "preliminar",
+    "ordem": 54,
+    "natureza": "prova ilícita ou insuficiente",
+    "fase": [
+      "investigacao"
+    ],
+    "art5": [
+      "III",
+      "LVI",
+      "LXIII"
+    ],
+    "cf_outros": [],
+    "tratados": [
+      "CADH, art. 8.2.g",
+      "CADH, art. 8.3",
+      "PIDCP, art. 14.3.g"
+    ],
+    "lei": [
+      "CPP, art. 155",
+      "CPP, art. 186",
+      "CPP, art. 197",
+      "CPP, art. 199",
+      "CPP, art. 200"
+    ],
+    "precedentes": [
+      "stj-aresp-2123334"
+    ],
+    "base": "confissao",
+    "acusacao": "O acusado confessou o crime aos policiais no momento da abordagem (ou na delegacia).",
+    "detectar": [
+      "A suposta confissão ocorreu na rua, na viatura ou em outro local não oficial, e é relatada só pelos policiais?",
+      "O acusado foi advertido, antes, do direito de permanecer calado? A advertência está documentada?",
+      "Havia advogado ou defensor presente?",
+      "A confissão foi gravada, reduzida a termo e assinada?",
+      "Há relato, laudo ou fotografia que indique agressão, ameaça ou promessa?",
+      "Em juízo, o acusado confirmou ou se retratou?",
+      "Existe prova independente que confirme o conteúdo da confissão?",
+      "Em que data ocorreu o fato? As teses do STJ sobre confissão extrajudicial valem para fatos posteriores a 2 de julho de 2024."
+    ],
+    "nucleo": "O preso deve ser informado de seus direitos, entre eles o de permanecer calado. Ninguém é obrigado a depor contra si, e a confissão só é válida se feita sem coação. A Terceira Seção do STJ decidiu que a confissão extrajudicial só é admissível se feita formalmente, de modo documentado, em estabelecimento estatal oficial, e que, mesmo admissível, não pode embasar a condenação. As teses valem para fatos ocorridos a partir do dia seguinte à publicação do acórdão, em julho de 2024. Mesmo a confissão judicial só serve à condenação se encontrar apoio nas demais provas (CPP, art. 197).",
+    "prejuizo": "Mostre que a denúncia se apoia na confissão informal e que, excluída esta, não resta prova de autoria.",
+    "replicas": [
+      {
+        "a": "A confissão foi espontânea, e os policiais a confirmaram em juízo.",
+        "r": "A Terceira Seção do STJ decidiu que a inadmissibilidade permanece mesmo quando a acusação tenta introduzir a confissão extrajudicial por outro meio, como o depoimento do policial que a colheu (AREsp nº 2.123.334/MG)."
+      },
+      {
+        "a": "A confissão extrajudicial foi corroborada por outras provas.",
+        "r": "Examine cada prova apontada. Se ela foi obtida a partir da confissão (por exemplo, a apreensão em local indicado pelo acusado), é prova derivada, não corroboração independente."
+      },
+      {
+        "a": "A falta de advertência é mera irregularidade.",
+        "r": "A advertência é o que torna o direito ao silêncio efetivo. A Segunda Turma do STF não admite condenação baseada só em declarações informais prestadas a policiais no momento da prisão. O Plenário ainda julga o alcance do dever de advertência na abordagem policial (Tema 1185, sem tese fixada até novembro de 2026)."
+      }
+    ],
+    "pedido": "declarar a ilicitude da confissão informal e das provas dela derivadas e determinar seu desentranhamento",
+    "pecas": [
+      "resposta",
+      "nulidade",
+      "hc"
+    ],
+    "texto": [
+      "O preso será informado de seus direitos, entre os quais o de permanecer calado, e terá assegurada a assistência da família e de advogado (art. 5º, caput, inciso LXIII, da {CF}). A {CADH} garante o direito de não ser obrigado a depor contra si mesmo nem a declarar-se culpado (art. 8.2, alínea g) e dispõe que a confissão só é válida se feita sem coação de nenhuma natureza (art. 8.3).",
+      "{FATO}",
+      "A suposta confissão não foi precedida de advertência do direito ao silêncio, não contou com a presença de defensor e não foi registrada. Declaração obtida nessas condições não é prova admissível.",
+      "Ainda que fosse válida, a confissão deve ser confrontada com as demais provas do processo (art. 197 do {CPP}) e não sustenta, sozinha, a acusação."
+    ],
+    "opcionais": [
+      "stf-rhc-170843"
+    ],
+    "limites": []
+  },
+  {
+    "id": "tortura",
+    "titulo": "Prova obtida mediante tortura, violência ou ameaça",
+    "secao": "preliminar",
+    "ordem": 55,
+    "natureza": "prova ilícita",
+    "fase": [
+      "investigacao",
+      "prisao"
+    ],
+    "art5": [
+      "III",
+      "XLIX",
+      "LVI"
+    ],
+    "cf_outros": [],
+    "tratados": [
+      "Convenção contra a Tortura, art. 15",
+      "CADH, art. 5.2",
+      "CADH, art. 8.3",
+      "PIDCP, art. 7"
+    ],
+    "lei": [
+      "CPP, art. 157",
+      "CPP, art. 310 (audiência de custódia)"
+    ],
+    "precedentes": [],
+    "base": "confissao",
+    "acusacao": "O acusado confessou e indicou onde estava o produto do crime.",
+    "detectar": [
+      "O laudo de exame de corpo de delito do preso registra lesões? Foi feito logo após a prisão?",
+      "O acusado relatou agressão na audiência de custódia? O juiz determinou a apuração?",
+      "Há fotografias, prontuário médico ou testemunhas do estado físico do acusado?",
+      "Quanto tempo passou entre a prisão e a apresentação à autoridade? Onde o acusado ficou nesse intervalo?",
+      "A confissão ou a indicação de provas ocorreu nesse intervalo?"
+    ],
+    "nucleo": "Ninguém será submetido a tortura nem a tratamento desumano ou degradante. Declaração obtida por tortura não pode ser invocada como prova em nenhum processo, salvo contra a pessoa acusada de tortura, como prova de que a declaração foi prestada. A regra de exclusão alcança a declaração e as provas encontradas a partir dela.",
+    "prejuizo": "Mostre o vínculo entre a violência e a prova: a confissão ou a indicação do local de apreensão ocorreu enquanto o acusado estava sob custódia dos agentes apontados.",
+    "replicas": [
+      {
+        "a": "Não há prova da agressão.",
+        "r": "A pessoa estava sob custódia do Estado. Havendo lesão documentada ou relato consistente, cabe ao Estado explicar a origem das lesões e apurar o fato."
+      },
+      {
+        "a": "As lesões são leves e decorrem da resistência à prisão.",
+        "r": "Peça que a acusação indique o registro de resistência no auto de prisão e confronte a localização e o tipo das lesões com essa versão."
+      }
+    ],
+    "pedido": "declarar a ilicitude das declarações e das provas delas derivadas, determinar seu desentranhamento e encaminhar cópias para apuração da violência relatada",
+    "pecas": [
+      "resposta",
+      "nulidade",
+      "hc"
+    ],
+    "texto": [
+      "Ninguém será submetido a tortura nem a tratamento desumano ou degradante (art. 5º, caput, inciso III, da {CF}), e é assegurado aos presos o respeito à integridade física e moral (art. 5º, caput, inciso XLIX). A {CCT} determina que nenhuma declaração que se demonstre ter sido prestada como resultado de tortura seja invocada como prova em qualquer processo, salvo contra a pessoa acusada de tortura, como prova de que a declaração foi prestada (art. 15). A {CADH} dispõe que a confissão só é válida se feita sem coação de nenhuma natureza (art. 8.3).",
+      "{FATO}",
+      "A declaração e as provas obtidas a partir dela são ilícitas e inadmissíveis (art. 5º, caput, inciso LVI, da {CF}; art. 157, caput e § 1º, do {CPP})."
+    ],
+    "opcionais": [],
+    "limites": []
+  },
+  {
+    "id": "corpo-delito",
+    "titulo": "Ausência de exame de corpo de delito",
+    "secao": "preliminar",
+    "ordem": 56,
+    "natureza": "nulidade e falta de prova da materialidade",
+    "fase": [
+      "investigacao",
+      "instrucao"
+    ],
+    "art5": [
+      "LIV",
+      "LVII"
+    ],
+    "cf_outros": [],
+    "tratados": [],
+    "lei": [
+      "CPP, art. 158",
+      "CPP, art. 159",
+      "CPP, art. 167",
+      "CPP, art. 564, III, b"
+    ],
+    "precedentes": [],
+    "base": "pericia",
+    "acusacao": "A materialidade está comprovada por depoimentos e pela confissão, ainda que não haja laudo.",
+    "detectar": [
+      "A infração deixa vestígios (lesão, dano, falsificação, substância, arma)?",
+      "Existe laudo pericial nos autos? É definitivo ou apenas preliminar?",
+      "O laudo foi elaborado por perito oficial, portador de diploma de curso superior, ou, na falta, por duas pessoas idôneas com diploma (CPP, art. 159)?",
+      "Os vestígios desapareceram, ou o exame era possível e não foi feito?"
+    ],
+    "nucleo": "Quando a infração deixa vestígios, o exame de corpo de delito é indispensável, e a confissão do acusado não o supre (CPP, art. 158). A prova testemunhal só pode suprir a falta do exame quando os vestígios tiverem desaparecido (CPP, art. 167). A falta do exame é causa de nulidade (CPP, art. 564, III, b).",
+    "prejuizo": "Sem o exame, não há prova técnica da materialidade. Mostre que o exame era possível e que a omissão é atribuível ao Estado.",
+    "replicas": [
+      {
+        "a": "A prova testemunhal supre a falta do exame (CPP, art. 167).",
+        "r": "O suprimento só é admitido quando os vestígios desapareceram. Se o exame era possível e não foi realizado, a testemunha não o substitui."
+      },
+      {
+        "a": "O acusado confessou.",
+        "r": "A lei é expressa: a confissão não supre o exame de corpo de delito (CPP, art. 158)."
+      }
+    ],
+    "pedido": "reconhecer a falta de prova da materialidade e rejeitar a denúncia ou absolver o acusado",
+    "pecas": [
+      "resposta",
+      "nulidade",
+      "hc"
+    ],
+    "texto": [
+      "Quando a infração deixar vestígios, será indispensável o exame de corpo de delito, direto ou indireto, não podendo supri-lo a confissão do acusado (art. 158 do {CPP}). A prova testemunhal só supre a falta do exame quando os vestígios houverem desaparecido (art. 167 do {CPP}). A falta do exame é causa de nulidade (art. 564, caput, inciso III, alínea b, do {CPP}).",
+      "{FATO}",
+      "A infração imputada deixa vestígios, e o exame era possível. Sem ele, não há prova da materialidade."
+    ],
+    "opcionais": [],
+    "limites": []
+  },
+  {
+    "id": "derivadas",
+    "titulo": "Provas derivadas das ilícitas",
+    "secao": "preliminar",
+    "ordem": 58,
+    "natureza": "prova ilícita por derivação",
+    "fase": [
+      "investigacao",
+      "instrucao"
+    ],
+    "art5": [
+      "LVI"
+    ],
+    "cf_outros": [],
+    "tratados": [],
+    "lei": [
+      "CPP, art. 157, § 1º",
+      "CPP, art. 157, § 2º",
+      "CPP, art. 157, § 3º",
+      "CPP, art. 573, § 1º"
+    ],
+    "precedentes": [],
+    "detectar": [
+      "Para cada prova da acusação, pergunte: como os investigadores chegaram a ela?",
+      "Monte o encadeamento: ato ilícito inicial, informação obtida, diligência seguinte, prova resultante.",
+      "Há alguma prova cuja origem seja comprovadamente autônoma (anterior ao ato ilícito ou obtida por outra linha de investigação)?",
+      "Depoimentos em juízo se limitam a relatar o resultado do ato ilícito (por exemplo, policiais que descrevem a apreensão ilegal)?"
+    ],
+    "nucleo": "São inadmissíveis as provas derivadas das ilícitas, salvo quando não houver nexo de causalidade entre umas e outras ou quando as derivadas puderem ser obtidas por fonte independente (CPP, art. 157, § 1º). Fonte independente é a que, por si só, seguindo os trâmites típicos da investigação, seria capaz de conduzir ao fato objeto da prova (§ 2º).",
+    "prejuizo": "Apresente o encadeamento das provas em ordem cronológica e mostre que cada uma só existe por causa do ato ilícito inicial.",
+    "replicas": [
+      {
+        "a": "A prova derivada seria obtida de qualquer modo (fonte independente).",
+        "r": "A exceção exige demonstração concreta de que uma linha de investigação lícita e já existente levaria à prova. O ônus é de quem a invoca."
+      },
+      {
+        "a": "Os depoimentos em juízo são prova autônoma.",
+        "r": "Depoimento que apenas relata o ato ilícito e seu resultado é a mesma prova em outra forma, e não fonte independente."
+      }
+    ],
+    "pedido": "declarar a ilicitude por derivação das provas indicadas e determinar seu desentranhamento (art. 157, caput e § 1º, do CPP) e, preclusa a decisão, sua inutilização (art. 157, § 3º, do CPP)",
+    "pecas": [
+      "resposta",
+      "nulidade",
+      "hc"
+    ],
+    "texto": [
+      "São também inadmissíveis as provas derivadas das ilícitas, salvo quando não evidenciado o nexo de causalidade entre umas e outras, ou quando as derivadas puderem ser obtidas por uma fonte independente das primeiras (art. 157, § 1º, do {CPP}).",
+      "{FATO}",
+      "As provas indicadas só foram obtidas em razão do ato ilícito inicial. Não há linha de investigação autônoma que conduzisse ao mesmo resultado. A ilicitude se estende a elas."
+    ],
+    "opcionais": [],
+    "limites": []
+  },
+  {
+    "id": "inquerito-exclusivo",
+    "titulo": "Acusação apoiada só em elementos do inquérito ou em testemunho indireto",
+    "secao": "merito",
+    "ordem": 86,
+    "natureza": "insuficiência de prova",
+    "fase": [
+      "instrucao",
+      "sentenca"
+    ],
+    "art5": [
+      "LV",
+      "LVII"
+    ],
+    "cf_outros": [],
+    "tratados": [
+      "CADH, art. 8.2.f",
+      "PIDCP, art. 14.3.e"
+    ],
+    "lei": [
+      "CPP, art. 155",
+      "CPP, art. 386, VII"
+    ],
+    "precedentes": [],
+    "base": "inquerito",
+    "acusacao": "Os depoimentos colhidos na delegacia, ou o relato de quem ouviu dizer, bastam para condenar ou pronunciar.",
+    "detectar": [
+      "Quais provas foram produzidas em juízo, com contraditório?",
+      "As testemunhas presenciaram o fato ou relatam o que ouviram de terceiros?",
+      "Quem é a fonte original da informação e por que não foi ouvida em juízo?",
+      "A testemunha da fase policial foi ouvida em juízo? Confirmou ou se retratou?",
+      "A decisão se apoia em depoimento da fase policial não repetido em juízo?"
+    ],
+    "nucleo": "O juiz forma sua convicção pela prova produzida em contraditório judicial e não pode fundamentar a decisão exclusivamente nos elementos informativos colhidos na investigação, ressalvadas as provas cautelares, não repetíveis e antecipadas (CPP, art. 155). O testemunho de quem não presenciou o fato não permite o contraditório sobre a fonte original.",
+    "prejuizo": "Liste a prova judicializada e mostre que nenhuma delas, sem os elementos do inquérito, sustenta a autoria.",
+    "replicas": [
+      {
+        "a": "O art. 155 ressalva as provas cautelares, não repetíveis e antecipadas.",
+        "r": "A ressalva alcança perícias e provas urgentes. Depoimento que podia ser repetido em juízo e não foi não se enquadra nela."
+      },
+      {
+        "a": "Na pronúncia, a dúvida se resolve em favor da sociedade.",
+        "r": "O STJ fixou, em recurso repetitivo, que a pronúncia não pode se basear exclusivamente em elementos do inquérito e que o testemunho indireto, sozinho, não atinge o padrão de prova exigido (Tema 1260). A Sexta Turma afirma que a máxima in dubio pro societate não tem amparo no ordenamento."
+      },
+      {
+        "a": "Há intimidação de testemunhas ou atuação de facção; o testemunho indireto ganha relevo.",
+        "r": "O Tema 1260 do STJ admite maior relevo ao testemunho indireto qualificado nesses contextos, desde que a dificuldade de produzir a prova direta esteja objetivamente demonstrada e haja controle judicial estrito. Exija a demonstração concreta: a alegação genérica de temor não basta."
+      }
+    ],
+    "pedido": "absolver o acusado por insuficiência de prova (art. 386, caput, inciso VII, do CPP) ou, no procedimento do júri, impronunciá-lo",
+    "pecas": [
+      "nulidade",
+      "hc"
+    ],
+    "texto": [
+      "O juiz formará sua convicção pela livre apreciação da prova produzida em contraditório judicial, não podendo fundamentar sua decisão exclusivamente nos elementos informativos colhidos na investigação, ressalvadas as provas cautelares, não repetíveis e antecipadas (art. 155, caput, do {CPP}). A {CADH} assegura à defesa o direito de inquirir as testemunhas (art. 8.2, alínea f).",
+      "{FATO}",
+      "Os elementos que sustentam a acusação não foram submetidos ao contraditório judicial. Sem eles, não há prova de autoria."
+    ],
+    "opcionais": [
+      "stj-tema-1260",
+      "stj-aresp-1940381",
+      "stf-hc-180144",
+      "stj-hc-589270",
+      "stj-resp-1674198",
+      "stj-resp-2091647"
+    ],
+    "limites": []
+  },
+  {
+    "id": "policial-exclusivo",
+    "titulo": "Acusação apoiada apenas na palavra dos agentes que efetuaram a prisão",
+    "secao": "merito",
+    "ordem": 87,
+    "natureza": "insuficiência de prova",
+    "fase": [
+      "instrucao",
+      "sentenca"
+    ],
+    "art5": [
+      "LV",
+      "LVII"
+    ],
+    "cf_outros": [],
+    "tratados": [
+      "CADH, art. 8.2"
+    ],
+    "lei": [
+      "CPP, art. 155",
+      "CPP, art. 156",
+      "CPP, art. 386, VII"
+    ],
+    "precedentes": [
+      "stj-aresp-1936393"
+    ],
+    "base": "policiais",
+    "acusacao": "Os policiais que efetuaram a prisão têm fé pública, e seus depoimentos são coerentes.",
+    "detectar": [
+      "Há outra prova além dos depoimentos dos agentes (testemunha civil, filmagem, perícia)?",
+      "Os depoimentos são idênticos entre si, palavra por palavra?",
+      "Há contradições entre os agentes, ou entre a fase policial e a judicial?",
+      "Havia câmeras corporais ou câmeras no local? As imagens foram juntadas? Por que não?",
+      "Os agentes se lembram do fato ou apenas confirmam o que assinaram no auto de prisão?",
+      "Testemunhas civis presentes no local foram identificadas e ouvidas?"
+    ],
+    "nucleo": "O depoimento de policial é meio de prova válido e deve ser valorado como o de qualquer testemunha: pela coerência interna, pela coerência externa e pela sintonia com as demais provas. Não há presunção de veracidade que inverta o ônus da prova, que é da acusação. Quando o Estado podia produzir prova de confirmação (imagens, testemunhas, perícia) e não o fez, a falta pesa contra a acusação. A exigência de gravação em áudio e vídeo para confirmar o depoimento foi posição vencida no STJ: não a apresente como regra.",
+    "prejuizo": "Indique as contradições e as provas de confirmação que estavam ao alcance do Estado e não foram produzidas.",
+    "replicas": [
+      {
+        "a": "O depoimento de policial é válido e tem presunção de veracidade.",
+        "r": "A validade não está em discussão; a suficiência, sim. A presunção de legitimidade do ato administrativo não se converte em presunção de culpa no processo penal."
+      },
+      {
+        "a": "A defesa não provou que os policiais tinham motivo para mentir.",
+        "r": "A defesa não tem o ônus de provar má-fé. Basta a dúvida razoável, e ela decorre da falta de confirmação por prova independente."
+      }
+    ],
+    "pedido": "absolver o acusado por insuficiência de prova (art. 386, caput, inciso VII, do CPP)",
+    "pecas": [
+      "nulidade",
+      "hc"
+    ],
+    "texto": [
+      "A prova da alegação incumbe a quem a fizer (art. 156, caput, do {CPP}), e ninguém será considerado culpado até o trânsito em julgado de sentença penal condenatória (art. 5º, caput, inciso LVII, da {CF}). O depoimento do agente que efetuou a prisão é valorado como o de qualquer testemunha, por sua coerência e por sua confirmação em outros elementos de prova.",
+      "{FATO}",
+      "Não há prova independente que confirme a versão dos agentes. O Estado tinha meios de produzi-la e não o fez. A dúvida resultante favorece o acusado."
+    ],
+    "opcionais": [
+      "stj-aresp-1940381"
+    ],
+    "limites": []
+  },
+  {
+    "id": "colaboracao",
+    "titulo": "Declarações de colaborador sem corroboração",
+    "secao": "preliminar",
+    "ordem": 59,
+    "natureza": "insuficiência de lastro probatório",
+    "fase": [
+      "denuncia",
+      "instrucao",
+      "sentenca"
+    ],
+    "art5": [
+      "LIV",
+      "LV",
+      "LVII"
+    ],
+    "cf_outros": [],
+    "tratados": [
+      "CADH, art. 8.2"
+    ],
+    "lei": [
+      "Lei nº 12.850, de 2013, art. 4º, § 16",
+      "Lei nº 12.850, de 2013, art. 4º, § 10-A"
+    ],
+    "precedentes": [],
+    "base": "delacao",
+    "acusacao": "O colaborador descreveu em detalhes a participação do acusado.",
+    "detectar": [
+      "A denúncia, a medida cautelar ou a sentença se apoia só no que disse o colaborador?",
+      "Os documentos apresentados pelo colaborador foram produzidos por ele próprio (anotações, planilhas, mensagens unilaterais)?",
+      "A “confirmação” vem de outro colaborador?",
+      "A defesa teve acesso ao acordo, aos termos de depoimento e aos registros audiovisuais?",
+      "O acusado delatado pôde se manifestar depois do colaborador em todas as fases?"
+    ],
+    "nucleo": "A lei veda que medidas cautelares, o recebimento da denúncia e a sentença condenatória sejam decretados ou proferidos com fundamento apenas nas declarações do colaborador (Lei nº 12.850, de 2013, art. 4º, § 16). A colaboração é meio de obtenção de prova: o que o colaborador diz precisa ser confirmado por elementos externos e independentes.",
+    "prejuizo": "Separe o que vem do colaborador do que vem de fonte externa e mostre que nada do segundo grupo vincula o acusado ao fato.",
+    "replicas": [
+      {
+        "a": "As declarações foram confirmadas por outros colaboradores.",
+        "r": "A confirmação de um colaborador por outro não é elemento externo. Ambos têm o mesmo interesse nos benefícios do acordo."
+      },
+      {
+        "a": "O colaborador apresentou documentos.",
+        "r": "Documento produzido unilateralmente pelo colaborador é extensão de sua declaração, e não prova independente."
+      }
+    ],
+    "pedido": "rejeitar a denúncia por falta de justa causa ou, se já recebida, absolver o acusado, por se apoiar a acusação apenas em declarações de colaborador",
+    "pecas": [
+      "resposta",
+      "hc"
+    ],
+    "texto": [
+      "A {L12850} veda que medidas cautelares reais ou pessoais, o recebimento de denúncia ou queixa-crime e a sentença condenatória sejam decretados ou proferidos com fundamento apenas nas declarações do colaborador (art. 4º, § 16).",
+      "{FATO}",
+      "A imputação se apoia somente nas declarações do colaborador. Não há elemento externo e independente que vincule o acusado ao fato."
+    ],
+    "opcionais": [],
+    "limites": []
+  },
+  {
+    "id": "justa-causa",
+    "titulo": "Falta de justa causa para a ação penal",
+    "secao": "preliminar",
+    "ordem": 62,
+    "natureza": "rejeição da denúncia",
+    "fase": [
+      "denuncia"
+    ],
+    "art5": [
+      "LIV",
+      "LVII"
+    ],
+    "cf_outros": [],
+    "tratados": [
+      "CADH, art. 8.2"
+    ],
+    "lei": [
+      "CPP, art. 395, III",
+      "CPP, art. 648, I"
+    ],
+    "precedentes": [],
+    "detectar": [
+      "Excluídas as provas ilícitas ou inválidas já apontadas, o que resta de indício de autoria e de prova da materialidade?",
+      "A denúncia se apoia só em declaração de colaborador, em denúncia anônima ou em elemento não confirmado?",
+      "Há prova da materialidade (laudo, auto de apreensão, documento)?",
+      "O inquérito contém elemento que vincule o acusado, individualmente, ao fato?"
+    ],
+    "nucleo": "A denúncia deve ser rejeitada quando faltar justa causa para o exercício da ação penal (CPP, art. 395, III). Justa causa é o lastro probatório mínimo, lícito e idôneo, de materialidade e de autoria. O processo penal, por si, atinge a liberdade e a honra do acusado; por isso a acusação sem suporte mínimo não deve prosseguir.",
+    "prejuizo": "Enumere os elementos que instruem a denúncia e mostre, um a um, por que nenhum constitui indício lícito de autoria ou prova de materialidade.",
+    "replicas": [
+      {
+        "a": "Nesta fase vigora o in dubio pro societate; bastam indícios.",
+        "r": "A fórmula não dispensa o lastro mínimo. Indício é fato provado que autoriza inferência, e não suspeita. O juízo de admissibilidade serve de filtro contra acusações temerárias."
+      },
+      {
+        "a": "O exame da justa causa exige análise aprofundada de provas, incabível em habeas corpus.",
+        "r": "Mostre que a falta de lastro se verifica de plano, pela leitura da denúncia e dos documentos que a acompanham, sem valoração de prova controvertida."
+      },
+      {
+        "a": "A instrução esclarecerá os fatos.",
+        "r": "A instrução serve para confirmar acusação que já tem suporte, e não para procurar o suporte que faltava no momento da denúncia."
+      }
+    ],
+    "pedido": "rejeitar a denúncia por falta de justa causa (CPP, art. 395, III)",
+    "pecas": [
+      "resposta",
+      "hc"
+    ],
+    "texto": [
+      "A denúncia será rejeitada quando faltar justa causa para o exercício da ação penal (art. 395, caput, inciso III, do {CPP}). A justa causa corresponde ao suporte probatório mínimo, lícito e idôneo, de materialidade e de autoria.",
+      "{FATO}",
+      "Os elementos que instruem a denúncia não indicam, de forma mínima, [A MATERIALIDADE DO FATO / A AUTORIA ATRIBUÍDA AO ACUSADO]. A acusação não tem suporte que autorize o prosseguimento do processo."
+    ],
+    "opcionais": [],
+    "limites": [
+      "stj-sum-648"
+    ]
+  }
+]

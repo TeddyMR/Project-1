@@ -1,0 +1,563 @@
+[
+  {
+    "id": "incompetencia",
+    "titulo": "Incompetência absoluta do juízo",
+    "secao": "preliminar",
+    "ordem": 10,
+    "natureza": "nulidade absoluta",
+    "fase": [
+      "denuncia"
+    ],
+    "art5": [
+      "XXXVII",
+      "LIII"
+    ],
+    "cf_outros": [],
+    "tratados": [
+      "CADH, art. 8.1",
+      "PIDCP, art. 14.1"
+    ],
+    "lei": [
+      "CPP, arts. 69 a 91 (regras de competência)",
+      "CPP, arts. 95, II, e 108 (exceção de incompetência)",
+      "CPP, art. 564, I",
+      "CPP, art. 567"
+    ],
+    "precedentes": [],
+    "detectar": [
+      "Compare o juízo que recebeu a denúncia com as regras de competência em razão da matéria (Justiça Federal, Militar, Eleitoral, Tribunal do Júri), da pessoa (foro por prerrogativa de função) e do lugar.",
+      "Verifique se há crime doloso contra a vida entre os fatos narrados ou conexos: em regra, a competência é do Tribunal do Júri (Constituição, art. 5º, XXXVIII, d; CPP, art. 78, I). A Lei nº 15.358, de 2026, atribuiu às Varas Criminais Colegiadas os homicídios cometidos por membros de organização criminosa ultraviolenta, grupo paramilitar ou milícia privada, quando conexos aos crimes do art. 2º dessa lei (art. 2º, § 8º). Se a denúncia invocar essa regra, confronte-a com a garantia constitucional do júri.",
+      "Verifique se o fato atinge bens, serviços ou interesse da União (competência federal, art. 109 da Constituição).",
+      "Confira se a distribuição foi livre ou se houve prevenção indevida."
+    ],
+    "nucleo": "A Constituição assegura que ninguém será processado nem sentenciado senão pela autoridade competente e veda o juízo de exceção. A incompetência em razão da matéria ou da pessoa é absoluta: não se prorroga e pode ser reconhecida a qualquer tempo. O CPP a inclui entre as causas de nulidade e determina a anulação dos atos decisórios.",
+    "prejuizo": "Indique os atos decisórios praticados pelo juízo incompetente (recebimento da denúncia, decretação de cautelares, deferimento de provas) e o efeito concreto de cada um sobre a situação do acusado.",
+    "replicas": [
+      {
+        "a": "O art. 567 do CPP preserva os atos instrutórios; só os decisórios são anulados.",
+        "r": "Peça, no mínimo, a anulação dos atos decisórios, entre eles o recebimento da denúncia e as medidas cautelares, com remessa ao juízo competente. A ratificação posterior depende de decisão fundamentada do juízo competente, e não se presume."
+      },
+      {
+        "a": "A competência territorial é relativa e a alegação está preclusa.",
+        "r": "Distinga as hipóteses. A incompetência em razão da matéria ou da pessoa é absoluta. A territorial é relativa e deve ser arguida por exceção no prazo da resposta à acusação (CPP, art. 108)."
+      }
+    ],
+    "pedido": "reconhecer a incompetência do juízo, declarar a nulidade dos atos decisórios (CPP, art. 567) e remeter os autos ao juízo competente",
+    "pecas": [
+      "resposta",
+      "nulidade",
+      "hc"
+    ],
+    "texto": [
+      "A {CF} estabelece que ninguém será processado nem sentenciado senão pela autoridade competente (art. 5º, caput, inciso LIII) e veda o juízo ou tribunal de exceção (art. 5º, caput, inciso XXXVII). A {CADH} assegura o julgamento por juiz ou tribunal competente, independente e imparcial, estabelecido anteriormente por lei (art. 8.1).",
+      "{FATO}",
+      "A competência para processar e julgar o fato narrado é de [INDICAR O JUÍZO COMPETENTE E A REGRA DE COMPETÊNCIA APLICÁVEL]. A incompetência do juízo é causa de nulidade (art. 564, caput, inciso I, do {CPP}) e alcança os atos decisórios (art. 567 do {CPP}), entre eles o recebimento da denúncia."
+    ],
+    "opcionais": [
+      "stf-sv-45"
+    ],
+    "limites": [
+      "stf-sum-704"
+    ]
+  },
+  {
+    "id": "parcialidade",
+    "titulo": "Impedimento, suspeição ou quebra da imparcialidade do julgador",
+    "secao": "preliminar",
+    "ordem": 12,
+    "natureza": "nulidade absoluta",
+    "fase": [
+      "denuncia",
+      "instrucao",
+      "sentenca"
+    ],
+    "art5": [
+      "XXXVII",
+      "LIII",
+      "LIV"
+    ],
+    "cf_outros": [],
+    "tratados": [
+      "CADH, art. 8.1",
+      "PIDCP, art. 14.1"
+    ],
+    "lei": [
+      "CPP, arts. 252 e 253 (impedimento)",
+      "CPP, art. 254 (suspeição)",
+      "CPP, arts. 95, I, e 96 a 103 (exceção de suspeição)",
+      "CPP, art. 564, I",
+      "CPP, arts. 101 e 112"
+    ],
+    "precedentes": [],
+    "detectar": [
+      "O juiz atuou antes, no mesmo caso, como autoridade policial, membro do Ministério Público, defensor, perito ou testemunha (CPP, art. 252)?",
+      "O juiz, seu cônjuge ou parente até o terceiro grau é parte ou diretamente interessado no feito (CPP, art. 252, IV)? O juiz é amigo íntimo ou inimigo capital de alguma das partes, aconselhou alguma delas, é seu credor, devedor, tutor ou curador, ou é sócio de sociedade interessada no processo (CPP, art. 254)?",
+      "O juiz antecipou juízo de culpa em decisões, entrevistas ou despachos?",
+      "O juiz orientou a acusação ou produziu, por iniciativa própria, prova que cabia ao Ministério Público?"
+    ],
+    "nucleo": "A imparcialidade é elemento do juiz natural e do devido processo legal. O CPP prevê hipóteses de impedimento e de suspeição. O juiz impedido não pode exercer jurisdição no processo (CPP, art. 252), e a suspeição é causa de nulidade dos atos (CPP, arts. 101 e 564, I). O impedimento é arguido pelo mesmo procedimento da exceção de suspeição (CPP, art. 112). A {CADH} exige juiz ou tribunal imparcial.",
+    "prejuizo": "Relacione os atos praticados pelo magistrado depois do fato que revela a parcialidade e mostre como influíram no curso do processo (decisões sobre prova, cautelares, condução da audiência).",
+    "replicas": [
+      {
+        "a": "As hipóteses dos arts. 252 e 254 do CPP são taxativas.",
+        "r": "A imparcialidade decorre do devido processo legal e do art. 8.1 da CADH, e não se esgota no rol legal. Descreva o conjunto de atos do magistrado que, somados, revelam a perda de equidistância."
+      },
+      {
+        "a": "A exceção não foi oposta na primeira oportunidade.",
+        "r": "A arguição de suspeição precede qualquer outra, salvo quando fundada em motivo superveniente (CPP, art. 96). Se o fato é superveniente ou só foi conhecido depois, prove a data em que a defesa tomou conhecimento dele."
+      }
+    ],
+    "pedido": "reconhecer o impedimento ou a suspeição, declarar a nulidade dos atos praticados pelo magistrado e determinar a redistribuição do processo",
+    "pecas": [
+      "nulidade",
+      "hc"
+    ],
+    "texto": [
+      "A imparcialidade do julgador integra as garantias do juiz natural e do devido processo legal (art. 5º, caput, incisos LIII e LIV, da {CF}). A {CADH} assegura o julgamento por juiz ou tribunal imparcial (art. 8.1). O {CPP} prevê as hipóteses de impedimento (arts. 252 e 253) e de suspeição (art. 254). O juiz impedido não pode exercer jurisdição no processo (art. 252, caput). A suspeição do juiz é causa de nulidade (art. 564, caput, inciso I), e, julgada procedente a exceção, ficam nulos os atos do processo principal (art. 101).",
+      "{FATO}",
+      "A situação descrita corresponde à hipótese de [INDICAR O DISPOSITIVO: ART. 252, INCISO ..., OU ART. 254, INCISO ..., DO CPP] e compromete a equidistância exigida do julgador."
+    ],
+    "opcionais": [
+      "stf-hc-164493"
+    ],
+    "limites": []
+  },
+  {
+    "id": "sistema-acusatorio",
+    "titulo": "Atuação do juiz em substituição à acusação",
+    "secao": "preliminar",
+    "ordem": 14,
+    "natureza": "nulidade relativa",
+    "fase": [
+      "instrucao"
+    ],
+    "art5": [
+      "LIV",
+      "LV"
+    ],
+    "cf_outros": [
+      "art. 129, I"
+    ],
+    "tratados": [
+      "CADH, art. 8.1"
+    ],
+    "lei": [
+      "CPP, art. 3º-A",
+      "CPP, art. 212",
+      "CPP, art. 571 (momento da arguição)"
+    ],
+    "precedentes": [],
+    "detectar": [
+      "Na audiência, o juiz iniciou a inquirição das testemunhas e fez a maior parte das perguntas, em vez de apenas complementar os pontos não esclarecidos (CPP, art. 212, parágrafo único)?",
+      "O juiz determinou, de ofício, a produção de prova que cabia à acusação requerer?",
+      "A defesa registrou o protesto na ata da audiência?",
+      "As respostas obtidas pelas perguntas do juiz foram usadas na sentença?"
+    ],
+    "nucleo": "O processo penal tem estrutura acusatória: a lei veda a iniciativa do juiz na fase de investigação e a substituição da atuação probatória do órgão de acusação (CPP, art. 3º-A). Na audiência, as partes perguntam diretamente à testemunha e o juiz apenas complementa a inquirição (CPP, art. 212). O STJ trata a inobservância da ordem de perguntas como nulidade relativa. Há julgados da Sexta Turma que anulam a audiência quando o juiz assume o protagonismo da inquirição e a defesa protesta no ato.",
+    "prejuizo": "Transcreva as perguntas feitas pelo juiz que supriram a omissão da acusação e indique o trecho da sentença ou da decisão que se apoiou nas respostas.",
+    "replicas": [
+      {
+        "a": "A nulidade é relativa: sem protesto na audiência houve preclusão, e não se demonstrou prejuízo.",
+        "r": "Por isso o protesto deve constar da ata no próprio ato (CPP, art. 571). Demonstre o prejuízo de forma concreta, com a indicação das perguntas e do uso das respostas na decisão."
+      },
+      {
+        "a": "O juiz pode determinar diligências para dirimir dúvida sobre ponto relevante.",
+        "r": "O STF admitiu que o juiz determine, pontualmente e nos limites legais, diligências suplementares para dirimir dúvida sobre questão relevante (ADIs nº 6.298, 6.299, 6.300 e 6.305). Atuação pontual e supletiva não se confunde com a condução da prova acusatória. Mostre que, no caso, o juiz não esclareceu dúvida residual, mas produziu a prova que sustentou a acusação."
+      }
+    ],
+    "pedido": "declarar a nulidade da audiência de instrução e dos atos que dela dependem e determinar sua renovação",
+    "pecas": [
+      "nulidade",
+      "hc"
+    ],
+    "texto": [
+      "O processo penal tem estrutura acusatória. A promoção da ação penal pública é função privativa do Ministério Público (art. 129, caput, inciso I, da {CF}), e a lei veda ao juiz substituir a atuação probatória do órgão de acusação (art. 3º-A do {CPP}). Na audiência, as perguntas são formuladas diretamente pelas partes, e o juiz pode apenas complementar a inquirição sobre os pontos não esclarecidos (art. 212, caput e parágrafo único, do {CPP}).",
+      "{FATO}",
+      "A defesa registrou o protesto no próprio ato, como consta da ata [INDICAR O DOCUMENTO E AS FOLHAS OU O ID]."
+    ],
+    "opcionais": [
+      "stj-hc-735519",
+      "stj-resp-2214638"
+    ],
+    "limites": [
+      "stf-adi-6298",
+      "stj-agrg-agrg-aresp-2561071",
+      "stj-agrg-resp-2279546",
+      "stj-agrg-aresp-3219113"
+    ]
+  },
+  {
+    "id": "citacao",
+    "titulo": "Citação inexistente ou inválida",
+    "secao": "preliminar",
+    "ordem": 20,
+    "natureza": "nulidade absoluta",
+    "fase": [
+      "citacao"
+    ],
+    "art5": [
+      "LIV",
+      "LV"
+    ],
+    "cf_outros": [],
+    "tratados": [
+      "CADH, art. 8.2.b",
+      "PIDCP, art. 14.3.a"
+    ],
+    "lei": [
+      "CPP, arts. 351 a 369",
+      "CPP, art. 363",
+      "CPP, art. 366",
+      "CPP, art. 564, III, e",
+      "CPP, art. 570"
+    ],
+    "precedentes": [],
+    "detectar": [
+      "O acusado foi citado pessoalmente? Há certidão do oficial de justiça com a entrega da contrafé?",
+      "Houve citação por edital sem que se esgotassem os meios de localização (endereços constantes dos autos e consultas aos sistemas disponíveis)?",
+      "O acusado estava preso na mesma unidade da Federação e foi citado por edital (Súmula 351 do STF)?",
+      "A citação por hora certa observou os requisitos legais (CPP, art. 362)?",
+      "Citado por edital, o acusado não compareceu nem constituiu advogado: o processo e o prazo prescricional foram suspensos (CPP, art. 366)?"
+    ],
+    "nucleo": "A citação completa a formação do processo (CPP, art. 363) e é a forma pela qual o acusado toma conhecimento da acusação. Sem citação válida não há contraditório. O CPP inclui a falta de citação entre as causas de nulidade (art. 564, III, e).",
+    "prejuizo": "Aponte o que a defesa deixou de fazer por falta de ciência: resposta à acusação, rol de testemunhas, comparecimento à audiência, constituição de advogado de confiança.",
+    "replicas": [
+      {
+        "a": "O comparecimento do acusado sanou o vício (CPP, art. 570).",
+        "r": "O comparecimento supre a falta de citação dali em diante, mas não convalida os atos praticados antes dele sem defesa. Peça a reabertura do prazo para a resposta à acusação e a renovação dos atos já realizados."
+      },
+      {
+        "a": "O edital que indica o dispositivo legal é válido, ainda que não transcreva a denúncia (Súmula 366 do STF).",
+        "r": "A discussão não é sobre o conteúdo do edital, mas sobre o cabimento da citação ficta. Demonstre que havia endereço conhecido nos autos ou que o acusado estava preso, e que os meios de localização não foram esgotados."
+      }
+    ],
+    "pedido": "declarar a nulidade da citação e dos atos posteriores e reabrir o prazo para a resposta à acusação",
+    "pecas": [
+      "resposta",
+      "nulidade",
+      "hc"
+    ],
+    "texto": [
+      "O processo penal só completa sua formação com a citação do acusado (art. 363 do {CPP}). A citação é o ato que lhe dá ciência da acusação e torna possível o exercício do contraditório e da ampla defesa (art. 5º, caput, inciso LV, da {CF}). A {CADH} assegura ao acusado a comunicação prévia e pormenorizada da acusação formulada (art. 8.2, alínea b).",
+      "{FATO}",
+      "A falta ou a invalidade da citação é causa de nulidade (art. 564, caput, inciso III, alínea e, do {CPP}) e contamina os atos posteriores, praticados sem a participação da defesa (art. 573, § 1º, do {CPP})."
+    ],
+    "opcionais": [
+      "stf-sum-351",
+      "stj-sum-455"
+    ],
+    "limites": [
+      "stf-sum-366",
+      "stj-sum-415"
+    ]
+  },
+  {
+    "id": "defesa-tecnica",
+    "titulo": "Ausência de defesa técnica ou defesa meramente formal",
+    "secao": "preliminar",
+    "ordem": 22,
+    "natureza": "nulidade absoluta (ausência) ou relativa (deficiência)",
+    "fase": [
+      "citacao",
+      "instrucao",
+      "sentenca"
+    ],
+    "art5": [
+      "LV",
+      "LXXIV"
+    ],
+    "cf_outros": [
+      "art. 133",
+      "art. 134"
+    ],
+    "tratados": [
+      "CADH, art. 8.2.d",
+      "CADH, art. 8.2.e",
+      "PIDCP, art. 14.3.d"
+    ],
+    "lei": [
+      "CPP, art. 261",
+      "CPP, art. 263",
+      "CPP, art. 396-A, § 2º",
+      "CPP, art. 564, III, c"
+    ],
+    "precedentes": [
+      "stf-sum-523"
+    ],
+    "detectar": [
+      "Algum ato foi praticado sem a presença de defensor (interrogatório, audiência, julgamento)?",
+      "A resposta à acusação não foi apresentada e o juiz deixou de nomear defensor para oferecê-la (CPP, art. 396-A, § 2º)?",
+      "A defesa anterior foi inerte ou genérica: não arrolou testemunhas, não fez perguntas, apresentou alegações finais sem tese?",
+      "O mesmo defensor patrocinou corréus com versões conflitantes (colidência de defesas)?",
+      "O defensor renunciou e o acusado não foi intimado para constituir outro (Súmula 708 do STF)?"
+    ],
+    "nucleo": "Nenhum acusado pode ser processado ou julgado sem defensor (CPP, art. 261). A falta de defesa é nulidade absoluta. A deficiência da defesa anula o processo quando há prova de prejuízo (Súmula 523 do STF). A {CADH} garante o direito de ser assistido por defensor (art. 8.2, alíneas “d” e “e”). A Corte Interamericana interpreta essa garantia como direito a defesa técnica efetiva: nomear defensor só para cumprir formalidade processual equivale a não ter defesa técnica (Caso Ruano Torres e outros vs. El Salvador, § 157).",
+    "prejuizo": "Na deficiência, descreva a tese que não foi sustentada, a testemunha que não foi arrolada, a prova que não foi requerida ou o recurso que não foi interposto, e mostre a relação com o resultado do processo.",
+    "replicas": [
+      {
+        "a": "Houve defensor nomeado; a deficiência só anula com prova de prejuízo (Súmula 523 do STF).",
+        "r": "Aceite o critério da súmula e cumpra-o: demonstre o prejuízo com fatos do processo. Defesa que se limita a comparecer, sem praticar ato útil, equivale à ausência de defesa."
+      },
+      {
+        "a": "O acusado constituiu o advogado e responde por sua escolha.",
+        "r": "O direito à defesa efetiva é indisponível. O juiz deve zelar por ele e, verificada a inércia, declarar o acusado indefeso e nomear outro defensor."
+      }
+    ],
+    "pedido": "declarar a nulidade dos atos praticados sem defesa efetiva e determinar sua renovação, com a participação de defensor",
+    "pecas": [
+      "nulidade",
+      "hc"
+    ],
+    "texto": [
+      "Nenhum acusado será processado ou julgado sem defensor (art. 261 do {CPP}). A {CF} assegura a ampla defesa, com os meios e recursos a ela inerentes (art. 5º, caput, inciso LV). A {CADH} garante ao acusado o direito de ser assistido por defensor de sua escolha ou por defensor proporcionado pelo Estado (art. 8.2, alíneas d e e).",
+      "{FATO}",
+      "A falta de nomeação de defensor é causa de nulidade (art. 564, caput, inciso III, alínea c, do {CPP})."
+    ],
+    "opcionais": [
+      "stf-sum-708",
+      "stf-sum-707"
+    ],
+    "limites": []
+  },
+  {
+    "id": "acesso-autos",
+    "titulo": "Negativa de acesso da defesa aos elementos de prova já documentados",
+    "secao": "preliminar",
+    "ordem": 24,
+    "natureza": "nulidade (cerceamento de defesa)",
+    "fase": [
+      "investigacao",
+      "denuncia",
+      "instrucao"
+    ],
+    "art5": [
+      "LV",
+      "LXIII"
+    ],
+    "cf_outros": [
+      "art. 133"
+    ],
+    "tratados": [
+      "CADH, art. 8.2.c",
+      "PIDCP, art. 14.3.b"
+    ],
+    "lei": [
+      "Lei nº 8.906, de 1994, art. 7º, XIV"
+    ],
+    "precedentes": [
+      "stf-sv-14"
+    ],
+    "detectar": [
+      "A defesa pediu acesso a mídias, relatórios, dados brutos de interceptação ou de extração de celular e não obteve?",
+      "A denúncia menciona documentos, laudos ou gravações que não estão nos autos?",
+      "O acesso se limitou ao relatório policial, sem a íntegra do material (por exemplo, todos os áudios interceptados)?",
+      "Há autos apartados ou procedimentos sigilosos relacionados aos quais a defesa não teve acesso?"
+    ],
+    "nucleo": "O defensor tem direito de acesso amplo aos elementos de prova já documentados que digam respeito ao exercício do direito de defesa (Súmula Vinculante 14). Sem conhecer a prova, a defesa não pode contraditá-la. A {CADH} assegura tempo e meios adequados para a preparação da defesa.",
+    "prejuizo": "Indique o material sonegado, a data do pedido de acesso, a decisão ou omissão que o negou e o ato que a defesa teve de praticar sem conhecê-lo (resposta à acusação, audiência, alegações finais).",
+    "replicas": [
+      {
+        "a": "As diligências em andamento podem ser mantidas em sigilo.",
+        "r": "A Súmula Vinculante 14 ressalva apenas as diligências ainda não documentadas. O que já está documentado e interessa à defesa deve ser franqueado."
+      },
+      {
+        "a": "A defesa teve acesso ao relatório, que basta.",
+        "r": "O relatório é a seleção feita pela acusação. A paridade de armas exige acesso à íntegra do material de onde ele foi extraído, para que a defesa possa buscar o que a favorece."
+      }
+    ],
+    "pedido": "determinar o acesso integral da defesa aos elementos já documentados, reabrir o prazo para a resposta à acusação e declarar a nulidade dos atos praticados durante a restrição",
+    "pecas": [
+      "resposta",
+      "nulidade",
+      "hc"
+    ],
+    "texto": [
+      "O contraditório e a ampla defesa (art. 5º, caput, inciso LV, da {CF}) pressupõem o conhecimento integral da prova. A {CADH} assegura ao acusado o tempo e os meios adequados para a preparação da defesa (art. 8.2, alínea c). A {L8906} confere ao advogado o direito de examinar autos de investigação de qualquer natureza (art. 7º, caput, inciso XIV).",
+      "{FATO}",
+      "A restrição não se enquadra na ressalva das diligências em andamento, porque o material já está documentado."
+    ],
+    "opcionais": [],
+    "limites": []
+  },
+  {
+    "id": "inepcia",
+    "titulo": "Inépcia da denúncia",
+    "secao": "preliminar",
+    "ordem": 30,
+    "natureza": "rejeição da denúncia",
+    "fase": [
+      "denuncia"
+    ],
+    "art5": [
+      "LIV",
+      "LV"
+    ],
+    "cf_outros": [],
+    "tratados": [
+      "CADH, art. 8.2.b",
+      "PIDCP, art. 14.3.a"
+    ],
+    "lei": [
+      "CPP, art. 41",
+      "CPP, art. 395, I",
+      "CPP, art. 569"
+    ],
+    "precedentes": [],
+    "detectar": [
+      "A denúncia expõe o fato com todas as suas circunstâncias: quem fez, o quê, quando, onde e como (CPP, art. 41)?",
+      "Em concurso de pessoas ou crime societário, a conduta de cada denunciado está descrita, ou a denúncia só menciona o cargo ou a condição de sócio?",
+      "A denúncia descreve o elemento subjetivo? Nos crimes culposos, diz em que consistiu a imprudência, a negligência ou a imperícia?",
+      "O fato narrado corresponde à classificação jurídica indicada?",
+      "A narrativa permite identificar do que o acusado deve se defender?"
+    ],
+    "nucleo": "A denúncia deve conter a exposição do fato criminoso com todas as suas circunstâncias (CPP, art. 41). A exigência serve à defesa: só se pode contestar o que foi descrito. A denúncia que não individualiza a conduta é manifestamente inepta e deve ser rejeitada (CPP, art. 395, I).",
+    "prejuizo": "Mostre o que a omissão impede: sem a descrição da conduta, a defesa não sabe que fato contestar nem que prova produzir.",
+    "replicas": [
+      {
+        "a": "Nos crimes de autoria coletiva admite-se denúncia geral.",
+        "r": "Denúncia geral não é denúncia genérica. Mesmo sem minúcias, a acusação deve indicar o vínculo entre cada denunciado e o fato. A imputação baseada apenas no cargo ou na condição de sócio é responsabilidade penal objetiva."
+      },
+      {
+        "a": "As omissões da denúncia podem ser supridas até a sentença (CPP, art. 569).",
+        "r": "O art. 569 alcança omissões acessórias. A falta de descrição do fato típico ou da conduta individual atinge o núcleo da acusação e não se supre no curso do processo sem aditamento formal e nova oportunidade de defesa."
+      },
+      {
+        "a": "A defesa compreendeu a acusação, tanto que a contestou.",
+        "r": "A defesa responde ao que consegue extrair do texto para não ficar indefesa. Isso não supre o ônus da acusação de descrever o fato."
+      },
+      {
+        "a": "Com a sentença, a alegação de inépcia fica superada.",
+        "r": "Por isso a inépcia deve ser arguida na resposta à acusação e renovada nas alegações finais. O STJ considera prejudicada a discussão depois da sentença condenatória."
+      }
+    ],
+    "pedido": "rejeitar a denúncia por inépcia (CPP, art. 395, I)",
+    "pecas": [
+      "resposta",
+      "hc"
+    ],
+    "texto": [
+      "A denúncia deve conter a exposição do fato criminoso, com todas as suas circunstâncias (art. 41 do {CPP}). A exigência decorre do contraditório e da ampla defesa (art. 5º, caput, inciso LV, da {CF}) e do direito do acusado à comunicação prévia e pormenorizada da acusação (art. 8.2, alínea b, da {CADH}).",
+      "{FATO}",
+      "A denúncia não descreve [INDICAR O ELEMENTO AUSENTE: A CONDUTA INDIVIDUAL DO ACUSADO, AS CIRCUNSTÂNCIAS DE TEMPO E LUGAR, O ELEMENTO SUBJETIVO]. A omissão impede o exercício da defesa, porque não permite saber de que fato o acusado deve se defender. A denúncia é manifestamente inepta e deve ser rejeitada (art. 395, caput, inciso I, do {CPP})."
+    ],
+    "opcionais": [],
+    "limites": []
+  },
+  {
+    "id": "condicao-acao",
+    "titulo": "Falta de pressuposto processual ou de condição da ação penal",
+    "secao": "preliminar",
+    "ordem": 32,
+    "natureza": "rejeição da denúncia",
+    "fase": [
+      "denuncia"
+    ],
+    "art5": [
+      "LIV"
+    ],
+    "cf_outros": [],
+    "tratados": [
+      "CADH, art. 8.4"
+    ],
+    "lei": [
+      "CPP, art. 395, II",
+      "CPP, art. 24 (representação)",
+      "CPP, art. 38 (decadência)",
+      "CPP, art. 18 (inquérito arquivado)"
+    ],
+    "precedentes": [],
+    "detectar": [
+      "O crime é de ação penal pública condicionada? A representação da vítima está nos autos e foi oferecida em seis meses, contados do dia em que ela soube quem é o autor (CPP, art. 38, caput)? Em crime praticado no âmbito de violência doméstica e familiar contra a mulher, o prazo é de doze meses (CPP, art. 38, § 2º, e CP, art. 103, parágrafo único, incluídos pela Lei nº 15.438, de 2026).",
+      "A ação é privada e foi proposta pelo Ministério Público, ou o contrário?",
+      "A denúncia por crime material contra a ordem tributária foi oferecida antes do lançamento definitivo do tributo (Súmula Vinculante 24)?",
+      "Havia inquérito arquivado sobre o mesmo fato e a denúncia veio sem provas novas (Súmula 524 do STF)?",
+      "Existe outro processo em curso ou decisão definitiva sobre o mesmo fato (litispendência ou coisa julgada)?"
+    ],
+    "nucleo": "A denúncia deve ser rejeitada quando faltar pressuposto processual ou condição para o exercício da ação penal (CPP, art. 395, II): legitimidade da parte, representação quando exigida, lançamento definitivo do tributo nos crimes materiais contra a ordem tributária, novas provas para reabrir inquérito arquivado, inexistência de litispendência ou de coisa julgada.",
+    "prejuizo": "A falta de condição da ação impede a própria existência válida do processo; indique o documento que comprova a ausência (data do fato e da representação, certidão do procedimento fiscal, decisão de arquivamento, certidão do outro processo).",
+    "replicas": [
+      {
+        "a": "A representação não exige forma especial.",
+        "r": "Não exige forma, mas exige manifestação inequívoca de vontade no prazo legal. Demonstre, com as datas, que não houve manifestação ou que ela foi tardia."
+      },
+      {
+        "a": "Surgiram provas novas que autorizam a reabertura do inquérito arquivado.",
+        "r": "Prova nova é a que altera o quadro probatório examinado no arquivamento. Compare o que havia na época com o que instrui a denúncia e mostre que nada mudou."
+      }
+    ],
+    "pedido": "rejeitar a denúncia por falta de pressuposto processual ou de condição da ação (CPP, art. 395, II)",
+    "pecas": [
+      "resposta",
+      "hc"
+    ],
+    "texto": [
+      "A denúncia deve ser rejeitada quando faltar pressuposto processual ou condição para o exercício da ação penal (art. 395, caput, inciso II, do {CPP}).",
+      "{FATO}",
+      "Falta, portanto, [INDICAR A CONDIÇÃO AUSENTE: REPRESENTAÇÃO TEMPESTIVA, LEGITIMIDADE DA PARTE, LANÇAMENTO DEFINITIVO DO TRIBUTO, PROVAS NOVAS APÓS O ARQUIVAMENTO], sem a qual a ação penal não pode prosseguir."
+    ],
+    "opcionais": [
+      "stf-sv-24",
+      "stf-sum-524"
+    ],
+    "limites": []
+  },
+  {
+    "id": "fundamentacao",
+    "titulo": "Decisão sem fundamentação",
+    "secao": "preliminar",
+    "ordem": 63,
+    "natureza": "nulidade",
+    "fase": [
+      "denuncia",
+      "instrucao",
+      "sentenca",
+      "prisao"
+    ],
+    "art5": [
+      "LIV",
+      "LXI"
+    ],
+    "cf_outros": [
+      "art. 93, IX"
+    ],
+    "tratados": [
+      "CADH, art. 8.1"
+    ],
+    "lei": [
+      "CPP, art. 315, § 2º",
+      "CPP, art. 564, V",
+      "CPP, art. 381, III"
+    ],
+    "precedentes": [],
+    "detectar": [
+      "A decisão que examinou a resposta à acusação enfrentou as teses da defesa, ou usou fórmula genérica (por exemplo, “as matérias se confundem com o mérito”)?",
+      "A decisão que decretou prisão, busca, quebra de sigilo ou interceptação aponta fatos concretos do caso?",
+      "A decisão se limita a reproduzir ou parafrasear a lei, usa conceitos indeterminados sem explicar por que incidem, ou invoca motivos que serviriam para qualquer outra decisão (CPP, art. 315, § 2º)?",
+      "A decisão deixou de enfrentar argumento da defesa capaz, em tese, de mudar a conclusão?"
+    ],
+    "nucleo": "Todas as decisões judiciais devem ser fundamentadas, sob pena de nulidade (Constituição, art. 93, IX). O CPP descreve o que não se considera fundamentação (art. 315, § 2º) e inclui a decisão carente de fundamentação entre as causas de nulidade (art. 564, V).",
+    "prejuizo": "Indique a tese defensiva que ficou sem exame e mostre que, se acolhida, ela mudaria o resultado (rejeição da denúncia, absolvição sumária, revogação da prisão).",
+    "replicas": [
+      {
+        "a": "A decisão que mantém o recebimento da denúncia dispensa fundamentação exaustiva.",
+        "r": "Fundamentação sucinta não é ausência de fundamentação. Apresentadas teses de absolvição sumária, o juiz deve enfrentá-las, ainda que de forma breve; o uso de fórmula padronizada equivale a não decidir."
+      },
+      {
+        "a": "A fundamentação por remissão a outra peça é válida.",
+        "r": "A remissão é admitida quando a decisão indica por que adota a peça referida e quando essa peça enfrenta os pontos da defesa. Mostre que nenhuma das duas condições foi atendida."
+      }
+    ],
+    "pedido": "declarar a nulidade da decisão e determinar que outra seja proferida, com o exame das teses da defesa",
+    "pecas": [
+      "nulidade",
+      "hc"
+    ],
+    "texto": [
+      "Todas as decisões do Poder Judiciário devem ser fundamentadas, sob pena de nulidade (art. 93, caput, inciso IX, da {CF}). O {CPP} não considera fundamentada a decisão que se limita a indicar ou parafrasear ato normativo, que emprega conceitos jurídicos indeterminados sem explicar o motivo concreto de sua incidência, que invoca motivos que serviriam para justificar qualquer outra decisão ou que não enfrenta os argumentos capazes de infirmar a conclusão adotada (art. 315, § 2º). A decisão carente de fundamentação é nula (art. 564, caput, inciso V, do {CPP}).",
+      "{FATO}",
+      "A decisão não examinou [INDICAR A TESE DEFENSIVA NÃO ENFRENTADA], argumento capaz de alterar a conclusão."
+    ],
+    "opcionais": [],
+    "limites": []
+  }
+]

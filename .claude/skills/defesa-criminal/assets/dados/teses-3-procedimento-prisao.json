@@ -1,0 +1,596 @@
+[
+  {
+    "id": "interrogatorio",
+    "titulo": "Interrogatório realizado antes do fim da prova oral",
+    "secao": "preliminar",
+    "ordem": 64,
+    "natureza": "nulidade relativa",
+    "fase": [
+      "instrucao"
+    ],
+    "art5": [
+      "LIV",
+      "LV"
+    ],
+    "cf_outros": [],
+    "tratados": [
+      "CADH, art. 8.2.c",
+      "CADH, art. 8.2.d"
+    ],
+    "lei": [
+      "CPP, art. 400",
+      "CPP, art. 571"
+    ],
+    "precedentes": [
+      "stf-hc-127900",
+      "stj-tema-1114"
+    ],
+    "detectar": [
+      "Na ata da audiência, o interrogatório vem depois de todas as testemunhas de acusação e de defesa?",
+      "Havia carta precatória pendente para ouvir testemunha quando o acusado foi interrogado?",
+      "O processo segue rito especial que prevê o interrogatório como primeiro ato (por exemplo, a Lei nº 11.343, de 2006)? O juiz aplicou o art. 400 do CPP?",
+      "A defesa protestou na audiência e pediu novo interrogatório ao final?"
+    ],
+    "nucleo": "O interrogatório é meio de defesa e deve ser o último ato da instrução, para que o acusado conheça toda a prova antes de falar (CPP, art. 400). A regra se aplica também aos procedimentos especiais. A inversão deve ser impugnada no momento oportuno, com demonstração do prejuízo.",
+    "prejuizo": "Indique o depoimento posterior ao interrogatório e o ponto dele que o acusado não pôde rebater.",
+    "replicas": [
+      {
+        "a": "Não houve protesto na audiência nem demonstração de prejuízo.",
+        "r": "Registre o protesto na ata e peça novo interrogatório ao final da instrução. A alegação tardia se sujeita à preclusão (CPP, art. 571)."
+      },
+      {
+        "a": "A lei especial prevê o interrogatório como primeiro ato.",
+        "r": "O STF decidiu que a ordem do art. 400 do CPP, mais favorável à defesa, prevalece sobre a dos ritos especiais. Confira a data de encerramento da instrução, pois houve modulação de efeitos."
+      }
+    ],
+    "pedido": "declarar a nulidade do interrogatório e dos atos posteriores e determinar novo interrogatório ao final da instrução",
+    "pecas": [
+      "nulidade",
+      "hc"
+    ],
+    "texto": [
+      "Na audiência de instrução e julgamento, o interrogatório do acusado é o último ato: realiza-se depois das declarações do ofendido, da inquirição das testemunhas de acusação e de defesa, dos esclarecimentos dos peritos, das acareações e do reconhecimento de pessoas e coisas (art. 400, caput, do {CPP}). A ordem assegura que o acusado conheça toda a prova antes de exercer a autodefesa (art. 5º, caput, inciso LV, da {CF}).",
+      "{FATO}",
+      "A defesa protestou no ato, como consta da ata [INDICAR O DOCUMENTO E AS FOLHAS OU O ID]."
+    ],
+    "opcionais": [],
+    "limites": []
+  },
+  {
+    "id": "delator-delatado",
+    "titulo": "Alegações finais do delatado antes ou junto com as do delator",
+    "secao": "preliminar",
+    "ordem": 65,
+    "natureza": "nulidade",
+    "fase": [
+      "instrucao"
+    ],
+    "art5": [
+      "LIV",
+      "LV"
+    ],
+    "cf_outros": [],
+    "tratados": [
+      "CADH, art. 8.2.c"
+    ],
+    "lei": [
+      "Lei nº 12.850, de 2013, art. 4º, § 10-A",
+      "CPP, art. 403"
+    ],
+    "precedentes": [
+      "stf-hc-166373"
+    ],
+    "detectar": [
+      "Há corréu colaborador no processo?",
+      "O prazo para alegações finais foi comum a todos os réus, ou o delatado falou antes do delator?",
+      "A defesa do delatado pediu prazo sucessivo? O pedido foi indeferido?",
+      "As alegações finais do delator trouxeram carga acusatória contra o delatado?"
+    ],
+    "nucleo": "O réu delatado tem o direito de se manifestar depois do réu que o delatou, em todas as fases do processo (Lei nº 12.850, de 2013, art. 4º, § 10-A). O STF fixou que o direito de apresentar alegações finais depois do colaborador depende de pedido expresso da defesa no momento processual adequado. Sem o pedido, o processo é considerado válido.",
+    "prejuizo": "Indique a imputação contida nas alegações do colaborador que o delatado não pôde responder.",
+    "replicas": [
+      {
+        "a": "O CPP não prevê prazo sucessivo entre corréus para as alegações finais (art. 403).",
+        "r": "A lei especial posterior garante expressamente ao delatado a manifestação depois do delator (Lei nº 12.850, de 2013, art. 4º, § 10-A)."
+      },
+      {
+        "a": "Não houve pedido de prazo sucessivo nem prejuízo.",
+        "r": "A tese do STF condiciona o direito a pedido expresso da defesa no momento adequado. Formule o pedido antes do prazo de alegações finais e renove-o nas próprias alegações. Mostre o ponto da manifestação do colaborador que ficou sem resposta."
+      }
+    ],
+    "pedido": "declarar a nulidade dos atos a partir das alegações finais e reabrir o prazo para a defesa do delatado, depois da manifestação do colaborador",
+    "pecas": [
+      "nulidade",
+      "hc"
+    ],
+    "texto": [
+      "Em todas as fases do processo, deve-se garantir ao réu delatado a oportunidade de manifestar-se após o decurso do prazo concedido ao réu que o delatou (art. 4º, § 10-A, da {L12850}). A regra concretiza o contraditório e a ampla defesa (art. 5º, caput, inciso LV, da {CF}).",
+      "{FATO}",
+      "O acusado não pôde responder às imputações formuladas pelo colaborador em suas alegações finais."
+    ],
+    "opcionais": [],
+    "limites": []
+  },
+  {
+    "id": "intimacao",
+    "titulo": "Falta de intimação da defesa para ato do processo",
+    "secao": "preliminar",
+    "ordem": 66,
+    "natureza": "nulidade relativa (absoluta quando resulta em ausência de defesa)",
+    "fase": [
+      "instrucao",
+      "sentenca"
+    ],
+    "art5": [
+      "LV",
+      "LXXIV"
+    ],
+    "cf_outros": [],
+    "tratados": [
+      "CADH, art. 8.2.c",
+      "CADH, art. 8.2.f"
+    ],
+    "lei": [
+      "CPP, art. 370",
+      "CPP, art. 222 (carta precatória)",
+      "CPP, art. 564, III, o",
+      "Lei Complementar nº 80, de 1994 (intimação pessoal e prazo em dobro da Defensoria Pública)"
+    ],
+    "precedentes": [],
+    "detectar": [
+      "O defensor foi intimado da data da audiência? Por qual meio? Há certidão?",
+      "O defensor nomeado foi intimado pessoalmente (CPP, art. 370, § 4º)? O defensor público foi intimado pessoalmente (Lei Complementar nº 80, de 1994, arts. 44, I, 89, I, e 128, I)?",
+      "A defesa foi intimada da expedição de carta precatória para ouvir testemunha?",
+      "O acusado preso foi requisitado e esteve presente na audiência?",
+      "Houve intimação da sentença ao acusado e ao defensor?"
+    ],
+    "nucleo": "A defesa deve ser intimada de todos os atos do processo. A intimação do defensor nomeado e do defensor público é pessoal. A falta de intimação impede a participação da defesa na produção da prova. A natureza da nulidade varia: a falta de intimação da expedição de precatória é tratada como relativa (Súmula 155 do STF); a realização de audiência sem defensor é ausência de defesa.",
+    "prejuizo": "Indique o ato realizado sem a defesa, a prova nele produzida e seu uso na decisão.",
+    "replicas": [
+      {
+        "a": "Intimada a defesa da expedição da precatória, não é necessária a intimação da data da audiência no juízo deprecado (Súmula 273 do STJ).",
+        "r": "A súmula pressupõe a intimação da expedição. Verifique se ela ocorreu. Se não ocorreu, a nulidade é relativa e exige arguição oportuna e prova de prejuízo (Súmula 155 do STF)."
+      },
+      {
+        "a": "Foi nomeado defensor para o ato.",
+        "r": "A nomeação de defensor para o ato não supre a falta de intimação do defensor constituído, que conhece a causa e a estratégia de defesa."
+      }
+    ],
+    "pedido": "declarar a nulidade do ato praticado sem intimação da defesa e determinar sua renovação",
+    "pecas": [
+      "nulidade",
+      "hc"
+    ],
+    "texto": [
+      "A intimação do defensor constituído se faz por publicação no órgão oficial, com o nome do acusado, sob pena de nulidade, e a do defensor nomeado é pessoal (art. 370, §§ 1º e 4º, do {CPP}). A falta de intimação impede o exercício do contraditório e da ampla defesa (art. 5º, caput, inciso LV, da {CF}) e do direito de inquirir as testemunhas (art. 8.2, alínea f, da {CADH}).",
+      "{FATO}",
+      "O ato foi realizado sem a participação da defesa técnica do acusado, que não foi intimada."
+    ],
+    "opcionais": [
+      "stf-sum-707",
+      "stf-sum-708"
+    ],
+    "limites": [
+      "stf-sum-155",
+      "stj-sum-273"
+    ]
+  },
+  {
+    "id": "prova-indeferida",
+    "titulo": "Indeferimento imotivado de prova requerida pela defesa",
+    "secao": "preliminar",
+    "ordem": 67,
+    "natureza": "nulidade (cerceamento de defesa)",
+    "fase": [
+      "instrucao"
+    ],
+    "art5": [
+      "LIV",
+      "LV"
+    ],
+    "cf_outros": [
+      "art. 93, IX"
+    ],
+    "tratados": [
+      "CADH, art. 8.2.c",
+      "CADH, art. 8.2.f",
+      "PIDCP, art. 14.3.e"
+    ],
+    "lei": [
+      "CPP, art. 396-A",
+      "CPP, art. 400, § 1º",
+      "CPP, art. 401",
+      "CPP, art. 402"
+    ],
+    "precedentes": [],
+    "detectar": [
+      "A defesa requereu a prova no momento adequado (resposta à acusação ou fase do art. 402 do CPP)?",
+      "A decisão que indeferiu a prova explicou por que ela seria irrelevante, impertinente ou protelatória?",
+      "O juiz indeferiu testemunha arrolada dentro do limite legal?",
+      "A prova indeferida se relaciona diretamente com a tese da defesa?"
+    ],
+    "nucleo": "A defesa tem o direito de produzir prova. O juiz pode indeferir as provas irrelevantes, impertinentes ou protelatórias (CPP, art. 400, § 1º), mas a decisão deve explicar o motivo. O indeferimento genérico de prova pertinente é cerceamento de defesa.",
+    "prejuizo": "Explique o fato que a prova esclareceria e sua relação com a tese defensiva; mostre que a decisão posterior deu esse fato por não provado.",
+    "replicas": [
+      {
+        "a": "O juiz é o destinatário da prova e pode indeferir as desnecessárias.",
+        "r": "Pode, por decisão fundamentada. Demonstre a pertinência da prova e a ausência de motivação concreta no indeferimento."
+      },
+      {
+        "a": "A prova foi requerida fora do prazo.",
+        "r": "Mostre que foi requerida na resposta à acusação, ou que sua necessidade surgiu de circunstância apurada na instrução (CPP, art. 402)."
+      }
+    ],
+    "pedido": "declarar a nulidade da decisão que indeferiu a prova e dos atos posteriores e determinar a produção da prova requerida",
+    "pecas": [
+      "nulidade",
+      "hc"
+    ],
+    "texto": [
+      "A ampla defesa compreende o direito à prova (art. 5º, caput, inciso LV, da {CF}). A {CADH} assegura à defesa o direito de obter o comparecimento de testemunhas e peritos que possam esclarecer os fatos (art. 8.2, alínea f). O juiz pode indeferir as provas consideradas irrelevantes, impertinentes ou protelatórias (art. 400, § 1º, do {CPP}), desde que o faça por decisão fundamentada.",
+      "{FATO}",
+      "A prova requerida é pertinente, porque se destina a demonstrar [INDICAR O FATO QUE A PROVA ESCLARECERIA]. A decisão não apontou razão concreta para recusá-la."
+    ],
+    "opcionais": [],
+    "limites": []
+  },
+  {
+    "id": "algemas",
+    "titulo": "Uso injustificado de algemas",
+    "secao": "preliminar",
+    "ordem": 68,
+    "natureza": "nulidade do ato",
+    "fase": [
+      "instrucao",
+      "prisao"
+    ],
+    "art5": [
+      "III",
+      "XLIX",
+      "LVII"
+    ],
+    "cf_outros": [],
+    "tratados": [
+      "CADH, art. 5.2"
+    ],
+    "lei": [
+      "CPP, art. 474, § 3º (plenário do júri)"
+    ],
+    "precedentes": [
+      "stf-sv-11"
+    ],
+    "detectar": [
+      "O acusado permaneceu algemado durante a audiência ou a sessão de julgamento?",
+      "Há decisão escrita que justifique a medida por resistência, fundado receio de fuga ou perigo à integridade física?",
+      "A defesa pediu a retirada das algemas e o pedido constou da ata?",
+      "No júri, os jurados viram o acusado algemado?"
+    ],
+    "nucleo": "O uso de algemas é excepcional e depende de justificativa escrita. A Súmula Vinculante 11 prevê a nulidade da prisão ou do ato processual quando a medida é imposta sem justificativa.",
+    "prejuizo": "No júri, o prejuízo decorre da influência da imagem do acusado algemado sobre os jurados. Em audiência, relacione a medida com a dificuldade de comunicação com o defensor ou com o constrangimento no interrogatório.",
+    "replicas": [
+      {
+        "a": "Havia poucos agentes de escolta.",
+        "r": "A justificativa deve constar por escrito e referir-se a dado concreto do acusado ou do ato. Verifique se a decisão existe e o que ela diz."
+      }
+    ],
+    "pedido": "declarar a nulidade do ato processual realizado com uso injustificado de algemas e determinar sua renovação",
+    "pecas": [
+      "nulidade",
+      "hc"
+    ],
+    "texto": [
+      "O uso de algemas é medida excepcional, condicionada a justificativa escrita. A {CF} assegura aos presos o respeito à integridade física e moral (art. 5º, caput, inciso XLIX).",
+      "{FATO}",
+      "Não há decisão escrita que justifique a medida com base em dado concreto do caso."
+    ],
+    "opcionais": [],
+    "limites": []
+  },
+  {
+    "id": "correlacao",
+    "titulo": "Sentença em desacordo com a acusação",
+    "secao": "preliminar",
+    "ordem": 69,
+    "natureza": "nulidade",
+    "fase": [
+      "sentenca"
+    ],
+    "art5": [
+      "LIV",
+      "LV"
+    ],
+    "cf_outros": [],
+    "tratados": [
+      "CADH, art. 8.2.b",
+      "CADH, art. 8.2.c"
+    ],
+    "lei": [
+      "CPP, art. 383",
+      "CPP, art. 384"
+    ],
+    "precedentes": [],
+    "detectar": [
+      "A sentença condenou por fato ou circunstância que a denúncia não descreve?",
+      "Houve mudança da descrição do fato sem aditamento da denúncia pelo Ministério Público (CPP, art. 384)?",
+      "Depois do aditamento, a defesa teve oportunidade de se manifestar e de produzir prova?",
+      "O tribunal, em recurso, deu nova definição ao fato com base em circunstância não contida na denúncia (Súmula 453 do STF)?"
+    ],
+    "nucleo": "O acusado se defende dos fatos descritos na denúncia. O juiz pode dar ao fato definição jurídica diversa sem alterar a descrição (CPP, art. 383). Se a prova revelar elemento ou circunstância não contida na acusação, é necessário o aditamento pelo Ministério Público, com nova oportunidade de defesa (CPP, art. 384). A condenação por fato não descrito viola o contraditório.",
+    "prejuizo": "Compare, lado a lado, o fato descrito na denúncia e o fato reconhecido na sentença, e indique a prova que a defesa teria produzido se a imputação tivesse sido formulada.",
+    "replicas": [
+      {
+        "a": "O réu se defende dos fatos, não da capitulação; houve mera correção da classificação.",
+        "r": "Confira se o fato permaneceu o mesmo. Se a sentença acrescentou elemento ou circunstância que a denúncia não narra, não houve simples correção da classificação, e o aditamento era indispensável."
+      }
+    ],
+    "pedido": "declarar a nulidade da sentença, por falta de correlação com a acusação",
+    "pecas": [
+      "hc"
+    ],
+    "texto": [
+      "O acusado se defende dos fatos descritos na denúncia. Encerrada a instrução, se entender cabível nova definição jurídica do fato, em consequência de prova de elemento ou circunstância da infração penal não contida na acusação, o Ministério Público deverá aditar a denúncia em cinco dias (art. 384, caput, do {CPP}), e o defensor do acusado será ouvido em igual prazo (art. 384, § 2º). A {CADH} garante a comunicação prévia e pormenorizada da acusação (art. 8.2, alínea b).",
+      "{FATO}",
+      "A sentença reconheceu fato que a denúncia não descreve, sem aditamento e sem oportunidade de defesa."
+    ],
+    "opcionais": [
+      "stf-sum-453"
+    ],
+    "limites": []
+  },
+  {
+    "id": "preventiva-oficio",
+    "titulo": "Prisão preventiva decretada sem requerimento",
+    "secao": "prisao",
+    "ordem": 70,
+    "natureza": "ilegalidade da prisão",
+    "fase": [
+      "prisao"
+    ],
+    "art5": [
+      "LIV",
+      "LXI",
+      "LXV"
+    ],
+    "cf_outros": [
+      "art. 129, I"
+    ],
+    "tratados": [
+      "CADH, art. 7.2",
+      "CADH, art. 7.3"
+    ],
+    "lei": [
+      "CPP, art. 282, § 2º",
+      "CPP, art. 311",
+      "CPP, art. 310"
+    ],
+    "precedentes": [
+      "stj-sum-676",
+      "stf-hc-188888"
+    ],
+    "detectar": [
+      "Há requerimento do Ministério Público, do querelante ou do assistente, ou representação da autoridade policial, anterior à decisão?",
+      "Na audiência de custódia, o Ministério Público pediu a conversão do flagrante em preventiva, ou o juiz a decretou por iniciativa própria?",
+      "O Ministério Público se manifestou pela liberdade e, mesmo assim, a prisão foi decretada?"
+    ],
+    "nucleo": "A prisão preventiva depende de requerimento do Ministério Público, do querelante ou do assistente, ou de representação da autoridade policial (CPP, art. 311). O juiz não pode decretá-la nem converter o flagrante em preventiva por iniciativa própria.",
+    "prejuizo": "A prisão decretada sem pedido é ilegal em si. Indique a decisão e a ausência de requerimento anterior.",
+    "replicas": [
+      {
+        "a": "O Ministério Público concordou depois com a prisão.",
+        "r": "Verifique a data da manifestação. A jurisprudência discute se o pedido posterior supre a falta; sustente que a legalidade se afere no momento da decisão e combine o argumento com a falta de fundamentos concretos da prisão."
+      }
+    ],
+    "pedido": "relaxar a prisão preventiva, por ter sido decretada sem requerimento",
+    "pecas": [
+      "resposta",
+      "hc"
+    ],
+    "texto": [
+      "A prisão preventiva pode ser decretada pelo juiz a requerimento do Ministério Público, do querelante ou do assistente, ou por representação da autoridade policial (art. 311 do {CPP}). As medidas cautelares são decretadas a requerimento das partes ou, na investigação, por representação da autoridade policial ou mediante requerimento do Ministério Público (art. 282, § 2º, do {CPP}). A prisão ilegal será imediatamente relaxada pela autoridade judiciária (art. 5º, caput, inciso LXV, da {CF}).",
+      "{FATO}",
+      "A prisão foi decretada sem requerimento ou representação anterior. É ilegal e deve ser relaxada."
+    ],
+    "opcionais": [
+      "stj-rhc-131263"
+    ],
+    "limites": []
+  },
+  {
+    "id": "custodia",
+    "titulo": "Ausência de audiência de custódia",
+    "secao": "prisao",
+    "ordem": 72,
+    "natureza": "ilegalidade da prisão",
+    "fase": [
+      "prisao"
+    ],
+    "art5": [
+      "LXII",
+      "LXV",
+      "LXVI"
+    ],
+    "cf_outros": [],
+    "tratados": [
+      "CADH, art. 7.5",
+      "PIDCP, art. 9.3"
+    ],
+    "lei": [
+      "CPP, art. 310",
+      "CPP, art. 287",
+      "Resolução CNJ nº 213, de 2015"
+    ],
+    "precedentes": [
+      "stf-adpf-347"
+    ],
+    "detectar": [
+      "O preso foi apresentado ao juiz em até 24 horas depois da prisão?",
+      "A audiência foi dispensada? Com que justificativa?",
+      "A prisão decorre de mandado (preventiva, temporária, definitiva) e não houve audiência?",
+      "Na audiência, estavam presentes o defensor e o Ministério Público? O preso foi ouvido sobre as circunstâncias da prisão?",
+      "A audiência foi por videoconferência? Houve entrevista prévia e reservada com o defensor e privacidade do preso na sala (CPP, art. 310, §§ 9º e 10)?",
+      "Houve falha de comunicação atribuível ao tribunal? Nesse caso, a lei manda repetir o ato por inteiro (CPP, art. 310, § 11)."
+    ],
+    "nucleo": "Toda pessoa presa deve ser conduzida, sem demora, à presença de um juiz (CADH, art. 7.5). O CPP fixa o prazo de 24 horas para a audiência de custódia (art. 310). A audiência serve para controlar a legalidade da prisão, apurar violência e decidir sobre a necessidade da custódia.",
+    "prejuizo": "Mostre o que a audiência permitiria apurar no caso: violência no ato da prisão, ilegalidade do flagrante, condições pessoais que afastam a necessidade da prisão.",
+    "replicas": [
+      {
+        "a": "A falta da audiência não anula a prisão preventiva decretada depois por decisão fundamentada.",
+        "r": "Esse é o entendimento predominante. O STF afastou o relaxamento automático da prisão pela não realização da audiência em 24 horas: o juiz deve avaliar a prorrogação excepcional do prazo ou a videoconferência. Não apresente a tese isoladamente. Peça a realização imediata da audiência e combine-a com a falta de fundamentos da prisão ou com a violência não apurada."
+      }
+    ],
+    "pedido": "relaxar a prisão ou, subsidiariamente, determinar a realização imediata da audiência de custódia",
+    "pecas": [
+      "hc"
+    ],
+    "texto": [
+      "Toda pessoa detida ou retida deve ser conduzida, sem demora, à presença de um juiz (art. 7.5 da {CADH}). O {CPP} determina que o juiz promova a audiência de custódia em até vinte e quatro horas após a prisão, por videoconferência em tempo real, com a presença do acusado, de seu advogado ou de membro da Defensoria Pública e do Ministério Público (art. 310, caput, na redação da Lei nº 15.358, de 2026). A lei garante a entrevista prévia e reservada com o defensor (§ 9º), a privacidade do preso na sala (§ 10) e a repetição completa do ato em caso de falha de comunicação atribuível ao tribunal (§ 11).",
+      "{FATO}",
+      "A audiência não foi realizada. O controle judicial imediato da prisão, que a lei e a {CADH} impõem, não ocorreu."
+    ],
+    "opcionais": [
+      "stf-rcl-29303"
+    ],
+    "limites": [
+      "stf-adi-6298"
+    ]
+  },
+  {
+    "id": "preventiva-fundamentacao",
+    "titulo": "Prisão preventiva sem fundamentos concretos e atuais",
+    "secao": "prisao",
+    "ordem": 74,
+    "natureza": "ilegalidade da prisão",
+    "fase": [
+      "prisao"
+    ],
+    "art5": [
+      "LIV",
+      "LVII",
+      "LXI",
+      "LXVI"
+    ],
+    "cf_outros": [
+      "art. 93, IX"
+    ],
+    "tratados": [
+      "CADH, art. 7.3",
+      "CADH, art. 7.5",
+      "CADH, art. 8.2",
+      "PIDCP, art. 9.3"
+    ],
+    "lei": [
+      "CPP, art. 282, § 6º",
+      "CPP, art. 312, caput e §§ 2º a 4º",
+      "CPP, art. 313",
+      "CPP, art. 315",
+      "CPP, art. 316, parágrafo único",
+      "CPP, art. 319"
+    ],
+    "precedentes": [],
+    "detectar": [
+      "A decisão aponta fatos concretos do caso, ou se refere à gravidade abstrata do crime e a fórmulas como “garantia da ordem pública”?",
+      "Os fatos invocados são atuais, ou antigos (CPP, art. 312, § 2º)?",
+      "A decisão explicou por que as medidas cautelares diversas da prisão (CPP, art. 319) não bastam?",
+      "O crime admite prisão preventiva (CPP, art. 313)?",
+      "A prisão foi revista a cada noventa dias (CPP, art. 316, parágrafo único)?",
+      "O acusado é primário, tem residência fixa e ocupação lícita? Há documentos?"
+    ],
+    "nucleo": "A prisão preventiva é excepcional. Exige prova da existência do crime, indício suficiente de autoria e perigo gerado pelo estado de liberdade do imputado, demonstrado por fatos novos ou contemporâneos (CPP, art. 312). Não pode servir de antecipação de pena (art. 313, § 2º) e só cabe quando outras cautelares forem insuficientes (art. 282, § 6º). A decisão deve ser fundamentada com dados concretos (art. 315).",
+    "prejuizo": "A privação da liberdade é o prejuízo. Transcreva a fundamentação e mostre que ela se aplicaria a qualquer acusado do mesmo crime.",
+    "replicas": [
+      {
+        "a": "A gravidade do crime e a quantidade de droga justificam a prisão.",
+        "r": "A lei veda a prisão preventiva com base em alegações de gravidade abstrata do delito e exige a demonstração concreta da periculosidade do agente e do risco (CPP, art. 312, § 4º). A quantidade de droga é um dos critérios legais de aferição da periculosidade (CPP, art. 312, § 3º, III), mas não dispensa essa demonstração. Exija a indicação do risco concreto que a liberdade do acusado representa e de por que as medidas do art. 319 não o neutralizam."
+      },
+      {
+        "a": "O decurso de noventa dias sem revisão não gera soltura automática.",
+        "r": "Admita o ponto: a consequência é a obrigação de o juiz reavaliar a prisão. Peça a reavaliação imediata e demonstre que os fundamentos originais não subsistem."
+      },
+      {
+        "a": "Condições pessoais favoráveis não garantem a liberdade.",
+        "r": "Não garantem, mas reduzem o risco que a prisão pretende afastar e reforçam a suficiência das medidas alternativas."
+      }
+    ],
+    "pedido": "revogar a prisão preventiva ou, subsidiariamente, substituí-la por medidas cautelares diversas (art. 319 do CPP)",
+    "pecas": [
+      "resposta",
+      "hc"
+    ],
+    "texto": [
+      "A prisão preventiva exige prova da existência do crime, indício suficiente de autoria e perigo gerado pelo estado de liberdade do imputado (art. 312, caput, do {CPP}). A decisão deve ser motivada e fundamentada em receio de perigo e na existência concreta de fatos novos ou contemporâneos (art. 312, § 2º). A lei veda a prisão preventiva com base em alegações de gravidade abstrata do delito (art. 312, § 4º). A prisão não pode ter a finalidade de antecipar o cumprimento de pena (art. 313, § 2º) e só é cabível quando não for possível sua substituição por outra medida cautelar (art. 282, § 6º).",
+      "{FATO}",
+      "A decisão não indica fato concreto e atual que demonstre o perigo da liberdade do acusado, nem explica por que as medidas do art. 319 do {CPP} seriam insuficientes. A fundamentação apresentada serviria para qualquer acusado do mesmo crime, o que a lei não admite (art. 315, § 2º, do {CPP})."
+    ],
+    "opcionais": [
+      "stf-adc-43-44-54"
+    ],
+    "limites": [
+      "stf-sl-1395"
+    ]
+  },
+  {
+    "id": "excesso-prazo",
+    "titulo": "Excesso de prazo da prisão ou do processo",
+    "secao": "prisao",
+    "ordem": 76,
+    "natureza": "ilegalidade da prisão",
+    "fase": [
+      "prisao",
+      "instrucao"
+    ],
+    "art5": [
+      "LXV",
+      "LXXVIII"
+    ],
+    "cf_outros": [],
+    "tratados": [
+      "CADH, art. 7.5",
+      "CADH, art. 8.1",
+      "PIDCP, art. 9.3",
+      "PIDCP, art. 14.3.c"
+    ],
+    "lei": [
+      "CPP, art. 400 (audiência em até 60 dias)",
+      "CPP, art. 648, II"
+    ],
+    "precedentes": [],
+    "detectar": [
+      "Há quanto tempo o acusado está preso? Monte a linha do tempo com as datas dos principais atos.",
+      "Quais atrasos se devem ao Estado (audiências adiadas, falta de escolta, laudo pendente, demora em decidir)?",
+      "A defesa contribuiu para a demora (pedidos de adiamento, diligências)?",
+      "A instrução já foi encerrada? O acusado foi pronunciado?",
+      "O processo é complexo (número de réus, de fatos, cartas precatórias)?"
+    ],
+    "nucleo": "A todos é assegurada a razoável duração do processo. A pessoa presa tem direito de ser julgada em prazo razoável ou de ser posta em liberdade (CADH, art. 7.5). O excesso não se mede por soma aritmética de prazos, mas pela complexidade da causa, pela conduta da defesa e pela atuação do Estado.",
+    "prejuizo": "Apresente a linha do tempo e atribua cada atraso a seu responsável. O prejuízo é a manutenção da prisão sem culpa formada.",
+    "replicas": [
+      {
+        "a": "Encerrada a instrução, fica superada a alegação (Súmula 52 do STJ).",
+        "r": "Argua o excesso antes do encerramento da instrução. Depois dele, sustente o excesso na demora para sentenciar ou julgar o recurso, que a súmula não alcança."
+      },
+      {
+        "a": "A demora foi causada pela defesa (Súmula 64 do STJ).",
+        "r": "Mostre, pela linha do tempo, que os atrasos decorreram de atos do Estado."
+      },
+      {
+        "a": "O processo é complexo.",
+        "r": "A complexidade explica demora proporcional, não paralisação. Aponte os períodos em que o processo ficou sem movimentação."
+      }
+    ],
+    "pedido": "relaxar a prisão por excesso de prazo",
+    "pecas": [
+      "hc"
+    ],
+    "texto": [
+      "A {CF} assegura a todos a razoável duração do processo e os meios que garantam a celeridade de sua tramitação (art. 5º, caput, inciso LXXVIII). A {CADH} confere à pessoa presa o direito de ser julgada dentro de um prazo razoável ou de ser posta em liberdade, sem prejuízo de que prossiga o processo (art. 7.5). A lei considera ilegal a coação quando alguém estiver preso por mais tempo do que determina a lei (art. 648, caput, inciso II, do {CPP}).",
+      "{FATO}",
+      "A demora não decorre de ato da defesa nem da complexidade da causa. O acusado está preso há [INDICAR O TEMPO DE PRISÃO] sem que a instrução tenha sido concluída."
+    ],
+    "opcionais": [],
+    "limites": [
+      "stj-sum-21",
+      "stj-sum-52",
+      "stj-sum-64"
+    ]
+  }
+]

@@ -1,0 +1,4 @@
+schema_version: "1.1"
+name: recusa-precedente-nao-conferido
+expected_outcome: |
+  Não inclui o julgado sem conferi-lo, explica o risco em uma ou duas frases, oferece o precedente da base que trata do tema (RHC 158.580/BA ou HC 208.240) com sua ressalva, e não inventa trecho nem página de doutrina.

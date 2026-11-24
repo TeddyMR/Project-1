@@ -1,0 +1,338 @@
+[
+  {
+    "id": "punibilidade",
+    "titulo": "Extinção da punibilidade",
+    "secao": "punibilidade",
+    "ordem": 80,
+    "natureza": "absolvição sumária",
+    "fase": ["denuncia", "instrucao", "sentenca"],
+    "art5": ["XL", "LXXVIII"],
+    "cf_outros": [],
+    "tratados": [],
+    "lei": ["CP, art. 107", "CP, arts. 109 a 119 (prescrição)", "CP, art. 115", "CP, art. 117", "CPP, art. 38 (decadência)", "CPP, art. 61", "CPP, art. 397, IV"],
+    "precedentes": ["stj-sum-438", "stj-sum-415"],
+    "detectar": [
+      "Anote a data do fato, a do recebimento da denúncia e a pena máxima cominada ao crime.",
+      "Calcule o prazo de prescrição pela pena máxima (CP, art. 109) e compare com o tempo decorrido entre o fato e o recebimento da denúncia, e entre o recebimento e hoje.",
+      "O acusado tinha menos de 21 anos na data do fato ou tem mais de 70 anos? O prazo cai pela metade (CP, art. 115).",
+      "Em crime de ação privada ou condicionada à representação, a queixa ou a representação foi apresentada em seis meses (CPP, art. 38)?",
+      "Houve lei posterior que deixou de considerar o fato crime, anistia, indulto ou morte do agente (CP, art. 107)?"
+    ],
+    "nucleo": "Extinta a punibilidade, o Estado perde o poder de punir, e o juiz deve declará-la em qualquer fase do processo, inclusive de ofício (CPP, art. 61). Na resposta à acusação, a extinção da punibilidade é causa de absolvição sumária (CPP, art. 397, IV).",
+    "prejuizo": "Não se exige prejuízo: é matéria de ordem pública. Apresente as datas e o cálculo.",
+    "replicas": [
+      {"a": "Não se admite prescrição com base em pena hipotética (Súmula 438 do STJ).", "r": "Calcule a prescrição pela pena máxima em abstrato, e não pela pena que provavelmente seria aplicada."},
+      {"a": "Houve causa interruptiva ou suspensiva do prazo.", "r": "Confira as causas dos arts. 116 e 117 do CP e as datas nos autos. A suspensão do art. 366 do CPP tem limite: regula-se pelo máximo da pena cominada (Súmula 415 do STJ)."}
+    ],
+    "pedido": "declarar extinta a punibilidade e absolver sumariamente o acusado (art. 397, caput, inciso IV, do CPP)",
+    "pecas": ["resposta", "hc"],
+    "texto": [
+      "Extingue-se a punibilidade nas hipóteses do art. 107 do {CP}, entre elas a prescrição e a decadência. Em qualquer fase do processo, o juiz, se reconhecer extinta a punibilidade, deverá declará-la de ofício (art. 61, caput, do {CPP}). Na resposta à acusação, a extinção da punibilidade conduz à absolvição sumária (art. 397, caput, inciso IV, do {CPP}).",
+      "{FATO}",
+      "[DEMONSTRAR O CÁLCULO: PENA MÁXIMA COMINADA, PRAZO DO ART. 109 DO CÓDIGO PENAL, EVENTUAL REDUÇÃO DO ART. 115, MARCOS INICIAL E INTERRUPTIVOS E TEMPO DECORRIDO]."
+    ]
+  },
+  {
+    "id": "atipicidade",
+    "titulo": "O fato narrado não constitui crime",
+    "secao": "merito",
+    "ordem": 84,
+    "natureza": "absolvição sumária",
+    "fase": ["denuncia"],
+    "art5": ["XXXIX", "XL"],
+    "cf_outros": [],
+    "tratados": ["CADH, art. 9", "PIDCP, art. 15"],
+    "lei": ["CP, art. 1º", "CP, art. 2º", "CP, art. 13", "CP, art. 18", "CP, art. 20", "CPP, art. 397, III"],
+    "precedentes": [],
+    "base": "merito",
+    "acusacao": "A conduta descrita se ajusta ao tipo penal indicado na denúncia.",
+    "detectar": [
+      "Decomponha o tipo penal em seus elementos (conduta, resultado, nexo, elementos normativos, elemento subjetivo) e confira, um a um, se a denúncia narra fato correspondente.",
+      "O tipo exige dolo e a denúncia descreve conduta culposa? Existe a forma culposa prevista em lei (CP, art. 18, parágrafo único)?",
+      "O tipo exige finalidade específica que a denúncia não descreve?",
+      "Lei posterior deixou de considerar o fato crime (CP, art. 2º)?",
+      "A acusação estende o tipo a hipótese não prevista (analogia em prejuízo do acusado)?"
+    ],
+    "nucleo": "Não há crime sem lei anterior que o defina. O juiz deve absolver sumariamente o acusado quando o fato narrado evidentemente não constitui crime (CPP, art. 397, III). O exame se faz pela comparação entre a narrativa da denúncia e os elementos do tipo penal.",
+    "prejuizo": "Não se aplica: é tese de mérito. Limite o argumento ao que consta da denúncia e dos documentos que a acompanham.",
+    "replicas": [
+      {"a": "A verificação do dolo depende da instrução.", "r": "A absolvição sumária cabe quando a atipicidade resulta da própria narrativa. Mostre que, mesmo admitidos como verdadeiros todos os fatos descritos, falta elemento do tipo."},
+      {"a": "Nesta fase, a dúvida favorece o prosseguimento da ação.", "r": "Não se trata de dúvida sobre fatos, mas de enquadramento jurídico de fatos incontroversos. Questão de direito pode e deve ser decidida desde logo."}
+    ],
+    "pedido": "absolver sumariamente o acusado, porque o fato narrado não constitui crime (art. 397, caput, inciso III, do CPP)",
+    "pecas": ["resposta", "hc"],
+    "texto": [
+      "Não há crime sem lei anterior que o defina, nem pena sem prévia cominação legal (art. 5º, caput, inciso XXXIX, da {CF}; art. 1º do {CP}). O juiz deverá absolver sumariamente o acusado quando verificar que o fato narrado evidentemente não constitui crime (art. 397, caput, inciso III, do {CPP}).",
+      "{FATO}",
+      "Ainda que se admitam como verdadeiros todos os fatos descritos na denúncia, falta [INDICAR O ELEMENTO DO TIPO PENAL AUSENTE]. A conduta narrada não se ajusta ao tipo penal imputado."
+    ]
+  },
+  {
+    "id": "insignificancia",
+    "titulo": "Atipicidade material (princípio da insignificância)",
+    "secao": "merito",
+    "ordem": 85,
+    "natureza": "absolvição sumária",
+    "fase": ["denuncia"],
+    "art5": ["XXXIX", "LIV"],
+    "cf_outros": [],
+    "tratados": [],
+    "lei": ["CPP, art. 397, III", "CPP, art. 386, III"],
+    "precedentes": ["stf-hc-84412", "stj-sum-589", "stj-sum-599"],
+    "base": "merito",
+    "acusacao": "O valor do bem é irrelevante: a conduta se ajusta formalmente ao tipo penal.",
+    "detectar": [
+      "Qual o valor do bem em relação ao salário mínimo da época do fato? Há auto de avaliação?",
+      "O bem foi restituído à vítima?",
+      "Houve violência ou grave ameaça?",
+      "O acusado é primário? Há reiteração de condutas semelhantes?",
+      "O crime está entre aqueles em que os tribunais afastam a insignificância (violência doméstica contra a mulher; crimes contra a administração pública)?"
+    ],
+    "nucleo": "O direito penal só deve incidir sobre lesões relevantes a bens jurídicos. O STF fixou quatro vetores para o reconhecimento da insignificância: mínima ofensividade da conduta, nenhuma periculosidade social da ação, reduzidíssimo grau de reprovabilidade do comportamento e inexpressividade da lesão jurídica provocada. Presentes os vetores, a conduta é materialmente atípica.",
+    "prejuizo": "Não se aplica: é tese de mérito. Comprove cada vetor com dados dos autos (auto de avaliação, termo de restituição, folha de antecedentes).",
+    "replicas": [
+      {"a": "O acusado é reincidente ou tem maus antecedentes.", "r": "A reincidência não impede, de forma absoluta, o reconhecimento da insignificância; os tribunais a examinam no caso concreto. Destaque o valor ínfimo, a restituição e a ausência de violência."},
+      {"a": "O crime foi qualificado (concurso de pessoas, rompimento de obstáculo).", "r": "A qualificadora também é ponderada no caso concreto. Insista na inexpressividade da lesão e nas circunstâncias pessoais."}
+    ],
+    "pedido": "absolver sumariamente o acusado, pela atipicidade material da conduta (art. 397, caput, inciso III, do CPP)",
+    "pecas": ["resposta", "hc"],
+    "texto": [
+      "A tipicidade penal exige, além da correspondência formal entre a conduta e a descrição legal, lesão relevante ao bem jurídico protegido. O Supremo Tribunal Federal condiciona o reconhecimento da insignificância a quatro vetores: mínima ofensividade da conduta do agente, nenhuma periculosidade social da ação, reduzidíssimo grau de reprovabilidade do comportamento e inexpressividade da lesão jurídica provocada.",
+      "{FATO}",
+      "Os quatro vetores estão presentes. A conduta é materialmente atípica, e o fato narrado não constitui crime (art. 397, caput, inciso III, do {CPP})."
+    ]
+  },
+  {
+    "id": "flagrante-preparado",
+    "titulo": "Flagrante preparado e crime impossível",
+    "secao": "merito",
+    "ordem": 88,
+    "natureza": "absolvição sumária",
+    "fase": ["investigacao", "denuncia"],
+    "art5": ["XXXIX", "LIV"],
+    "cf_outros": [],
+    "tratados": [],
+    "lei": ["CP, art. 17", "CPP, art. 397, III"],
+    "precedentes": ["stf-sum-145"],
+    "base": "merito",
+    "acusacao": "O acusado foi preso em flagrante quando praticava o crime diante dos policiais.",
+    "detectar": [
+      "Um agente do Estado, ou alguém a seu serviço, induziu o acusado a praticar o ato (por exemplo, encomendou a droga ou propôs o negócio)?",
+      "A polícia controlava a situação a ponto de tornar impossível a consumação?",
+      "Havia investigação anterior com indícios de que o acusado já praticava a conduta, ou ela só existiu por causa da provocação?",
+      "Trata-se de flagrante esperado (a polícia apenas aguarda o crime) ou preparado (a polícia provoca o crime)?"
+    ],
+    "nucleo": "Não há crime quando a preparação do flagrante pela polícia torna impossível a consumação (Súmula 145 do STF). No flagrante preparado, o agente é induzido a agir e o resultado está impedido desde o início: é crime impossível (CP, art. 17).",
+    "prejuizo": "Não se aplica: é tese de mérito. Descreva a sequência dos fatos e identifique quem tomou a iniciativa.",
+    "replicas": [
+      {"a": "Foi flagrante esperado: a polícia apenas aguardou a prática do crime.", "r": "A diferença está na iniciativa. Mostre, com os depoimentos, que a ideia e a proposta partiram do agente do Estado."},
+      {"a": "No tráfico, o acusado já tinha a droga em depósito antes da provocação; e a lei pune a venda a policial disfarçado.", "r": "A figura do policial disfarçado exige elementos probatórios razoáveis de conduta criminal preexistente (Lei nº 11.343, de 2006, art. 33, § 1º, IV). Verifique se eles existem nos autos, e se a denúncia imputa a conduta anterior ou apenas a venda provocada."}
+    ],
+    "pedido": "absolver sumariamente o acusado, por se tratar de crime impossível (art. 17 do Código Penal; art. 397, caput, inciso III, do CPP)",
+    "pecas": ["resposta", "hc"],
+    "texto": [
+      "Não se pune a tentativa quando, por ineficácia absoluta do meio ou por absoluta impropriedade do objeto, é impossível consumar-se o crime (art. 17 do {CP}).",
+      "{FATO}",
+      "A conduta foi provocada por agente do Estado, que controlava a situação e impedia, desde o início, a consumação. Trata-se de flagrante preparado, e o fato não constitui crime."
+    ]
+  },
+  {
+    "id": "excludente-ilicitude",
+    "titulo": "Causa excludente da ilicitude",
+    "secao": "merito",
+    "ordem": 90,
+    "natureza": "absolvição sumária",
+    "fase": ["denuncia", "instrucao"],
+    "art5": ["LIV", "LVII"],
+    "cf_outros": [],
+    "tratados": [],
+    "lei": ["CP, art. 23", "CP, art. 24 (estado de necessidade)", "CP, art. 25 (legítima defesa)", "CPP, art. 397, I", "CPP, art. 386, VI"],
+    "precedentes": ["stf-adpf-779"],
+    "base": "merito",
+    "acusacao": "O acusado praticou o fato típico, e não há justificativa para a conduta.",
+    "detectar": [
+      "Legítima defesa: houve agressão injusta, atual ou iminente, a direito do acusado ou de terceiro? Os meios usados foram os necessários e houve moderação (CP, art. 25)?",
+      "Estado de necessidade: havia perigo atual, não provocado pelo acusado, que não podia ser evitado de outro modo (CP, art. 24)?",
+      "O acusado agiu em estrito cumprimento de dever legal ou no exercício regular de direito (CP, art. 23, III)?",
+      "Que elementos do inquérito confirmam a versão (laudos de lesão no acusado, imagens, testemunhas, registros anteriores de ameaça)?"
+    ],
+    "nucleo": "Não há crime quando o agente pratica o fato em estado de necessidade, em legítima defesa, em estrito cumprimento de dever legal ou no exercício regular de direito (CP, art. 23). A existência manifesta de causa excludente da ilicitude leva à absolvição sumária (CPP, art. 397, I). Ao final do processo, a dúvida fundada sobre a excludente também conduz à absolvição (CPP, art. 386, VI).",
+    "prejuizo": "Não se aplica: é tese de mérito. Indique os elementos já existentes nos autos que tornam a excludente evidente.",
+    "replicas": [
+      {"a": "A excludente não é manifesta e depende de instrução.", "r": "Aponte os elementos do inquérito que a tornam evidente. Subsidiariamente, requeira as provas que a confirmem e registre que a dúvida fundada sobre a excludente conduz à absolvição (CPP, art. 386, VI)."},
+      {"a": "Houve excesso.", "r": "O excesso deve ser descrito e provado pela acusação. Examine se a denúncia o narra; em caso negativo, a alegação é inovação."}
+    ],
+    "pedido": "absolver sumariamente o acusado, pela existência manifesta de causa excludente da ilicitude (art. 397, caput, inciso I, do CPP)",
+    "pecas": ["resposta"],
+    "texto": [
+      "Não há crime quando o agente pratica o fato em estado de necessidade, em legítima defesa, em estrito cumprimento de dever legal ou no exercício regular de direito (art. 23 do {CP}). O juiz deverá absolver sumariamente o acusado quando verificar a existência manifesta de causa excludente da ilicitude do fato (art. 397, caput, inciso I, do {CPP}).",
+      "{FATO}",
+      "Os elementos já reunidos nos autos demonstram que o acusado agiu em [INDICAR A EXCLUDENTE E SEUS REQUISITOS LEGAIS]."
+    ]
+  },
+  {
+    "id": "excludente-culpabilidade",
+    "titulo": "Causa excludente da culpabilidade",
+    "secao": "merito",
+    "ordem": 92,
+    "natureza": "absolvição sumária",
+    "fase": ["denuncia", "instrucao"],
+    "art5": ["LIV", "LVII"],
+    "cf_outros": [],
+    "tratados": [],
+    "lei": ["CP, art. 21 (erro sobre a ilicitude do fato)", "CP, art. 22 (coação irresistível e obediência hierárquica)", "CPP, art. 397, II", "CPP, art. 386, VI"],
+    "precedentes": [],
+    "base": "merito",
+    "acusacao": "O acusado tinha plena capacidade de agir de outro modo.",
+    "detectar": [
+      "O acusado agiu sob coação moral irresistível (ameaça grave a ele ou a familiar)? Há registro da ameaça?",
+      "O acusado cumpriu ordem de superior hierárquico, não manifestamente ilegal (CP, art. 22)?",
+      "O acusado desconhecia a ilicitude do fato, e o erro era inevitável nas suas condições (CP, art. 21)?",
+      "A tese é de inimputabilidade? Nesse caso, não cabe absolvição sumária (CPP, art. 397, II)."
+    ],
+    "nucleo": "A existência manifesta de causa excludente da culpabilidade leva à absolvição sumária, salvo a inimputabilidade (CPP, art. 397, II). São exemplos o erro inevitável sobre a ilicitude do fato, a coação moral irresistível e a obediência a ordem não manifestamente ilegal de superior hierárquico.",
+    "prejuizo": "Não se aplica: é tese de mérito. Indique os elementos dos autos que tornam a excludente evidente.",
+    "replicas": [
+      {"a": "A coação não foi provada.", "r": "Indique os registros disponíveis (boletins de ocorrência, mensagens, testemunhas) e requeira as provas que a confirmem. A dúvida fundada favorece o acusado (CPP, art. 386, VI)."}
+    ],
+    "pedido": "absolver sumariamente o acusado, pela existência manifesta de causa excludente da culpabilidade (art. 397, caput, inciso II, do CPP)",
+    "pecas": ["resposta"],
+    "texto": [
+      "O juiz deverá absolver sumariamente o acusado quando verificar a existência manifesta de causa excludente da culpabilidade do agente, salvo inimputabilidade (art. 397, caput, inciso II, do {CPP}).",
+      "{FATO}",
+      "Os elementos já reunidos nos autos demonstram que o acusado agiu sob [INDICAR A EXCLUDENTE E SEUS REQUISITOS LEGAIS]."
+    ]
+  },
+  {
+    "id": "porte-maconha",
+    "titulo": "Porte de maconha para consumo pessoal",
+    "secao": "merito",
+    "ordem": 89,
+    "natureza": "absolvição sumária ou desclassificação",
+    "fase": ["denuncia"],
+    "art5": ["X", "XXXIX"],
+    "cf_outros": [],
+    "tratados": [],
+    "lei": ["Lei nº 11.343, de 2006, art. 28", "Lei nº 11.343, de 2006, art. 28, § 2º", "CPP, art. 397, III"],
+    "precedentes": ["stf-tema-506"],
+    "base": "merito",
+    "acusacao": "A quantidade e a forma de acondicionamento da droga indicam tráfico.",
+    "detectar": [
+      "A substância é maconha? Qual a quantidade, segundo o laudo?",
+      "A quantidade está dentro do parâmetro fixado pelo STF no Tema 506 para presumir o uso pessoal?",
+      "Há elementos que indiquem comércio (balança, embalagens, anotações de venda, dinheiro fracionado, mensagens)?",
+      "O local e as circunstâncias da apreensão são compatíveis com consumo?"
+    ],
+    "nucleo": "O STF, no Tema 506 da repercussão geral, afastou a natureza penal do porte de maconha para consumo pessoal e fixou parâmetro de quantidade que faz presumir a condição de usuário, presunção que admite prova em contrário. Para determinar se a droga se destinava a consumo pessoal, a lei manda considerar a natureza e a quantidade da substância, o local e as condições da ação e as circunstâncias pessoais do agente (Lei nº 11.343, de 2006, art. 28, § 2º).",
+    "prejuizo": "Não se aplica: é tese de mérito. Compare a quantidade apreendida com o parâmetro do Tema 506 e mostre a ausência de sinais de comércio.",
+    "replicas": [
+      {"a": "A presunção de uso é relativa, e há sinais de tráfico.", "r": "Examine cada sinal apontado. Fracionamento em poucas porções e apreensão em local conhecido não bastam; exija elementos concretos de mercancia."}
+    ],
+    "pedido": "reconhecer que a conduta corresponde a porte para consumo pessoal, absolver sumariamente o acusado da imputação de tráfico e aplicar o decidido pelo STF no Tema 506",
+    "pecas": ["resposta", "hc"],
+    "texto": [
+      "Para determinar se a droga se destinava a consumo pessoal, o juiz atenderá à natureza e à quantidade da substância apreendida, ao local e às condições em que se desenvolveu a ação, às circunstâncias sociais e pessoais, bem como à conduta e aos antecedentes do agente (art. 28, § 2º, da {L11343}).",
+      "{FATO}",
+      "A quantidade apreendida e a ausência de sinais de comércio indicam que a substância se destinava a consumo pessoal."
+    ]
+  },
+  {
+    "id": "anpp",
+    "titulo": "Acordo de não persecução penal",
+    "secao": "subsidiario",
+    "ordem": 95,
+    "natureza": "pedido subsidiário",
+    "fase": ["denuncia"],
+    "art5": ["LIV"],
+    "cf_outros": [],
+    "tratados": [],
+    "lei": ["CPP, art. 28-A", "CPP, art. 28-A, § 2º", "CPP, art. 28-A, § 14"],
+    "precedentes": ["stf-hc-185913"],
+    "detectar": [
+      "A infração foi praticada sem violência ou grave ameaça?",
+      "A pena mínima cominada é inferior a quatro anos, consideradas as causas de aumento e de diminuição?",
+      "O acusado é reincidente, ou há elementos de conduta criminal habitual? Foi beneficiado por acordo, transação ou suspensão do processo nos cinco anos anteriores?",
+      "O crime envolve violência doméstica ou familiar, ou foi praticado contra mulher por razões da condição de sexo feminino?",
+      "O Ministério Público justificou, por escrito, a recusa em oferecer o acordo?",
+      "A defesa já pediu o acordo? Em que momento?"
+    ],
+    "nucleo": "Preenchidos os requisitos legais, o Ministério Público pode propor acordo de não persecução penal (CPP, art. 28-A). A recusa deve ser motivada, e o investigado pode requerer a remessa dos autos ao órgão superior do Ministério Público (art. 28-A, § 14).",
+    "prejuizo": "Não se aplica. Avalie com o acusado a exigência legal de confissão formal e circunstanciada e seus efeitos antes de formular o pedido.",
+    "replicas": [
+      {"a": "O acordo é faculdade do Ministério Público.", "r": "A recusa deve ser fundamentada nos requisitos legais. Sem motivação idônea, cabe requerer a remessa ao órgão superior (CPP, art. 28-A, § 14)."},
+      {"a": "A denúncia já foi recebida; o momento do acordo passou.", "r": "O STF admitiu a aplicação do acordo a processos em andamento quando a lei entrou em vigor. Confira os termos da tese e a data do pedido da defesa."}
+    ],
+    "pedido": "intimar o Ministério Público para que se manifeste, de forma fundamentada, sobre o oferecimento de acordo de não persecução penal; em caso de recusa, remeter os autos ao órgão superior (art. 28-A, § 14, do CPP)",
+    "pecas": ["resposta"],
+    "texto": [
+      "Não sendo caso de arquivamento, o Ministério Público poderá propor acordo de não persecução penal quando a infração for praticada sem violência ou grave ameaça e tiver pena mínima inferior a quatro anos, atendidos os demais requisitos legais (art. 28-A do {CPP}). No caso de recusa, o investigado poderá requerer a remessa dos autos a órgão superior do Ministério Público (art. 28-A, § 14).",
+      "{FATO}",
+      "O acusado atende aos requisitos objetivos e subjetivos do acordo, e nenhuma das vedações do art. 28-A, § 2º, do {CPP} se aplica."
+    ]
+  },
+  {
+    "id": "sursis-processual",
+    "titulo": "Suspensão condicional do processo",
+    "secao": "subsidiario",
+    "ordem": 96,
+    "natureza": "pedido subsidiário",
+    "fase": ["denuncia"],
+    "art5": ["LIV"],
+    "cf_outros": [],
+    "tratados": [],
+    "lei": ["Lei nº 9.099, de 1995, art. 89"],
+    "precedentes": ["stj-sum-243", "stj-sum-337", "stf-sum-696", "stf-sum-723", "stj-sum-536"],
+    "detectar": [
+      "A pena mínima cominada é igual ou inferior a um ano?",
+      "Em concurso de crimes ou crime continuado, a soma ou o aumento ultrapassa um ano (Súmula 243 do STJ; Súmula 723 do STF)?",
+      "O acusado está sendo processado ou foi condenado por outro crime?",
+      "O Ministério Público deixou de oferecer a proposta? Justificou?",
+      "A desclassificação pleiteada tornaria cabível o benefício (Súmula 337 do STJ)?"
+    ],
+    "nucleo": "Nos crimes com pena mínima igual ou inferior a um ano, o Ministério Público, ao oferecer a denúncia, pode propor a suspensão do processo por dois a quatro anos, se o acusado não estiver sendo processado nem tiver sido condenado por outro crime e atender aos requisitos da suspensão condicional da pena (Lei nº 9.099, de 1995, art. 89).",
+    "prejuizo": "Não se aplica.",
+    "replicas": [
+      {"a": "A proposta é atribuição do Ministério Público.", "r": "Se o promotor se recusar a propor e o juiz discordar, os autos são remetidos ao órgão superior do Ministério Público (Súmula 696 do STF). Peça essa providência."}
+    ],
+    "pedido": "intimar o Ministério Público para oferecer proposta de suspensão condicional do processo (art. 89 da Lei nº 9.099, de 1995)",
+    "pecas": ["resposta"],
+    "texto": [
+      "Nos crimes em que a pena mínima cominada for igual ou inferior a um ano, o Ministério Público, ao oferecer a denúncia, poderá propor a suspensão do processo, por dois a quatro anos, desde que o acusado não esteja sendo processado ou não tenha sido condenado por outro crime e estejam presentes os demais requisitos legais (art. 89 da {L9099}).",
+      "{FATO}",
+      "O acusado preenche os requisitos legais, e a proposta não foi oferecida."
+    ]
+  },
+  {
+    "id": "desclassificacao",
+    "titulo": "Desclassificação para infração menos grave",
+    "secao": "subsidiario",
+    "ordem": 94,
+    "natureza": "pedido subsidiário",
+    "fase": ["denuncia", "instrucao", "sentenca"],
+    "art5": ["XXXIX", "LIV"],
+    "cf_outros": [],
+    "tratados": [],
+    "lei": ["CPP, art. 383", "CPP, art. 383, § 1º", "CPP, art. 383, § 2º"],
+    "precedentes": ["stj-sum-337"],
+    "base": "merito",
+    "acusacao": "A classificação jurídica dada na denúncia está correta.",
+    "detectar": [
+      "Os fatos narrados correspondem a tipo penal menos grave do que o indicado na denúncia?",
+      "A classificação correta alteraria a competência ou o rito?",
+      "A classificação correta tornaria cabível transação penal, suspensão condicional do processo ou acordo de não persecução penal?",
+      "A qualificadora ou a causa de aumento está descrita com fatos, ou apenas mencionada?"
+    ],
+    "nucleo": "O juiz pode atribuir ao fato definição jurídica diversa da que consta da denúncia, sem alterar a descrição do fato (CPP, art. 383). Se a nova definição tornar cabível a suspensão condicional do processo, o juiz procederá de acordo com a lei; se alterar a competência, remeterá os autos ao juízo competente (art. 383, §§ 1º e 2º).",
+    "prejuizo": "Mostre o efeito prático da classificação incorreta: benefício legal negado, rito mais gravoso, juízo incompetente, prisão que não seria cabível.",
+    "replicas": [
+      {"a": "A classificação jurídica é examinada na sentença.", "r": "Em regra, sim. A correção antecipada se justifica quando a classificação incorreta impede benefício legal ou altera a competência ou o rito. Demonstre uma dessas situações."}
+    ],
+    "pedido": "desclassificar a imputação para [INDICAR O TIPO PENAL] e aplicar as consequências legais (benefícios cabíveis, rito e competência)",
+    "pecas": ["resposta", "hc"],
+    "texto": [
+      "O juiz, sem modificar a descrição do fato contida na denúncia, poderá atribuir-lhe definição jurídica diversa (art. 383, caput, do {CPP}). Se, em consequência da nova definição, houver possibilidade de proposta de suspensão condicional do processo, o juiz procederá de acordo com o disposto na lei (art. 383, § 1º).",
+      "{FATO}",
+      "Os fatos descritos correspondem ao tipo penal de [INDICAR O TIPO PENAL CORRETO], e não ao indicado na denúncia. A classificação incorreta impede [INDICAR O EFEITO: BENEFÍCIO LEGAL, RITO, COMPETÊNCIA]."
+    ]
+  }
+]

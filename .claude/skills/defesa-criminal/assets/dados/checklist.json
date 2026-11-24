@@ -1,0 +1,88 @@
+[
+  {
+    "id": "investigacao",
+    "titulo": "Abordagem, buscas e investigação",
+    "perguntas": [
+      {"id": "q-abordagem", "texto": "A revista pessoal foi justificada só por “atitude suspeita”, nervosismo, local ou denúncia anônima não verificada?", "onde": "auto de prisão em flagrante e depoimentos dos condutores", "tese": "busca-pessoal"},
+      {"id": "q-casa", "texto": "Houve entrada em residência sem mandado judicial?", "onde": "auto de prisão em flagrante, auto de apreensão e depoimentos", "tese": "busca-domiciliar"},
+      {"id": "q-celular", "texto": "O conteúdo do celular foi acessado antes de decisão judicial?", "onde": "relatório policial, auto de apreensão e decisão de quebra de sigilo (compare as datas)", "tese": "celular"},
+      {"id": "q-prints", "texto": "Há capturas de tela ou extração de dados sem perícia, sem código hash ou sem acesso da defesa à íntegra?", "onde": "laudo ou relatório de extração e mídias juntadas", "tese": "prova-digital"},
+      {"id": "q-lacre", "texto": "Há divergência de lacre, peso ou descrição entre o auto de apreensão e o laudo, ou intervalo de guarda sem registro?", "onde": "auto de apreensão, guia de remessa e laudo pericial", "tese": "cadeia-custodia"},
+      {"id": "q-intercept", "texto": "Há interceptação telefônica com decisão genérica, prorrogações padronizadas ou período sem cobertura judicial?", "onde": "autos da medida cautelar: decisões e relatórios, com as datas", "tese": "interceptacao"},
+      {"id": "q-reconhecimento", "texto": "O acusado foi reconhecido por fotografia isolada, sozinho, ou sem descrição prévia e auto formal?", "onde": "termo ou auto de reconhecimento e depoimento da vítima", "tese": "reconhecimento"},
+      {"id": "q-confissao", "texto": "A acusação menciona confissão informal, feita aos policiais, sem advertência do direito ao silêncio e sem registro?", "onde": "depoimentos dos condutores e termo de interrogatório policial", "tese": "confissao"},
+      {"id": "q-violencia", "texto": "Há lesões ou relato de agressão, ameaça ou coação no momento da prisão?", "onde": "laudo de exame de corpo de delito do preso e ata da audiência de custódia", "tese": "tortura"},
+      {"id": "q-laudo", "texto": "O crime deixa vestígios e não há laudo pericial definitivo nos autos?", "onde": "laudos e auto de apreensão", "tese": "corpo-delito"},
+      {"id": "q-derivadas", "texto": "As demais provas foram obtidas a partir de alguma das medidas acima?", "onde": "relatório final do inquérito, na ordem cronológica das diligências", "tese": "derivadas"},
+      {"id": "q-acesso", "texto": "A defesa teve negado o acesso a mídias, autos apartados ou à íntegra de dados já documentados?", "onde": "pedidos da defesa, respostas e certidões", "tese": "acesso-autos"},
+      {"id": "q-preparado", "texto": "A conduta foi provocada por policial ou por pessoa a serviço da polícia?", "onde": "depoimentos dos agentes e relatório da operação", "tese": "flagrante-preparado"}
+    ]
+  },
+  {
+    "id": "prisao",
+    "titulo": "Prisão e custódia",
+    "perguntas": [
+      {"id": "q-oficio", "texto": "A prisão preventiva foi decretada sem pedido do Ministério Público e sem representação da autoridade policial?", "onde": "decisão que decretou a prisão e ata da audiência de custódia", "tese": "preventiva-oficio"},
+      {"id": "q-custodia", "texto": "O preso deixou de ser apresentado ao juiz em audiência de custódia?", "onde": "ata da audiência de custódia ou certidão de sua não realização", "tese": "custodia"},
+      {"id": "q-prev-fund", "texto": "A decisão de prisão se apoia na gravidade abstrata do crime, sem fato concreto e atual?", "onde": "decisão que decretou ou manteve a prisão", "tese": "preventiva-fundamentacao"},
+      {"id": "q-prazo", "texto": "O acusado está preso há tempo excessivo por atrasos atribuíveis ao Estado?", "onde": "andamento processual, com as datas dos adiamentos e seus motivos", "tese": "excesso-prazo"},
+      {"id": "q-algemas", "texto": "O acusado ficou algemado em audiência ou julgamento sem decisão escrita que justificasse?", "onde": "ata e gravação da audiência", "tese": "algemas"}
+    ]
+  },
+  {
+    "id": "denuncia",
+    "titulo": "Denúncia e admissibilidade",
+    "perguntas": [
+      {"id": "q-competencia", "texto": "O juízo é incompetente em razão da matéria ou da pessoa?", "onde": "denúncia e decisão de recebimento", "tese": "incompetencia"},
+      {"id": "q-inepcia", "texto": "A denúncia deixa de descrever a conduta individual do acusado, ou o tempo, o lugar e o modo do fato?", "onde": "denúncia", "tese": "inepcia"},
+      {"id": "q-condicao", "texto": "Falta representação da vítima, legitimidade da parte, lançamento definitivo do tributo ou prova nova após arquivamento?", "onde": "denúncia, termo de representação e certidões", "tese": "condicao-acao"},
+      {"id": "q-colab", "texto": "A denúncia se apoia apenas na palavra de colaborador?", "onde": "denúncia, termos de colaboração e documentos que a acompanham", "tese": "colaboracao"},
+      {"id": "q-justa", "texto": "Excluídas as provas inválidas, a denúncia fica sem lastro mínimo de autoria ou de materialidade?", "onde": "denúncia e peças do inquérito que a instruem", "tese": "justa-causa"},
+      {"id": "q-prescricao", "texto": "Pelas datas e pela pena máxima, pode ter ocorrido prescrição ou decadência?", "onde": "data do fato, data do recebimento da denúncia e pena cominada (use o verificador abaixo)", "tese": "punibilidade"},
+      {"id": "q-atip", "texto": "Mesmo admitidos como verdadeiros, os fatos narrados deixam de preencher algum elemento do tipo penal?", "onde": "denúncia e texto do tipo penal", "tese": "atipicidade"},
+      {"id": "q-insig", "texto": "O bem tem valor ínfimo e o fato ocorreu sem violência ou grave ameaça?", "onde": "auto de avaliação, termo de restituição e folha de antecedentes", "tese": "insignificancia"},
+      {"id": "q-maconha", "texto": "A imputação é de tráfico por pequena quantidade de maconha, sem sinais de comércio?", "onde": "laudo de constatação, auto de apreensão e auto de prisão", "tese": "porte-maconha"},
+      {"id": "q-excl-ilic", "texto": "Os autos já mostram, de forma clara, legítima defesa, estado de necessidade ou outra excludente da ilicitude?", "onde": "laudos, imagens e depoimentos do inquérito", "tese": "excludente-ilicitude"},
+      {"id": "q-excl-culp", "texto": "Os autos já mostram, de forma clara, coação irresistível, obediência hierárquica ou erro inevitável sobre a ilicitude?", "onde": "depoimentos, mensagens e registros de ameaça", "tese": "excludente-culpabilidade"}
+    ]
+  },
+  {
+    "id": "citacao",
+    "titulo": "Citação e defesa",
+    "perguntas": [
+      {"id": "q-citacao", "texto": "A citação foi feita por edital sem esgotamento dos meios de localização, ou com o acusado preso?", "onde": "mandado, certidão do oficial de justiça e edital", "tese": "citacao"},
+      {"id": "q-defesa", "texto": "Algum ato ocorreu sem defensor, ou a defesa anterior foi inerte?", "onde": "atas de audiência e peças da defesa anterior", "tese": "defesa-tecnica"},
+      {"id": "q-intim", "texto": "A defesa deixou de ser intimada de audiência, de carta precatória ou de decisão?", "onde": "certidões de intimação e publicações", "tese": "intimacao"}
+    ]
+  },
+  {
+    "id": "audiencia",
+    "titulo": "Audiência e instrução",
+    "perguntas": [
+      {"id": "q-interrog", "texto": "O acusado foi interrogado antes de ouvidas todas as testemunhas?", "onde": "ata e gravação da audiência", "tese": "interrogatorio"},
+      {"id": "q-juiz", "texto": "O juiz conduziu a inquirição das testemunhas ou produziu, de ofício, prova da acusação?", "onde": "gravação da audiência e ata, com o registro do protesto", "tese": "sistema-acusatorio"},
+      {"id": "q-prova-indef", "texto": "O juiz indeferiu prova da defesa sem explicar por que seria irrelevante ou protelatória?", "onde": "requerimento da defesa e decisão que o indeferiu", "tese": "prova-indeferida"},
+      {"id": "q-delator", "texto": "O delatado apresentou alegações finais antes do colaborador ou no mesmo prazo?", "onde": "despacho que abriu o prazo e datas das alegações finais", "tese": "delator-delatado"},
+      {"id": "q-inquerito", "texto": "A prova de autoria se resume a depoimentos do inquérito não repetidos em juízo ou a testemunhas de “ouvir dizer”?", "onde": "termos de depoimento da fase policial e da fase judicial", "tese": "inquerito-exclusivo"},
+      {"id": "q-policiais", "texto": "A acusação se apoia só na palavra dos policiais que fizeram a prisão, sem imagem, perícia ou testemunha civil?", "onde": "depoimentos judiciais e rol de provas da acusação", "tese": "policial-exclusivo"}
+    ]
+  },
+  {
+    "id": "decisoes",
+    "titulo": "Decisões e sentença",
+    "perguntas": [
+      {"id": "q-fundam", "texto": "A decisão que analisou a resposta à acusação, a prova ou a prisão usou fundamentação genérica?", "onde": "a própria decisão, comparada com a peça da defesa", "tese": "fundamentacao"},
+      {"id": "q-parcial", "texto": "Há causa de impedimento ou de suspeição do juiz, ou sinais de perda de imparcialidade?", "onde": "decisões, despachos e atas de audiência", "tese": "parcialidade"},
+      {"id": "q-correl", "texto": "A sentença condenou por fato ou circunstância que a denúncia não descreve?", "onde": "denúncia, eventual aditamento e sentença", "tese": "correlacao"}
+    ]
+  },
+  {
+    "id": "saidas",
+    "titulo": "Saídas alternativas",
+    "perguntas": [
+      {"id": "q-anpp", "texto": "O crime é sem violência ou grave ameaça, com pena mínima inferior a quatro anos, e o acordo de não persecução penal não foi oferecido?", "onde": "denúncia e manifestação do Ministério Público sobre o acordo", "tese": "anpp"},
+      {"id": "q-sursis", "texto": "A pena mínima é de até um ano e a suspensão condicional do processo não foi proposta?", "onde": "denúncia e folha de antecedentes", "tese": "sursis-processual"},
+      {"id": "q-desclass", "texto": "Os fatos correspondem a crime menos grave do que o indicado na denúncia?", "onde": "denúncia e texto dos tipos penais", "tese": "desclassificacao"}
+    ]
+  }
+]

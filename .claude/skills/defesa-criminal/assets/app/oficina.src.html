@@ -1,0 +1,921 @@
+<title>Oficina de Defesa Penal</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Serif:ital,wght@0,400;0,600;1,400&display=swap">
+<style>
+/* Layout: bancada de trabalho. Capa estreita com a mesa dos autos, faixa fixa do processo,
+   sete abas na ordem do trabalho; leitura em coluna única, com painel lateral em telas largas. */
+:root{
+  --bg:#edf0f3; --surface:#ffffff; --surface-2:#f4f6f8; --ink:#141c2b; --muted:#56627a; --line:#d3d9e2;
+  --accent:#1e4a7d; --accent-ink:#ffffff; --accent-soft:#e3ecf7;
+  --seal:#a3212f; --seal-soft:#f8e6e8; --warn:#8a5a00; --warn-soft:#f7edd8; --ok:#1f6b50; --ok-soft:#e0f1ea;
+  --mark:#fff1b8; --mark-ink:#3d2f00;
+  --paper:#ffffff; --paper-ink:#1b1d22;
+  --hero-ink:#f4f7fb; --hero-veil:rgba(13,20,33,.84); --hero-veil-0:rgba(13,20,33,0);
+  --sans:"IBM Plex Sans",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+  --serif:"IBM Plex Serif",Georgia,"Times New Roman",serif;
+  --mono:"IBM Plex Mono",ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+  --r:6px;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#0f141c; --surface:#171e29; --surface-2:#1d2633; --ink:#e6eaf0; --muted:#9aa6b8; --line:#2c3848;
+    --accent:#86b4ec; --accent-ink:#0c1420; --accent-soft:#1c2c44;
+    --seal:#f08a95; --seal-soft:#3a1c22; --warn:#e2b55e; --warn-soft:#352a12; --ok:#74d0a8; --ok-soft:#163328;
+    --mark:#5a4a12; --mark-ink:#fff3c4;
+    --paper:#f3f5f8; --paper-ink:#1b1d22;
+    color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#0f141c; --surface:#171e29; --surface-2:#1d2633; --ink:#e6eaf0; --muted:#9aa6b8; --line:#2c3848;
+  --accent:#86b4ec; --accent-ink:#0c1420; --accent-soft:#1c2c44;
+  --seal:#f08a95; --seal-soft:#3a1c22; --warn:#e2b55e; --warn-soft:#352a12; --ok:#74d0a8; --ok-soft:#163328;
+  --mark:#5a4a12; --mark-ink:#fff3c4;
+  --paper:#f3f5f8; --paper-ink:#1b1d22;
+  color-scheme:dark;
+}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font-family:var(--sans);font-size:15px;line-height:1.5}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:10;background:var(--bg)}
+.wrap{max-width:1120px;margin-inline:auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+h1,h2,h3,h4{margin:0;text-wrap:balance;line-height:1.25}
+p{margin:0}
+a{color:var(--accent)}
+:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+
+/* capa */
+.hero{position:relative;background:#1a2433;color:var(--hero-ink);overflow:hidden}
+.hero img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:78% 40%}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,var(--hero-veil) 0%,var(--hero-veil) 38%,var(--hero-veil-0) 78%)}
+.hero .wrap{position:relative;z-index:1;padding-block:30px 28px;display:flex;flex-direction:column;gap:8px}
+.hero .eyebrow{font-family:var(--mono);font-size:11.5px;letter-spacing:.09em;text-transform:uppercase;opacity:.82}
+.hero h1{font-size:clamp(26px,4.2vw,38px);font-weight:700;letter-spacing:-.01em}
+.hero .lede{max-width:54ch;font-size:15.5px;opacity:.94}
+.hero .fine{max-width:62ch;font-size:12.5px;opacity:.8}
+
+/* faixa do processo */
+.strip{background:var(--surface);border-bottom:1px solid var(--line)}
+.strip .wrap{display:flex;flex-wrap:wrap;gap:6px 18px;align-items:center;padding-block:9px;font-size:13px}
+.strip .autos{font-family:var(--mono);font-variant-numeric:tabular-nums}
+.strip b{font-weight:600}
+.tarja{display:inline-block;background:var(--seal);color:var(--surface);font-weight:700;font-size:11px;letter-spacing:.08em;padding:2px 8px;border-radius:2px;text-transform:uppercase}
+.strip .sp{flex:1 1 auto}
+
+/* abas */
+.tabs{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--bg);border-bottom:1px solid var(--line)}
+.tabs .wrap{display:flex;gap:2px;overflow-x:auto;scrollbar-width:thin}
+.tab{appearance:none;border:0;background:none;color:var(--muted);font:500 13.5px var(--sans);padding:12px 12px 10px;border-bottom:3px solid transparent;cursor:pointer;white-space:nowrap;display:flex;gap:7px;align-items:baseline}
+.tab .n{font-family:var(--mono);font-size:11px;opacity:.75}
+.tab:hover{color:var(--ink)}
+.tab[aria-selected="true"]{color:var(--ink);border-bottom-color:var(--accent);font-weight:600}
+
+main{padding-block:22px 48px;display:flex;flex-direction:column;gap:18px}
+.lead{max-width:72ch;color:var(--muted)}
+.sec-h{display:flex;flex-direction:column;gap:4px}
+.sec-h h2{font-size:21px;font-weight:600}
+.cols{display:grid;grid-template-columns:minmax(0,1fr) 320px;gap:20px;align-items:start}
+.cols > *{min-width:0}
+.side{position:sticky;top:calc(env(safe-area-inset-top,0px) + 58px);display:flex;flex-direction:column;gap:14px}
+.stack{display:flex;flex-direction:column;gap:14px;min-width:0}
+
+.card{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:16px 18px;display:flex;flex-direction:column;gap:10px;min-width:0}
+.card h3{font-size:15.5px;font-weight:600}
+.card h4{font-size:13px;font-weight:600;color:var(--muted);text-transform:uppercase;letter-spacing:.05em}
+.note{background:var(--surface-2);border-left:3px solid var(--accent);padding:10px 14px;font-size:13.5px;border-radius:0 var(--r) var(--r) 0}
+.note.aviso{border-left-color:var(--warn)}
+.note.ex{border-left-color:var(--seal);display:flex;flex-wrap:wrap;gap:8px 14px;align-items:center}
+.small{font-size:12.5px;color:var(--muted)}
+.mono{font-family:var(--mono);font-variant-numeric:tabular-nums}
+
+/* formulário */
+.form{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:12px 14px}
+.f{display:flex;flex-direction:column;gap:4px;grid-column:span 2;min-width:0}
+.f.w3{grid-column:span 3}.f.w4{grid-column:span 4}.f.w6{grid-column:span 6}.f.w1{grid-column:span 1}
+.f > span,.f > label{font-size:12.5px;font-weight:500;color:var(--muted)}
+input[type=text],input[type=date],input[type=number],select,textarea{width:100%;font:inherit;color:var(--ink);background:var(--surface);border:1px solid var(--line);border-radius:4px;padding:7px 9px;min-width:0}
+textarea{min-height:84px;resize:vertical;line-height:1.45}
+input:focus,select:focus,textarea:focus{border-color:var(--accent)}
+.checkrow{display:flex;gap:8px;align-items:center;font-size:14px}
+.btn{appearance:none;font:600 13.5px var(--sans);border-radius:4px;border:1px solid var(--accent);background:var(--accent);color:var(--accent-ink);padding:8px 14px;cursor:pointer}
+.btn.ghost{background:transparent;color:var(--accent)}
+.btn.quiet{border-color:var(--line);background:var(--surface);color:var(--ink);font-weight:500}
+.btn:disabled{opacity:.5;cursor:default}
+.btns{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+
+/* etiquetas */
+.pill{display:inline-block;font-size:11.5px;font-weight:600;padding:2px 8px;border-radius:999px;background:var(--surface-2);color:var(--muted);white-space:nowrap}
+.pill.seal{background:var(--seal-soft);color:var(--seal)}
+.pill.warn{background:var(--warn-soft);color:var(--warn)}
+.pill.accent{background:var(--accent-soft);color:var(--accent)}
+.pill.ok{background:var(--ok-soft);color:var(--ok)}
+.pill.wrapok{white-space:normal}
+
+/* perguntas */
+.fase{background:var(--surface);border:1px solid var(--line);border-radius:var(--r)}
+.fase > summary{cursor:pointer;padding:12px 16px;font-weight:600;display:flex;gap:10px;align-items:baseline;flex-wrap:wrap}
+.fase > summary .cnt{font:500 12px var(--mono);color:var(--muted)}
+.qs{display:flex;flex-direction:column}
+.q{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:6px 14px;padding:11px 16px;border-top:1px solid var(--line);align-items:center}
+.q .qt{font-size:14.5px}
+.q .onde{font-size:12.5px;color:var(--muted)}
+.q .hit{grid-column:1 / -1;font-size:13px;display:flex;flex-wrap:wrap;gap:6px 10px;align-items:center}
+.q .seg{justify-self:start}
+.seg{display:inline-flex;border:1px solid var(--line);border-radius:4px;overflow:hidden;padding:0;margin:0}
+.seg label{position:relative;font-size:13px;padding:5px 11px;cursor:pointer;background:var(--surface);color:var(--muted);border-left:1px solid var(--line)}
+.seg label:first-of-type{border-left:0}
+.seg input{position:absolute;opacity:0;inset:0;margin:0;cursor:pointer}
+.seg label:has(input:checked){background:var(--accent);color:var(--accent-ink);font-weight:600}
+.seg label:has(input:focus-visible){outline:2px solid var(--accent);outline-offset:-2px}
+.linkbtn{appearance:none;border:0;background:none;padding:0;font:inherit;color:var(--accent);text-decoration:underline;cursor:pointer}
+
+/* fichas de tese */
+.tese{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);min-width:0}
+.tese.is-sel{border-color:var(--accent);box-shadow:inset 3px 0 0 var(--accent)}
+.tese-h{display:grid;grid-template-columns:auto minmax(0,1fr);gap:12px;padding:13px 16px;align-items:start}
+.tese-h input[type=checkbox]{width:18px;height:18px;margin-top:2px;accent-color:var(--accent)}
+.tese-t{display:flex;flex-direction:column;gap:6px;min-width:0}
+.tese-t h3{font-size:15.5px;font-weight:600}
+.tese-m{display:flex;flex-wrap:wrap;gap:6px 10px;align-items:center;font-size:12.5px;color:var(--muted)}
+.tese .diz{font-family:var(--serif);font-style:italic;font-size:14.5px;color:var(--ink);border-left:2px solid var(--line);padding-left:10px}
+.tese details{border-top:1px solid var(--line)}
+.tese details > summary{cursor:pointer;padding:9px 16px;font-size:13.5px;font-weight:500;color:var(--accent)}
+.tese .body{padding:4px 16px 16px;display:flex;flex-direction:column;gap:14px}
+.tese .body h4{font-size:12px;font-weight:600;color:var(--muted);text-transform:uppercase;letter-spacing:.06em;margin-bottom:4px}
+.tese ul{margin:0;padding-left:18px;display:flex;flex-direction:column;gap:4px}
+.tese .fund{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+.tese .fund li{font-size:13.5px}
+.rep{display:flex;flex-direction:column;gap:10px}
+.rep .par{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.25fr);gap:10px;font-size:13.5px}
+.rep .par > div{padding:8px 10px;border-radius:4px;background:var(--surface-2)}
+.rep .par > div:last-child{background:var(--ok-soft)}
+.rep .lbl{display:block;font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:.06em;color:var(--muted);margin-bottom:2px}
+.precs{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:8px}
+.prec{border:1px solid var(--line);border-radius:4px;padding:9px 11px;display:flex;flex-direction:column;gap:4px;font-size:13.5px;min-width:0}
+.prec-c{font-weight:600}
+.prec-s{font-family:var(--serif)}
+.prec-n{color:var(--warn);font-size:12.5px}
+.prec .integra{border:0}
+.prec .integra > summary{padding:0;font-size:12.5px;font-weight:500;color:var(--accent);cursor:pointer}
+.prec-l{display:flex;flex-wrap:wrap;gap:6px 12px;align-items:center;font-size:12.5px}
+.notas{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;padding:0 16px 14px}
+.notas .f{grid-column:auto}
+
+/* matriz do art. 5º */
+.tblwrap{overflow-x:auto;border:1px solid var(--line);border-radius:var(--r);background:var(--surface)}
+table{border-collapse:collapse;width:100%;font-size:13.5px}
+th,td{text-align:left;padding:9px 12px;border-bottom:1px solid var(--line);vertical-align:top}
+th{font-size:11.5px;text-transform:uppercase;letter-spacing:.06em;color:var(--muted);font-weight:600;background:var(--surface-2)}
+tr:last-child td{border-bottom:0}
+td.inc{font-family:var(--mono);font-weight:500;white-space:nowrap}
+.chips{display:flex;flex-wrap:wrap;gap:6px}
+.chip{appearance:none;font:500 12.5px var(--sans);border:1px solid var(--line);background:var(--surface);color:var(--ink);border-radius:999px;padding:3px 10px;cursor:pointer;text-align:left}
+.chip:hover{border-color:var(--accent)}
+.chip[aria-pressed="true"]{background:var(--accent);border-color:var(--accent);color:var(--accent-ink)}
+.chip.on{border-color:var(--accent);color:var(--accent);font-weight:600}
+.filters{display:flex;flex-wrap:wrap;gap:10px;align-items:end}
+.filters .f{flex:1 1 180px}
+
+/* sequência */
+.steps{list-style:none;margin:0;padding:0;display:flex;flex-direction:column}
+.step{display:grid;grid-template-columns:38px minmax(0,1fr);gap:12px;padding-bottom:16px;position:relative}
+.step::before{content:"";position:absolute;left:18px;top:36px;bottom:0;width:2px;background:var(--line)}
+.step:last-child::before{display:none}
+.step .num{width:36px;height:36px;border-radius:50%;background:var(--accent);color:var(--accent-ink);display:grid;place-items:center;font:600 14px var(--mono)}
+.step .st{display:flex;flex-direction:column;gap:5px;padding-top:6px;min-width:0}
+.step h3{font-size:15.5px;font-weight:600}
+.step .mine{display:flex;flex-wrap:wrap;gap:6px;margin-top:2px}
+.duo{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+.duo > *{min-width:0}
+ol.plain,ul.plain{margin:0;padding-left:20px;display:flex;flex-direction:column;gap:6px}
+
+/* minuta */
+.pecas{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}
+.peca{position:relative;border:1px solid var(--line);border-radius:var(--r);background:var(--surface);padding:12px 14px;cursor:pointer;display:flex;flex-direction:column;gap:4px}
+.peca input{position:absolute;opacity:0;inset:0;cursor:pointer;margin:0}
+.peca:has(input:checked){border-color:var(--accent);box-shadow:inset 0 0 0 1px var(--accent);background:var(--accent-soft)}
+.peca:has(input:focus-visible){outline:2px solid var(--accent);outline-offset:2px}
+.peca strong{font-size:14.5px}
+.plano{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:8px}
+.plano li{border:1px solid var(--line);border-radius:4px;padding:9px 11px;display:flex;flex-direction:column;gap:5px;font-size:13.5px}
+.plano .ph{display:flex;flex-wrap:wrap;gap:6px 10px;align-items:center}
+.plano .pp{display:flex;flex-direction:column;gap:3px;padding-left:2px}
+.doc{background:var(--paper);color:var(--paper-ink);border:1px solid var(--line);border-radius:2px;padding:36px clamp(18px,6vw,64px);font-family:var(--serif);font-size:15px;line-height:1.6;min-width:0;overflow-wrap:anywhere}
+.doc p{margin:0 0 .7em;text-align:justify;text-indent:2.2em}
+.doc p.end{text-indent:0;text-align:left;font-weight:600;margin-bottom:1.6em}
+.doc p.proc{text-indent:0;text-align:left;margin-bottom:1.6em}
+.doc p.titulo{text-indent:0;text-align:center;font-weight:600;margin:1em 0}
+.doc p.h1{text-indent:0;text-align:left;font-weight:600;margin-top:1.3em}
+.doc p.h2{text-indent:0;text-align:left;font-weight:600;margin-top:.9em}
+.doc p.li{text-indent:0;padding-left:2.2em}
+.doc p.ass{text-indent:0;text-align:center;margin-top:.2em;margin-bottom:0}
+.doc p.data{margin-top:1.4em}
+.doc mark{background:var(--mark);color:var(--mark-ink);padding:0 2px}
+.kv{display:grid;grid-template-columns:auto minmax(0,1fr);gap:4px 12px;font-size:13.5px}
+.kv dt{color:var(--muted)}
+.kv dd{margin:0}
+.checks{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:7px}
+.checks label{display:grid;grid-template-columns:auto minmax(0,1fr);gap:9px;align-items:start;font-size:14px}
+.checks input{margin-top:3px;width:16px;height:16px;accent-color:var(--accent)}
+.vres{display:flex;flex-direction:column;gap:8px}
+.vres .it{border:1px solid var(--line);border-radius:4px;padding:8px 11px;display:flex;flex-direction:column;gap:3px;font-size:13.5px}
+.toast{position:fixed;left:50%;bottom:calc(18px + env(safe-area-inset-bottom,0px));transform:translateX(-50%);background:var(--ink);color:var(--bg);padding:9px 16px;border-radius:4px;font-size:13.5px;z-index:20;max-width:min(92vw,520px)}
+footer{border-top:1px solid var(--line);color:var(--muted);font-size:12.5px}
+footer .wrap{padding-block:16px 28px;display:flex;flex-direction:column;gap:6px}
+
+@media (max-width:900px){
+  .cols{grid-template-columns:minmax(0,1fr)}
+  .side{position:static}
+  .tese .fund{grid-template-columns:minmax(0,1fr)}
+}
+@media (max-width:640px){
+  .form{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .f,.f.w1,.f.w3{grid-column:span 2}
+  .f.w4,.f.w6{grid-column:span 2}
+  .q{grid-template-columns:minmax(0,1fr)}
+  .rep .par,.notas,.duo,.pecas{grid-template-columns:minmax(0,1fr)}
+  .hero::after{background:linear-gradient(90deg,var(--hero-veil) 0%,var(--hero-veil) 62%,var(--hero-veil-0) 130%)}
+  .doc{padding:22px 16px;font-size:14.5px}
+}
+@media (prefers-reduced-motion:no-preference){ .tab,.chip,.btn{transition:color .12s,border-color .12s,background-color .12s} }
+</style>
+
+<header class="hero">
+  <img src="capa.jpg" alt="" width="1344" height="752">
+  <div class="wrap">
+    <span class="eyebrow">Processo penal · resposta à acusação · nulidades · habeas corpus</span>
+    <h1>Oficina de Defesa Penal</h1>
+    <p class="lede">Analise os autos, localize vícios, responda à acusação ponto a ponto e monte a minuta, com cada citação conferida na fonte.</p>
+    <p class="fine">Ferramenta de apoio. A minuta exige revisão de advogado ou defensor público antes do protocolo.</p>
+  </div>
+</header>
+<div class="strip"><div class="wrap" id="faixa"></div></div>
+<nav class="tabs" aria-label="Etapas do trabalho"><div class="wrap" role="tablist" id="abas"></div></nav>
+<div class="wrap"><main id="painel" tabindex="-1"></main></div>
+<footer><div class="wrap" id="rodape"></div></footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+<script type="application/json" id="dados">/*__DADOS__*/</script>
+<script>
+(() => {
+'use strict';
+const D = JSON.parse(document.getElementById('dados').textContent);
+const T = new Map(D.teses.map(t => [t.id, t]));
+const P = new Map(D.precedentes.map(p => [p.id, p]));
+const ABAS = [['caso','Caso'],['analise','Analisar o processo'],['vicios','Vícios (art. 5º)'],['refutar','Refutar a acusação'],['sequencia','Sequência lógica'],['peticao','Gerar petição'],['fontes','Fontes e conferência']];
+const PECAS = {
+  resposta:{nome:'Resposta à acusação', sub:'Rejeição da denúncia e absolvição sumária (CPP, arts. 395 a 397)'},
+  nulidade:{nome:'Arguição de nulidade', sub:'Nulidade de ato e desentranhamento de prova ilícita (CPP, arts. 157 e 563 a 573)'},
+  hc:{nome:'Habeas corpus', sub:'Trancamento da ação penal, com liminar para suspender a audiência (CPP, arts. 647 e 648)'}
+};
+const MESES = ['janeiro','fevereiro','março','abril','maio','junho','julho','agosto','setembro','outubro','novembro','dezembro'];
+const DIAS = ['domingo','segunda-feira','terça-feira','quarta-feira','quinta-feira','sexta-feira','sábado'];
+const LOCAL = !window.claude;
+let dl = null;
+const abertos = new Set();
+let baseSel = D.bases[0].id;
+let filtro = {nat:'', txt:'', trib:'', q:''};
+let blocosAtuais = null;
+
+/* ---------- utilidades ---------- */
+function el(tag, props, ...kids){
+  const n = document.createElement(tag);
+  if (props) for (const [k, v] of Object.entries(props)){
+    if (v == null || v === false) continue;
+    if (k === 'class') n.className = v;
+    else if (k === 'text') n.textContent = v;
+    else if (k === 'dataset') Object.assign(n.dataset, v);
+    else if (k.startsWith('on')) n.addEventListener(k.slice(2), v);
+    else if (k === 'checked' || k === 'value' || k === 'disabled' || k === 'open' || k === 'hidden' || k === 'selected') n[k] = v;
+    else n.setAttribute(k, v === true ? '' : v);
+  }
+  for (const c of kids.flat(Infinity)) if (c != null && c !== false) n.append(c.nodeType ? c : document.createTextNode(String(c)));
+  return n;
+}
+const pill = (txt, tom) => el('span', {class:'pill ' + (tom || '')}, txt);
+function link(url, txt){ return url && /^https:\/\//.test(url) ? el('a', {href:url, target:'_blank', rel:'noopener noreferrer'}, txt) : null; }
+function tom(nat){
+  const n = (nat || '').toLowerCase();
+  if (n.includes('absoluta') || n.includes('prisão')) return 'seal';
+  if (n.includes('relativa')) return 'warn';
+  if (n.includes('absolvição') || n.includes('insuficiência')) return 'ok';
+  if (n.includes('subsidiário')) return '';
+  return 'accent';
+}
+function curto(txt){ return txt.replace(/\{([A-Z0-9]+)\}/g, (m, k) => D.normas[k] ? D.normas[k].depois : m); }
+function expandir(txt, ctx){
+  return txt.replace(/\{([A-Z0-9]+)\}/g, (m, k) => {
+    const n = D.normas[k]; if (!n) return m;
+    if (!ctx.vistas.has(k)){ ctx.vistas.add(k); return n.primeira; }
+    return n.depois;
+  });
+}
+function iso(d){ return d.getFullYear() + '-' + String(d.getMonth() + 1).padStart(2, '0') + '-' + String(d.getDate()).padStart(2, '0'); }
+function deIso(s){ if (!s) return null; const m = /^(\d{4})-(\d{2})-(\d{2})$/.exec(s); if (!m) return null; return new Date(+m[1], +m[2] - 1, +m[3]); }
+function br(s){ const d = typeof s === 'string' ? deIso(s) : s; if (!d) return ''; return String(d.getDate()).padStart(2, '0') + '/' + String(d.getMonth() + 1).padStart(2, '0') + '/' + d.getFullYear(); }
+function extenso(s){ const d = typeof s === 'string' ? deIso(s) : s; if (!d) return ''; return (d.getDate() === 1 ? '1º' : d.getDate()) + ' de ' + MESES[d.getMonth()] + ' de ' + d.getFullYear(); }
+function somaMeses(d, m){ const r = new Date(d.getFullYear(), d.getMonth() + m, d.getDate()); if (r.getDate() !== d.getDate()) r.setDate(0); return r; }
+function somaDias(d, n){ return new Date(d.getFullYear(), d.getMonth(), d.getDate() + n); }
+function intervalo(a, b){
+  let anos = b.getFullYear() - a.getFullYear(), meses = b.getMonth() - a.getMonth(), dias = b.getDate() - a.getDate();
+  if (dias < 0){ meses--; dias += new Date(b.getFullYear(), b.getMonth(), 0).getDate(); }
+  if (meses < 0){ anos--; meses += 12; }
+  const pl = (n, s, p) => n + ' ' + (n === 1 ? s : p);
+  return [anos ? pl(anos, 'ano', 'anos') : '', meses ? pl(meses, 'mês', 'meses') : '', pl(dias, 'dia', 'dias')].filter(Boolean).join(', ');
+}
+let toastT = null;
+function aviso(msg){
+  document.querySelectorAll('.toast').forEach(n => n.remove());
+  const t = el('div', {class:'toast', role:'status'}, msg); document.body.append(t);
+  clearTimeout(toastT); toastT = setTimeout(() => t.remove(), 3600);
+}
+
+/* ---------- estado ---------- */
+const EXEMPLO = {
+  caso:{justica:'estadual', vara:'2ª Vara Criminal', comarca:'Niterói', uf:'RJ', tribunal:'Tribunal de Justiça do Estado do Rio de Janeiro', processo:'0000000-00.2026.8.19.0000', acusado:'João da Silva (nome fictício)', preso:true, defensor:'Maria de Souza (nome fictício)', oab:'OAB/RJ nº 000.000', papel:'advogada', imputacao:'art. 33, caput, da Lei nº 11.343, de 2006', fase:'citado', dfato:'2026-10-02', dprisao:'2026-10-02', dreceb:'2026-10-20', dcit:'2026-11-16', daij:'2027-02-09', penaAnos:15, penaMeses:0, menor21:false, maior70:false, local:'Niterói',
+    sintese:'Segundo a denúncia, em 2 de outubro de 2026, policiais militares abordaram o acusado em via pública por “atitude suspeita”. Nada encontraram na revista. Em seguida, entraram na casa dele, sem mandado, e apreenderam 38 g de maconha. Os policiais afirmam que o acusado admitiu, no local, que vendia a droga.',
+    versao:'O acusado nega a venda. Afirma que a droga era para uso próprio e que não autorizou a entrada dos policiais.'},
+  resp:{'q-abordagem':'sim','q-casa':'sim','q-confissao':'sim','q-derivadas':'sim','q-celular':'nao','q-laudo':'ns','q-justa':'sim','q-prev-fund':'sim'},
+  sel:{'busca-pessoal':true,'busca-domiciliar':true,'confissao':true,'derivadas':true,'justa-causa':true,'preventiva-fundamentacao':true},
+  notas:{'busca-domiciliar':{fato:'Os policiais militares entraram na residência do acusado sem mandado judicial, depois de revista pessoal em que nada foi encontrado (auto de prisão em flagrante, ID [INDICAR]). O auto não descreve fato anterior à entrada que indicasse a existência de droga no imóvel, e não há termo ou gravação de consentimento do morador.', prejuizo:'A única prova da materialidade é a droga apreendida no interior do imóvel. Excluída a apreensão, não resta elemento que sustente a denúncia.'}},
+  fora:{}, peca:'resposta', opc:{enderecamento:'forense', formato:'forense', trancar:true, liminar:true, suspender:true}, testemunhas:[{nome:'[NOME DA TESTEMUNHA]', dados:'[QUALIFICAÇÃO E ENDEREÇO]'}], conf:{}, exemplo:true, guardar:false
+};
+function vazio(){ return {caso:{justica:'estadual', vara:'', comarca:'', uf:'', tribunal:'', processo:'', acusado:'', preso:false, defensor:'', oab:'', papel:'advogado', imputacao:'', fase:'citado', dfato:'', dprisao:'', dreceb:'', dcit:'', daij:'', penaAnos:'', penaMeses:'', menor21:false, maior70:false, local:'', sintese:'', versao:''}, resp:{}, sel:{}, notas:{}, fora:{}, peca:'resposta', opc:{enderecamento:'forense', formato:'forense', trancar:true, liminar:true, suspender:true}, testemunhas:[], conf:{}, exemplo:false, guardar:false}; }
+let S = JSON.parse(JSON.stringify(EXEMPLO));
+const CHAVE = 'oficina-defesa-penal:v1';
+function carregar(){ try { const r = localStorage.getItem(CHAVE); if (r){ const o = JSON.parse(r); if (o && o.caso && o.guardar) S = Object.assign(vazio(), o); } } catch (e) {} }
+let salvT = null;
+function salvar(){
+  clearTimeout(salvT);
+  salvT = setTimeout(() => { try { if (S.guardar) localStorage.setItem(CHAVE, JSON.stringify(S)); else localStorage.removeItem(CHAVE); } catch (e) {} }, 300);
+}
+function dp(){ return /^defensor/.test(S.caso.papel || ''); }
+function selecionadas(){ return D.teses.filter(t => S.sel[t.id]).sort((a, b) => a.ordem - b.ordem); }
+function pendencias(){ const out = []; for (const f of D.checklist) for (const q of f.perguntas) if (S.resp[q.id] === 'ns') out.push(q); return out; }
+
+/* ---------- cálculos por regra ---------- */
+function prazoResposta(){
+  const c = deIso(S.caso.dcit); if (!c) return null;
+  const dias = dp() ? 20 : 10;
+  let fim = somaDias(c, dias); const bruto = fim; let prorrog = false;
+  while (fim.getDay() === 0 || fim.getDay() === 6){ fim = somaDias(fim, 1); prorrog = true; }
+  const hoje = new Date(); const h0 = new Date(hoje.getFullYear(), hoje.getMonth(), hoje.getDate());
+  const resta = Math.round((fim - h0) / 86400000);
+  const recesso = (() => { for (let d = somaDias(c, 1); d <= fim; d = somaDias(d, 1)){ const m = d.getMonth(), dia = d.getDate(); if ((m === 11 && dia >= 20) || (m === 0 && dia <= 20)) return true; } return false; })();
+  return {c, dias, bruto, fim, prorrog, resta, recesso};
+}
+function prescricao(){
+  const c = S.caso; const f = deIso(c.dfato); const a = Number(c.penaAnos) || 0, m = Number(c.penaMeses) || 0;
+  if (!f || (!a && !m)) return null;
+  const tot = a * 12 + m;
+  let p = tot > 144 ? 20 : tot > 96 ? 16 : tot > 48 ? 12 : tot > 24 ? 8 : tot >= 12 ? 4 : (c.dfato < '2010-05-06' ? 2 : 3);
+  const inciso = tot > 144 ? 'I' : tot > 96 ? 'II' : tot > 48 ? 'III' : tot > 24 ? 'IV' : tot >= 12 ? 'V' : 'VI';
+  const metade = !!(c.menor21 || c.maior70);
+  const mesesPrazo = metade ? p * 6 : p * 12;
+  const r = deIso(c.dreceb); const hoje = new Date(); const h0 = new Date(hoje.getFullYear(), hoje.getMonth(), hoje.getDate());
+  const out = {p, inciso, metade, mesesPrazo, f, r, trechos:[]};
+  if (r){
+    const lim = somaMeses(f, mesesPrazo);
+    out.trechos.push({de:'fato', ate:'recebimento da denúncia', a:f, b:r, lim, prescrito: lim <= r});
+    const lim2 = somaMeses(r, mesesPrazo);
+    out.trechos.push({de:'recebimento da denúncia', ate:'hoje', a:r, b:h0, lim:lim2, prescrito: lim2 <= h0});
+  } else {
+    const lim = somaMeses(f, mesesPrazo);
+    out.trechos.push({de:'fato', ate:'hoje', a:f, b:h0, lim, prescrito: lim <= h0});
+  }
+  return out;
+}
+
+/* ---------- faixa e abas ---------- */
+function abaAtual(){ const h = (location.hash || '').replace('#', ''); return ABAS.some(a => a[0] === h) ? h : 'caso'; }
+function faixa(){
+  const c = S.caso, n = selecionadas().length, pe = pendencias().length, pr = prazoResposta();
+  const f = document.getElementById('faixa'); f.replaceChildren(
+    el('span', null, 'Autos ', el('b', {class:'autos'}, c.processo || 'sem número')),
+    el('span', null, c.acusado || 'Acusado não informado'),
+    c.preso ? el('span', {class:'tarja'}, 'Réu preso') : null,
+    el('span', {class:'sp'}),
+    el('span', null, el('b', null, String(n)), n === 1 ? ' tese selecionada' : ' teses selecionadas'),
+    pe ? el('span', null, el('b', null, String(pe)), pe === 1 ? ' pendência' : ' pendências') : null,
+    pr && S.caso.fase === 'citado' ? el('span', null, 'Resposta até ', el('b', {class:'mono'}, br(pr.fim))) : null
+  );
+}
+function abas(){
+  const at = abaAtual();
+  document.getElementById('abas').replaceChildren(...ABAS.map((a, i) => el('button', {class:'tab', role:'tab', type:'button', id:'aba-' + a[0], 'aria-selected': String(a[0] === at), 'aria-controls':'painel', onclick:() => ir(a[0])}, el('span', {class:'n'}, String(i + 1)), a[1])));
+}
+function ir(id, alvo){
+  if (abaAtual() !== id){ location.hash = id; } else desenhar();
+  if (alvo) setTimeout(() => { const n = document.getElementById(alvo); if (n){ n.scrollIntoView({block:'start'}); const d = n.querySelector('details'); if (d) d.open = true; } }, 60);
+  else window.scrollTo({top: document.querySelector('.tabs').offsetTop});
+}
+function desenhar(){
+  abas(); faixa();
+  const p = document.getElementById('painel'); const at = abaAtual();
+  p.setAttribute('role', 'tabpanel'); p.setAttribute('aria-labelledby', 'aba-' + at);
+  p.replaceChildren(...({caso:vCaso, analise:vAnalise, vicios:vVicios, refutar:vRefutar, sequencia:vSequencia, peticao:vPeticao, fontes:vFontes})[at]());
+}
+function redesenhar(){ const y = window.scrollY; desenhar(); window.scrollTo(0, y); }
+
+/* ---------- componentes ---------- */
+function campo(id, rotulo, chave, o){
+  o = o || {}; const c = S.caso; let inp;
+  const on = e => { c[chave] = e.target.type === 'checkbox' ? e.target.checked : e.target.value; S.exemplo = false; salvar(); faixa(); if (o.redesenha) redesenhar(); };
+  if (o.tipo === 'select') inp = el('select', {id, onchange:on}, o.opcoes.map(([v, t]) => el('option', {value:v, selected:c[chave] === v}, t)));
+  else if (o.tipo === 'area') inp = el('textarea', {id, oninput:on, placeholder:o.dica || ''}, c[chave] || '');
+  else inp = el('input', {id, type:o.tipo || 'text', value:c[chave] == null ? '' : c[chave], oninput:on, onchange:on, placeholder:o.dica || '', min:o.min, max:o.max});
+  return el('div', {class:'f ' + (o.w || '')}, el('label', {for:id}, rotulo), inp);
+}
+function marca(id, rotulo, chave, o){
+  const c = S.caso;
+  return el('label', {class:'checkrow'}, el('input', {type:'checkbox', id, checked:!!c[chave], onchange:e => { c[chave] = e.target.checked; S.exemplo = false; salvar(); faixa(); if (o && o.redesenha) redesenhar(); }}), rotulo);
+}
+function alternar(id, on){ if (on) S.sel[id] = true; else delete S.sel[id]; salvar(); redesenhar(); }
+function itemPrec(p, limite){
+  return el('li', {class:'prec'},
+    el('div', {class:'prec-c'}, p.citacao),
+    el('div', {class:'prec-s'}, p.literal ? '“' + p.literal + '”' : p.sintese),
+    p.integra ? el('details', {class:'integra'}, el('summary', null, 'Ler a íntegra da tese'), el('div', {class:'prec-s'}, '“' + p.integra + '”')) : null,
+    p.nota ? el('div', {class:'prec-n'}, 'Ressalva: ' + p.nota) : null,
+    el('div', {class:'prec-l'}, pill('Conferido em ' + br(p.verificado_em), 'ok'), p.situacao && p.situacao !== 'vigente' ? pill(p.situacao, 'warn wrapok') : null, limite ? pill('Limite a enfrentar', 'warn') : null, link(p.fonte, 'fonte consultada'), link(p.conferir, 'pesquisar no tribunal')));
+}
+function fichaTese(t, o){
+  o = o || {}; const sel = !!S.sel[t.id]; const nota = S.notas[t.id] || {};
+  const precs = [...t.precedentes, ...(t.opcionais || [])].map(i => P.get(i)).filter(Boolean);
+  const lims = (t.limites || []).map(i => P.get(i)).filter(Boolean);
+  const corpo = el('div', {class:'body'},
+    el('div', null, el('h4', null, 'Núcleo do argumento'), el('p', null, curto(t.nucleo))),
+    el('div', null, el('h4', null, 'O que conferir nos autos'), el('ul', null, t.detectar.map(d => el('li', null, curto(d))))),
+    el('div', {class:'fund'},
+      el('div', null, el('h4', null, 'Constituição'), el('ul', null, [...t.art5.map(i => 'art. 5º, ' + i), ...(t.cf_outros || [])].map(x => el('li', null, x)))),
+      el('div', null, el('h4', null, 'Tratados'), (t.tratados || []).length ? el('ul', null, t.tratados.map(x => el('li', null, x))) : el('p', {class:'small'}, 'Sem dispositivo específico.')),
+      el('div', null, el('h4', null, 'Lei'), el('ul', null, t.lei.map(x => el('li', null, x))))),
+    el('div', null, el('h4', null, 'Precedentes conferidos'), precs.length ? el('ul', {class:'precs'}, precs.map(p => itemPrec(p))) : el('p', {class:'small'}, 'Nenhum precedente desta base foi vinculado a esta tese. Pesquise nos tribunais antes de citar qualquer julgado e não cite de memória.')),
+    lims.length ? el('div', null, el('h4', null, 'Precedentes que limitam a tese'), el('ul', {class:'precs'}, lims.map(p => itemPrec(p, true)))) : null,
+    t.prejuizo ? el('div', null, el('h4', null, 'Como demonstrar o prejuízo'), el('p', null, curto(t.prejuizo))) : null,
+    el('div', null, el('h4', null, 'O que a acusação vai responder'), el('div', {class:'rep'}, t.replicas.map(r => el('div', {class:'par'}, el('div', null, el('span', {class:'lbl'}, 'Acusação'), curto(r.a)), el('div', null, el('span', {class:'lbl'}, 'Resposta da defesa'), curto(r.r)))))),
+    el('div', null, el('h4', null, 'Pedido'), el('p', null, t.pedido.charAt(0).toUpperCase() + t.pedido.slice(1) + '.')));
+  const det = el('details', {open:abertos.has(t.id) || !!o.aberto, ontoggle:e => { if (e.target.open) abertos.add(t.id); else abertos.delete(t.id); }}, el('summary', null, 'Fundamento, precedentes e respostas à acusação'), corpo);
+  const mk = (campoN, rot, dica) => el('div', {class:'f'}, el('label', {for:'n-' + campoN + '-' + t.id}, rot), el('textarea', {id:'n-' + campoN + '-' + t.id, placeholder:dica, oninput:e => { (S.notas[t.id] = S.notas[t.id] || {})[campoN] = e.target.value; S.exemplo = false; salvar(); }}, nota[campoN] || ''));
+  return el('article', {class:'tese' + (sel ? ' is-sel' : ''), id:'tese-' + t.id},
+    el('div', {class:'tese-h'},
+      el('input', {type:'checkbox', id:'sel-' + t.id, checked:sel, 'aria-label':'Incluir na peça: ' + t.titulo, onchange:e => alternar(t.id, e.target.checked)}),
+      el('div', {class:'tese-t'},
+        el('h3', null, el('label', {for:'sel-' + t.id}, t.titulo)),
+        o.diz && t.acusacao ? el('p', {class:'diz'}, 'A acusação afirma: ' + t.acusacao) : null,
+        el('div', {class:'tese-m'}, pill(t.natureza, tom(t.natureza) + ' wrapok'), el('span', null, 'Constituição, art. 5º, ' + t.art5.join(', '))))),
+    sel ? el('div', {class:'notas'}, mk('fato', 'Fato do processo e onde está nos autos', 'Descreva o que ocorreu e indique o documento e as folhas ou o ID.'), t.secao === 'preliminar' || t.secao === 'prisao' ? mk('prejuizo', 'Prejuízo concreto para a defesa', curto(t.prejuizo || '')) : null) : null,
+    det);
+}
+
+/* ---------- 1. caso ---------- */
+function vCaso(){
+  const pr = prazoResposta();
+  const form = el('div', {class:'form'},
+    campo('c-justica', 'Justiça', 'justica', {tipo:'select', opcoes:[['estadual', 'Estadual'], ['federal', 'Federal']]}),
+    campo('c-vara', 'Vara', 'vara', {dica:'2ª Vara Criminal'}),
+    campo('c-comarca', 'Comarca ou subseção', 'comarca'),
+    campo('c-uf', 'UF', 'uf', {w:'w1', dica:'RJ'}),
+    campo('c-processo', 'Número do processo', 'processo', {w:'w3', dica:'0000000-00.0000.0.00.0000'}),
+    campo('c-tribunal', 'Tribunal competente para o habeas corpus', 'tribunal', {w:'w6', dica:'Tribunal de Justiça do Estado de … ou Tribunal Regional Federal da …ª Região'}),
+    campo('c-acusado', 'Acusado', 'acusado', {w:'w3'}),
+    campo('c-imputacao', 'Imputação (tipo penal)', 'imputacao', {w:'w3', dica:'art. 155, caput, do Código Penal'}),
+    campo('c-defensor', 'Nome de quem assina a defesa', 'defensor', {w:'w3'}),
+    campo('c-papel', 'Atua como', 'papel', {tipo:'select', redesenha:true, opcoes:[['advogado', 'Advogado'], ['advogada', 'Advogada'], ['defensor', 'Defensor público (prazo em dobro)'], ['defensora', 'Defensora pública (prazo em dobro)']]}),
+    campo('c-oab', 'Inscrição na OAB', 'oab', {w:'w1', dica:'OAB/UF nº 000.000'}),
+    el('div', {class:'f w6'}, el('div', {class:'btns'}, marca('c-preso', 'Réu preso', 'preso', {redesenha:true}))),
+    campo('c-fase', 'Fase do processo', 'fase', {w:'w3', tipo:'select', redesenha:true, opcoes:[['inquerito', 'Investigação'], ['denuncia', 'Denúncia oferecida'], ['citado', 'Citado: prazo da resposta em curso'], ['resposta', 'Resposta apresentada'], ['aij', 'Audiência de instrução designada'], ['instrucao', 'Instrução encerrada'], ['sentenca', 'Sentença proferida']]}),
+    campo('c-local', 'Local para a data da peça', 'local', {w:'w3'}),
+    campo('c-dfato', 'Data do fato', 'dfato', {tipo:'date'}),
+    campo('c-dprisao', 'Data da prisão', 'dprisao', {tipo:'date'}),
+    campo('c-dreceb', 'Recebimento da denúncia', 'dreceb', {tipo:'date'}),
+    campo('c-dcit', 'Data da citação', 'dcit', {tipo:'date', redesenha:true}),
+    campo('c-daij', 'Data da audiência (AIJ)', 'daij', {tipo:'date'}),
+    el('div', {class:'f'}),
+    campo('c-sintese', 'Síntese da acusação', 'sintese', {w:'w6', tipo:'area', dica:'O que a denúncia narra, em poucas frases.'}),
+    campo('c-versao', 'Versão da defesa', 'versao', {w:'w6', tipo:'area', dica:'O que o acusado afirma e o que a defesa pretende demonstrar.'}));
+  return [
+    el('div', {class:'sec-h'}, el('h2', null, 'Dados do caso'), el('p', {class:'lead'}, 'Estes dados alimentam os cálculos de prazo, a análise e a minuta. Preencha só o que constar dos autos.')),
+    S.exemplo ? el('div', {class:'note ex'}, el('span', null, el('b', null, 'Exemplo fictício carregado. '), 'Nomes, números e datas foram inventados para demonstração.'), el('button', {class:'btn quiet', type:'button', onclick:() => { S = vazio(); salvar(); redesenhar(); }}, 'Começar caso em branco')) : null,
+    el('div', {class:'cols'},
+      el('div', {class:'card'}, form),
+      el('aside', {class:'side'},
+        el('div', {class:'card'}, el('h3', null, 'Prazo da resposta à acusação'),
+          pr ? [el('p', null, 'Até ', el('b', {class:'mono'}, br(pr.fim)), ' (' + DIAS[pr.fim.getDay()] + ')', pr.resta >= 0 ? ', em ' + pr.resta + (pr.resta === 1 ? ' dia.' : ' dias.') : '. Prazo vencido por esta conta.'),
+            el('p', {class:'small'}, 'Conta: citação em ' + br(pr.c) + '; o dia do começo não se computa (CPP, art. 798, § 1º); ' + pr.dias + ' dias corridos' + (dp() ? ' (prazo em dobro da Defensoria Pública)' : ' (CPP, art. 396)') + ' terminam em ' + br(pr.bruto) + (pr.prorrog ? '; como o dia não é útil, o prazo se prorroga até o dia útil seguinte (art. 798, § 3º).' : '.')),
+            pr.recesso && !S.caso.preso ? el('p', {class:'small'}, 'O período inclui dias entre 20 de dezembro e 20 de janeiro. Com réu solto, o prazo fica suspenso nesse intervalo (CPP, art. 798-A), e a data real pode ser posterior.') : null,
+            el('p', {class:'small'}, 'Estimativa conservadora: não considera feriados nem suspensões locais, que só adiam o vencimento. Confira no sistema do tribunal.')]
+          : el('p', {class:'small'}, 'Informe a data da citação para ver a estimativa e a conta.')),
+        el('div', {class:'card'}, el('h3', null, 'Sigilo'),
+          el('p', {class:'small'}, 'Os dados ficam nesta página e não são enviados a nenhum servidor. Ao fechar a página, eles se perdem, salvo se você marcar a opção abaixo.'),
+          el('label', {class:'checkrow'}, el('input', {type:'checkbox', id:'c-guardar', checked:!!S.guardar, onchange:e => { S.guardar = e.target.checked; salvar(); }}), 'Guardar rascunho neste navegador'),
+          el('div', {class:'btns'}, el('button', {class:'btn quiet', type:'button', onclick:() => { S = JSON.parse(JSON.stringify(EXEMPLO)); salvar(); redesenhar(); }}, 'Carregar exemplo'), el('button', {class:'btn quiet', type:'button', onclick:() => { S = vazio(); salvar(); redesenhar(); }}, 'Limpar tudo')))))
+  ];
+}
+
+/* ---------- 2. análise ---------- */
+function vAnalise(){
+  const fases = D.checklist.map((f, i) => {
+    const sim = f.perguntas.filter(q => S.resp[q.id] === 'sim').length;
+    return el('details', {class:'fase', open:abertos.has('f-' + f.id) || (i === 0 && !abertos.has('x-' + f.id)), ontoggle:e => { if (e.target.open){ abertos.add('f-' + f.id); abertos.delete('x-' + f.id); } else { abertos.delete('f-' + f.id); abertos.add('x-' + f.id); } }},
+      el('summary', null, f.titulo, el('span', {class:'cnt'}, sim + ' de ' + f.perguntas.length + ' com irregularidade')),
+      el('div', {class:'qs'}, f.perguntas.map(q => {
+        const r = S.resp[q.id]; const t = T.get(q.tese);
+        const op = (v, rot) => el('label', null, el('input', {type:'radio', name:q.id, id:q.id + '-' + v, value:v, checked:r === v, onchange:() => {
+          S.resp[q.id] = v; S.exemplo = false;
+          if (v === 'sim') S.sel[q.tese] = true;
+          else if (!D.checklist.some(ff => ff.perguntas.some(qq => qq.tese === q.tese && S.resp[qq.id] === 'sim'))) delete S.sel[q.tese];
+          salvar(); redesenhar(); }}), rot);
+        return el('div', {class:'q'},
+          el('div', null, el('div', {class:'qt'}, q.texto), el('div', {class:'onde'}, 'Onde conferir: ' + q.onde)),
+          el('fieldset', {class:'seg'}, el('legend', {class:'sr'}, q.texto), op('sim', 'Sim'), op('nao', 'Não'), op('ns', 'Não sei')),
+          r === 'sim' && t ? el('div', {class:'hit'}, pill(t.natureza, tom(t.natureza) + ' wrapok'), el('span', null, t.titulo), el('button', {class:'linkbtn', type:'button', onclick:() => { abertos.add(t.id); ir('vicios', 'tese-' + t.id); }}, 'ver fundamento')) : null,
+          r === 'ns' ? el('div', {class:'hit small'}, 'Entrou na lista de pendências. Consulte o documento indicado e volte a esta pergunta.') : null);
+      })));
+  });
+  const sel = selecionadas(), pe = pendencias(), ps = prescricao();
+  return [
+    el('div', {class:'sec-h'}, el('h2', null, 'Analisar o processo'), el('p', {class:'lead'}, 'Percorra os autos na ordem em que os atos ocorreram. Cada “Sim” registra uma irregularidade e seleciona a tese correspondente. “Não sei” gera uma pendência com o documento a consultar.')),
+    el('div', {class:'cols'},
+      el('div', {class:'stack'}, fases,
+        el('div', {class:'card'}, el('h3', null, 'Prescrição pela pena máxima'),
+          el('div', {class:'form'},
+            campo('c-penaAnos', 'Pena máxima: anos', 'penaAnos', {tipo:'number', min:0, max:40, redesenha:true}),
+            campo('c-penaMeses', 'Pena máxima: meses', 'penaMeses', {tipo:'number', min:0, max:11, redesenha:true}),
+            el('div', {class:'f'}, el('span', null, 'Redução do prazo (CP, art. 115)'), marca('c-menor21', 'Menor de 21 na data do fato', 'menor21', {redesenha:true}), marca('c-maior70', 'Maior de 70 anos', 'maior70', {redesenha:true}))),
+          ps ? [el('p', null, 'Prazo: ', el('b', null, ps.p + ' anos'), ' (CP, art. 109, ' + ps.inciso + ')', ps.metade ? ', reduzido à metade: ' + (ps.mesesPrazo % 12 === 0 ? ps.mesesPrazo / 12 + ' anos' : ps.mesesPrazo + ' meses') + '.' : '.'),
+            el('ul', {class:'plain'}, ps.trechos.map(t => el('li', null, 'Do ' + t.de + ' (' + br(t.a) + ') até ' + (t.ate === 'hoje' ? 'hoje' : 'o ' + t.ate + ' (' + br(t.b) + ')') + ': ' + intervalo(t.a, t.b) + '. O último dia do prazo é ' + br(somaDias(t.lim, -1)) + '. ', pill(t.prescrito ? 'Em tese, prescrito' : 'Não alcança o prazo', t.prescrito ? 'ok' : '')))),
+            el('p', {class:'small'}, 'Cálculo pela pena máxima em abstrato, com o recebimento da denúncia como marco interruptivo (CP, art. 117, I). Não considera causas de aumento ou de diminuição, outras causas interruptivas nem causas suspensivas (CP, art. 116; CPP, art. 366). Confira antes de alegar.')]
+          : el('p', {class:'small'}, 'Informe a pena máxima cominada e, na aba Caso, a data do fato e a do recebimento da denúncia.'))),
+      el('aside', {class:'side'},
+        el('div', {class:'card'}, el('h3', null, 'Achados'), sel.length ? el('ul', {class:'plain'}, sel.map(t => el('li', null, el('button', {class:'linkbtn', type:'button', onclick:() => { abertos.add(t.id); ir('vicios', 'tese-' + t.id); }}, t.titulo), ' ', pill(t.natureza, tom(t.natureza) + ' wrapok')))) : el('p', {class:'small'}, 'Nenhuma irregularidade registrada até aqui.'),
+          sel.length ? el('button', {class:'btn', type:'button', onclick:() => ir('peticao')}, 'Montar a minuta') : null),
+        el('div', {class:'card'}, el('h3', null, 'Pendências'), pe.length ? el('ul', {class:'plain'}, pe.map(q => el('li', null, q.onde))) : el('p', {class:'small'}, 'Nenhum documento pendente de consulta.'))))
+  ];
+}
+
+/* ---------- 3. vícios ---------- */
+function vVicios(){
+  const nats = [['', 'Todas'], ['absoluta', 'Nulidade absoluta'], ['relativa', 'Nulidade relativa'], ['prova', 'Prova ilícita ou inválida'], ['rejeição', 'Rejeição da denúncia'], ['prisão', 'Ilegalidade da prisão'], ['absolvição', 'Absolvição sumária']];
+  const passa = t => (!filtro.nat || t.natureza.toLowerCase().includes(filtro.nat)) && (!filtro.txt || (t.titulo + ' ' + t.nucleo + ' ' + t.lei.join(' ')).toLowerCase().includes(filtro.txt.toLowerCase()));
+  const lista = D.teses.filter(t => t.secao !== 'subsidiario').filter(passa).sort((a, b) => a.ordem - b.ordem);
+  const cont = el('div', {class:'stack', id:'lista-vicios'}, lista.length ? lista.map(t => fichaTese(t)) : el('p', {class:'small'}, 'Nenhuma ficha corresponde ao filtro.'));
+  return [
+    el('div', {class:'sec-h'}, el('h2', null, 'Vícios e garantias do art. 5º'), el('p', {class:'lead'}, 'Cada linha liga uma garantia da Constituição aos vícios que a violam. Toque em um vício para abrir a ficha com fundamento, precedentes conferidos e as respostas previsíveis da acusação.')),
+    el('div', {class:'note aviso'}, el('b', null, 'Três categorias, três regimes. '), 'A nulidade absoluta atinge interesse público, não preclui e pode ser reconhecida a qualquer tempo. A nulidade relativa deve ser arguida no momento previsto no art. 571 do CPP, sob pena de preclusão (art. 572). A prova ilícita não é nula: é inadmissível e deve ser desentranhada, com as que dela derivam (Constituição, art. 5º, LVI; CPP, art. 157). Os tribunais superiores exigem demonstração de prejuízo também nas nulidades absolutas (CPP, art. 563). Por isso, demonstre sempre o prejuízo concreto.'),
+    el('div', {class:'tblwrap'}, el('table', null,
+      el('thead', null, el('tr', null, el('th', null, 'Constituição'), el('th', null, 'Garantia'), el('th', null, 'Vícios relacionados'))),
+      el('tbody', null, D.incisos.map(i => {
+        const ts = D.teses.filter(t => t.art5.includes(i.inc) || (t.cf_outros || []).includes(i.inc)).sort((a, b) => a.ordem - b.ordem);
+        return el('tr', null, el('td', {class:'inc'}, i.rot), el('td', null, i.garantia), el('td', null, el('div', {class:'chips'}, ts.map(t => el('button', {class:'chip' + (S.sel[t.id] ? ' on' : ''), type:'button', onclick:() => { filtro.nat = ''; filtro.txt = ''; abertos.add(t.id); redesenhar(); setTimeout(() => { const n = document.getElementById('tese-' + t.id); if (n) n.scrollIntoView({block:'start'}); }, 40); }}, t.titulo)))));
+      })))),
+    el('div', {class:'filters'},
+      el('div', {class:'f'}, el('label', {for:'v-nat'}, 'Natureza'), el('select', {id:'v-nat', onchange:e => { filtro.nat = e.target.value; redesenhar(); }}, nats.map(([v, t]) => el('option', {value:v, selected:filtro.nat === v}, t)))),
+      el('div', {class:'f'}, el('label', {for:'v-txt'}, 'Buscar nas fichas'), el('input', {type:'text', id:'v-txt', value:filtro.txt, placeholder:'citação, reconhecimento, art. 157…', oninput:e => { filtro.txt = e.target.value; const l = D.teses.filter(t => t.secao !== 'subsidiario').filter(passa).sort((a, b) => a.ordem - b.ordem); document.getElementById('lista-vicios').replaceChildren(...(l.length ? l.map(t => fichaTese(t)) : [el('p', {class:'small'}, 'Nenhuma ficha corresponde ao filtro.')])); }}))),
+    cont
+  ];
+}
+
+/* ---------- 4. refutar ---------- */
+function vRefutar(){
+  const ts = D.teses.filter(t => t.base === baseSel).sort((a, b) => a.ordem - b.ordem);
+  return [
+    el('div', {class:'sec-h'}, el('h2', null, 'Refutar a acusação'), el('p', {class:'lead'}, 'Escolha aquilo em que a acusação se apoia. Para cada base, a oficina mostra os pontos de ataque, o fundamento e a resposta ao que o Ministério Público costuma replicar.')),
+    el('div', {class:'card'}, el('h3', null, 'Quatro perguntas, nesta ordem'),
+      el('ol', {class:'plain'}, D.metodo.map(m => el('li', null, el('b', null, m.pergunta + ' '), m.explica))),
+      el('p', {class:'small'}, 'A ordem importa: a prova excluída na primeira pergunta não chega a ser valorada nas seguintes. Sustente todas as que couberem, em ordem sucessiva.')),
+    el('div', {class:'chips', role:'group', 'aria-label':'Base da acusação'}, D.bases.map(b => el('button', {class:'chip', type:'button', 'aria-pressed':String(b.id === baseSel), onclick:() => { baseSel = b.id; redesenhar(); }}, b.rotulo))),
+    el('div', {class:'stack'}, ts.map(t => fichaTese(t, {diz:true, aberto:true})))
+  ];
+}
+
+/* ---------- 5. sequência ---------- */
+function vSequencia(){
+  const sel = selecionadas();
+  return [
+    el('div', {class:'sec-h'}, el('h2', null, 'Sequência lógica dos argumentos'), el('p', {class:'lead'}, 'A defesa vai do que derruba o processo inteiro ao que apenas o atenua. Cada passo é pedido principal em relação aos seguintes, que entram como pedidos sucessivos.')),
+    el('div', {class:'card'}, el('ol', {class:'steps'}, D.sequencia.map((s, i) => {
+      const meus = sel.filter(t => t.ordem >= s.de && t.ordem <= s.ate);
+      return el('li', {class:'step'}, el('span', {class:'num'}, String(i + 1)), el('div', {class:'st'}, el('h3', null, s.titulo), el('p', null, s.porque), el('p', {class:'small'}, 'Efeito pretendido: ' + s.efeito), meus.length ? el('div', {class:'mine'}, meus.map(t => el('button', {class:'chip on', type:'button', onclick:() => { abertos.add(t.id); ir('vicios', 'tese-' + t.id); }}, t.titulo))) : null));
+    }))),
+    el('div', {class:'duo'},
+      el('div', {class:'card'}, el('h3', null, 'Estrutura de cada argumento'), el('ol', {class:'plain'}, D.estrutura.map(e => el('li', null, el('b', null, e.passo + '. '), e.explica)))),
+      el('div', {class:'card'}, el('h3', null, 'O que alegar agora'), el('ul', {class:'plain'}, D.preclusao.map(p => el('li', null, el('b', null, p.quando + ': '), p.oque, ' ', el('span', {class:'small'}, '(' + p.base + ')')))))),
+    el('div', {class:'duo'},
+      el('div', {class:'card'}, el('h3', null, 'Ordem de apresentação na peça escrita'), el('ol', {class:'plain'}, D.apresentacao.escrita.map(x => el('li', null, x)))),
+      el('div', {class:'card'}, el('h3', null, 'Ordem de apresentação oral'), el('ol', {class:'plain'}, D.apresentacao.oral.map(x => el('li', null, x))))),
+    el('div', {class:'card'}, el('h3', null, 'Redação conforme o Manual de Redação da Presidência da República'),
+      el('p', {class:'small'}, 'O Manual (3ª edição) rege a redação oficial do Poder Executivo. Seus atributos servem a qualquer texto jurídico que precise ser entendido na primeira leitura.'),
+      el('div', {class:'tblwrap'}, el('table', null, el('thead', null, el('tr', null, el('th', null, 'Atributo'), el('th', null, 'Como aplicar na peça'))), el('tbody', null, D.estilo.atributos.map(a => el('tr', null, el('td', null, el('b', null, a.nome)), el('td', null, a.regra)))))),
+      el('div', {class:'tblwrap'}, el('table', null, el('thead', null, el('tr', null, el('th', null, 'Em vez de'), el('th', null, 'Escreva'))), el('tbody', null, D.estilo.trocas.map(a => el('tr', null, el('td', null, a.evite), el('td', null, a.prefira)))))),
+      el('ul', {class:'plain'}, D.estilo.citacao.map(x => el('li', null, x))))
+  ];
+}
+
+/* ---------- 6. minuta ---------- */
+function tesesDaPeca(){ return selecionadas().filter(t => t.pecas.includes(S.peca)); }
+function precsCitados(t){ return [...t.precedentes.filter(i => !S.fora[t.id + '|' + i]), ...(t.opcionais || []).filter(i => S.fora[t.id + '|' + i] === false)].map(i => P.get(i)).filter(Boolean); }
+function montar(){
+  const c = S.caso, ctx = {vistas:new Set()}, B = [], peca = S.peca, ts = tesesDaPeca();
+  const hc = peca === 'hc';
+  const adapt = s => hc ? s.replace(/\bacusado(s?)\b/g, 'paciente$1').replace(/\bAcusado(s?)\b/g, 'Paciente$1') : s;
+  const v = (x, dica) => (x && String(x).trim()) || '[' + dica + ']';
+  const p = x => B.push({t:'p', x:adapt(expandir(x, ctx))});
+  const juizo = 'da ' + v(c.vara, 'VARA') + (c.justica === 'federal' ? ' da Subseção Judiciária de ' : ' da Comarca de ') + v(c.comarca, 'COMARCA') + (c.uf ? ' – ' + c.uf : '');
+  const juiz = c.justica === 'federal' ? 'Juiz Federal' : 'Juiz de Direito';
+  if (hc){
+    B.push({t:'end', x:(S.opc.enderecamento === 'manual' ? 'Senhor Desembargador Presidente do ' : 'Excelentíssimo Senhor Desembargador Presidente do ') + v(c.tribunal, 'TRIBUNAL COMPETENTE')});
+  } else {
+    B.push({t:'end', x:(S.opc.enderecamento === 'manual' ? 'Senhor ' + juiz + ' ' : 'Excelentíssimo Senhor ' + juiz + ' ') + juizo});
+    B.push({t:'proc', x:'Processo nº ' + v(c.processo, 'NÚMERO DO PROCESSO')});
+  }
+  const PAPEL = {advogado:['advogado inscrito na ', 'seu defensor'], advogada:['advogada inscrita na ', 'sua defensora'], defensor:['defensor público', 'seu defensor'], defensora:['defensora pública', 'sua defensora']}[c.papel] || ['advogado inscrito na ', 'seu defensor'];
+  const def = v(c.defensor, 'NOME DO DEFENSOR') + ', ' + PAPEL[0] + (dp() ? '' : v(c.oab, 'OAB/UF Nº'));
+  let n = 0; const h1 = x => { n++; sub = 0; B.push({t:'h1', x:n + ' ' + x.toUpperCase()}); }; let sub = 0;
+  const h2 = x => { sub++; B.push({t:'h2', x:n + '.' + sub + ' ' + x}); };
+  const corpoTese = t => {
+    const nota = S.notas[t.id] || {};
+    for (const par of t.texto){
+      if (par === '{FATO}') B.push({t:'p', x:(nota.fato && nota.fato.trim()) || '[DESCREVER O FATO DO PROCESSO, COM INDICAÇÃO DO DOCUMENTO E DAS FOLHAS OU DO ID]'});
+      else p(par);
+    }
+    const ps = precsCitados(t);
+    if (ps.length){
+      p(ps.length > 1 ? 'Aplicam-se ao caso os seguintes precedentes:' : 'Aplica-se ao caso o seguinte precedente:');
+      ps.forEach((q, i) => B.push({t:'li', x:String.fromCharCode(97 + i) + ') ' + q.citacao + ': ' + (q.literal ? '“' + q.literal + '”' : q.sintese) + (i < ps.length - 1 ? ';' : '')}));
+    }
+    if (t.secao === 'preliminar' || t.secao === 'prisao') B.push({t:'p', x:(nota.prejuizo && nota.prejuizo.trim()) || '[DEMONSTRAR O PREJUÍZO CONCRETO PARA A DEFESA (ART. 563 DO CPP)]'});
+  };
+  const grupo = sec => ts.filter(t => t.secao === sec);
+  const pedidos = [];
+  if (peca === 'resposta'){
+    B.push({t:'p', x:adapt(expandir(v(c.acusado, 'NOME DO ACUSADO') + ', já qualificado nos autos, por ' + PAPEL[1] + ', ' + def + ', apresenta', ctx))});
+    B.push({t:'titulo', x:'RESPOSTA À ACUSAÇÃO'});
+    p('com fundamento nos arts. 396 e 396-A do {CPP}, pelas razões a seguir.');
+    h1('Síntese da acusação');
+    p('O Ministério Público imputa ao acusado a prática do crime previsto no ' + v(c.imputacao, 'TIPO PENAL IMPUTADO') + '.');
+    B.push({t:'p', x:v(c.sintese, 'RESUMIR A NARRATIVA DA DENÚNCIA')});
+    h1('Tempestividade');
+    p('O acusado foi citado em ' + (c.dcit ? extenso(c.dcit) : '[DATA DA CITAÇÃO]') + '. A resposta é apresentada no prazo de ' + (dp() ? 'dez dias do art. 396 do {CPP}, contado em dobro para a Defensoria Pública' : 'dez dias do art. 396 do {CPP}') + '.');
+    const pre = grupo('preliminar');
+    if (pre.length){ h1('Questões preliminares'); pre.forEach(t => { h2(t.titulo); corpoTese(t); pedidos.push(t.pedido); }); }
+    const pun = grupo('punibilidade');
+    if (pun.length){ h1('Extinção da punibilidade'); pun.forEach(t => { corpoTese(t); pedidos.push(t.pedido); }); }
+    const mer = grupo('merito');
+    if (mer.length){ h1('Absolvição sumária'); mer.forEach(t => { h2(t.titulo); corpoTese(t); pedidos.push(t.pedido); }); }
+    const subs = grupo('subsidiario');
+    if (subs.length){ h1('Pedidos subsidiários'); subs.forEach(t => { h2(t.titulo); corpoTese(t); pedidos.push('subsidiariamente, ' + t.pedido); }); }
+    const pri = grupo('prisao');
+    if (pri.length){ h1('Liberdade do acusado'); pri.forEach(t => { h2(t.titulo); corpoTese(t); pedidos.push(t.pedido); }); }
+    h1('Provas');
+    p('A defesa requer a produção das provas admitidas em direito, em especial [INDICAR PERÍCIAS, DOCUMENTOS E DILIGÊNCIAS], e a inquirição das testemunhas abaixo, que deverão ser intimadas (art. 396-A do {CPP}):');
+    const tes = S.testemunhas.length ? S.testemunhas : [{nome:'[NOME DA TESTEMUNHA]', dados:'[QUALIFICAÇÃO E ENDEREÇO]'}];
+    tes.forEach((w, i) => B.push({t:'li', x:(i + 1) + '. ' + (w.nome || '[NOME]') + ', ' + (w.dados || '[QUALIFICAÇÃO E ENDEREÇO]') + (i < tes.length - 1 ? ';' : '.')}));
+    pedidos.push('caso a ação penal prossiga, deferir a produção das provas requeridas e a intimação das testemunhas arroladas');
+  } else if (peca === 'nulidade'){
+    B.push({t:'p', x:adapt(expandir(v(c.acusado, 'NOME DO ACUSADO') + ', já qualificado nos autos, por ' + PAPEL[1] + ', ' + def + ', apresenta', ctx))});
+    B.push({t:'titulo', x:'ARGUIÇÃO DE NULIDADE'});
+    p('com fundamento nos arts. 157 e 563 a 573 do {CPP}, pelas razões a seguir.');
+    h1('Síntese do processo');
+    B.push({t:'p', x:v(c.sintese, 'RESUMIR O ANDAMENTO DO PROCESSO E O ATO IMPUGNADO')});
+    h1('Oportunidade da arguição');
+    p('A arguição é apresentada na primeira oportunidade em que a defesa se manifesta nos autos depois do ato impugnado, como exige o art. 571 do {CPP}. As nulidades absolutas e a ilicitude da prova não se sujeitam a preclusão.');
+    h1('Fundamentos');
+    ts.forEach(t => { h2(t.titulo); corpoTese(t); pedidos.push(t.pedido); });
+    h1('Extensão da nulidade');
+    p('A nulidade de um ato, uma vez declarada, causa a dos atos que dele diretamente dependam ou sejam consequência (art. 573, § 1º, do {CPP}). O juiz que pronunciar a nulidade declarará os atos a que ela se estende (art. 573, § 2º). No caso, a nulidade alcança [INDICAR OS ATOS DEPENDENTES].');
+    if (S.opc.suspender) pedidos.unshift('suspender a audiência de instrução e julgamento' + (c.daij ? ' designada para ' + extenso(c.daij) : '') + ' até a decisão desta arguição');
+    pedidos.push('declarar os atos a que a nulidade se estende (art. 573, § 2º, do CPP) e determinar sua renovação');
+  } else {
+    B.push({t:'p', x:expandir(def.charAt(0).toUpperCase() + def.slice(1) + ', impetra', ctx)});
+    B.push({t:'titulo', x:'HABEAS CORPUS' + (S.opc.liminar ? ', COM PEDIDO DE LIMINAR,' : '')});
+    p('em favor de ' + v(c.acusado, 'NOME DO PACIENTE') + ', [QUALIFICAÇÃO DO PACIENTE], contra ato do Juízo ' + juizo + ', praticado na Ação Penal nº ' + v(c.processo, 'NÚMERO DO PROCESSO') + ', com fundamento no art. 5º, caput, inciso LXVIII, da {CF} e nos arts. 647 e 648 do {CPP}, pelas razões a seguir.');
+    h1('Síntese dos fatos e do ato coator');
+    p('O paciente responde à ação penal indicada, na qual lhe é imputada a prática do crime previsto no ' + v(c.imputacao, 'TIPO PENAL IMPUTADO') + '.');
+    B.push({t:'p', x:adapt(v(c.sintese, 'RESUMIR A NARRATIVA DA DENÚNCIA'))});
+    p('A autoridade coatora [DESCREVER O ATO COATOR: RECEBEU A DENÚNCIA, REJEITOU A ABSOLVIÇÃO SUMÁRIA OU INDEFERIU A ARGUIÇÃO DE NULIDADE, COM A DATA E O ID DA DECISÃO]' + (c.daij ? ' e designou audiência de instrução e julgamento para ' + extenso(c.daij) + '.' : '.'));
+    h1('Cabimento');
+    p('Dar-se-á habeas corpus sempre que alguém sofrer ou se achar na iminência de sofrer violência ou coação ilegal na sua liberdade de ir e vir (art. 647 do {CPP}). A coação é ilegal, entre outras hipóteses, quando não houver justa causa, quando o processo for manifestamente nulo e quando extinta a punibilidade (art. 648, caput, incisos I, VI e VII, do {CPP}).');
+    if (S.opc.trancar) p('O trancamento da ação penal por habeas corpus é medida excepcional. Os tribunais superiores o admitem quando a ilegalidade se verifica de plano, sem exame aprofundado de provas. É o que ocorre neste caso: as questões a seguir são de direito e se demonstram com os documentos que instruem esta impetração.');
+    h1('Constrangimento ilegal');
+    ts.forEach(t => { h2(t.titulo); corpoTese(t); });
+    if (S.opc.liminar){
+      h1('Liminar');
+      p('A plausibilidade do direito resulta dos fundamentos expostos, demonstrados por prova documental. O perigo da demora decorre ' + (c.daij ? 'da audiência de instrução e julgamento designada para ' + extenso(c.daij) : 'do prosseguimento da ação penal') + (c.preso ? ' e da prisão do paciente' : '') + '. A realização do ato antes do julgamento desta impetração tornaria ineficaz a ordem que vier a ser concedida.');
+    }
+    const fundo = ts.filter(t => t.secao !== 'prisao'), pri = ts.filter(t => t.secao === 'prisao');
+    if (S.opc.liminar) pedidos.push('conceder a liminar para suspender o curso da Ação Penal nº ' + v(c.processo, 'NÚMERO DO PROCESSO') + (c.daij ? ' e a audiência designada para ' + extenso(c.daij) : '') + ', até o julgamento deste habeas corpus' + (pri.length ? ', e para pôr o paciente em liberdade' : ''));
+    pedidos.push('requisitar informações à autoridade coatora e ouvir o Ministério Público');
+    if (S.opc.trancar && fundo.length) pedidos.push('no mérito, conceder a ordem para trancar a Ação Penal nº ' + v(c.processo, 'NÚMERO DO PROCESSO'));
+    fundo.forEach(t => pedidos.push((S.opc.trancar ? 'subsidiariamente, conceder a ordem para ' : 'conceder a ordem para ') + t.pedido));
+    pri.forEach(t => pedidos.push('conceder a ordem para ' + t.pedido));
+  }
+  h1('Pedidos');
+  p('Ante o exposto, ' + (hc ? (/a$/.test(c.papel || '') ? 'a impetrante' : 'o impetrante') : 'a defesa') + ' requer as seguintes providências' + (pedidos.length > 2 ? ', em ordem sucessiva' : '') + ':');
+  pedidos.forEach((q, i) => B.push({t:'li', x:adapt(expandir(String.fromCharCode(97 + i) + ') ' + q + (i < pedidos.length - 1 ? ';' : '.'), ctx))}));
+  if (hc) p('Instruem esta impetração cópias da denúncia, da decisão impugnada e das peças do inquérito e do processo mencionadas no texto.');
+  B.push({t:'p', x:'Nesses termos, pede deferimento.'});
+  B.push({t:'data', x:v(c.local, 'LOCAL') + ', ' + extenso(new Date()) + '.'});
+  B.push({t:'ass', x:v(c.defensor, 'NOME DO DEFENSOR')});
+  B.push({t:'ass', x:c.papel === 'defensor' ? 'Defensor Público' : c.papel === 'defensora' ? 'Defensora Pública' : v(c.oab, 'OAB/UF Nº')});
+  return B;
+}
+function pintar(doc, B){
+  doc.replaceChildren(...B.map(b => {
+    const n = el('p', {class:b.t, dataset:{t:b.t}});
+    b.x.split(/(\[[^\]]+\])/g).forEach(s => { if (!s) return; n.append(/^\[[^\]]+\]$/.test(s) ? el('mark', null, s) : s); });
+    return n;
+  }));
+}
+function lerDoc(){ const doc = document.getElementById('doc'); return doc ? [...doc.children].map(n => ({t:n.dataset.t || 'p', x:n.textContent})) : []; }
+function textoPuro(B){ return B.map(b => (b.t === 'titulo' ? '\n' + b.x + '\n' : b.t === 'h1' ? '\n' + b.x : b.t === 'li' ? '    ' + b.x : b.x)).join('\n\n').replace(/\n{3,}/g, '\n\n'); }
+function xml(s){ return s.replace(/[&<>"]/g, c => ({'&':'&amp;', '<':'&lt;', '>':'&gt;', '"':'&quot;'})[c]); }
+async function docx(B){
+  const man = S.opc.formato === 'manual';
+  const fonte = man ? 'Calibri' : 'Times New Roman', linha = man ? 240 : 360, rec = 1417;
+  const par = b => {
+    let pp = '', rp = '<w:rFonts w:ascii="' + fonte + '" w:hAnsi="' + fonte + '" w:cs="' + fonte + '"/><w:sz w:val="24"/><w:szCs w:val="24"/>';
+    const sp = (antes, depois) => '<w:spacing w:before="' + antes + '" w:after="' + depois + '" w:line="' + linha + '" w:lineRule="auto"/>';
+    if (b.t === 'end'){ pp = sp(0, 480) + '<w:jc w:val="left"/>'; rp += '<w:b/>'; }
+    else if (b.t === 'proc') pp = sp(0, 360) + '<w:jc w:val="left"/>';
+    else if (b.t === 'titulo'){ pp = sp(240, 240) + '<w:jc w:val="center"/>'; rp += '<w:b/>'; }
+    else if (b.t === 'h1'){ pp = '<w:keepNext/>' + sp(360, 120) + '<w:jc w:val="left"/>'; rp += '<w:b/>'; }
+    else if (b.t === 'h2'){ pp = '<w:keepNext/>' + sp(240, 120) + '<w:jc w:val="left"/>'; rp += '<w:b/>'; }
+    else if (b.t === 'li') pp = sp(0, 120) + '<w:ind w:left="' + rec + '"/><w:jc w:val="both"/>';
+    else if (b.t === 'ass') pp = sp(0, 0) + '<w:jc w:val="center"/>';
+    else if (b.t === 'data') pp = sp(480, 720) + '<w:ind w:firstLine="' + rec + '"/><w:jc w:val="left"/>';
+    else pp = sp(0, 120) + '<w:ind w:firstLine="' + rec + '"/><w:jc w:val="both"/>';
+    return '<w:p><w:pPr>' + pp + '</w:pPr><w:r><w:rPr>' + rp + '</w:rPr><w:t xml:space="preserve">' + xml(b.x) + '</w:t></w:r></w:p>';
+  };
+  const mg = man ? 'w:top="1134" w:right="850" w:bottom="1134" w:left="1701"' : 'w:top="1701" w:right="1134" w:bottom="1134" w:left="1701"';
+  const corpo = '<?xml version="1.0" encoding="UTF-8" standalone="yes"?><w:document xmlns:w="http://schemas.openxmlformats.org/wordprocessingml/2006/main"><w:body>' + B.map(par).join('') + '<w:sectPr><w:pgSz w:w="11906" w:h="16838"/><w:pgMar ' + mg + ' w:header="709" w:footer="709" w:gutter="0"/></w:sectPr></w:body></w:document>';
+  const zip = new window.JSZip();
+  zip.file('[Content_Types].xml', '<?xml version="1.0" encoding="UTF-8" standalone="yes"?><Types xmlns="http://schemas.openxmlformats.org/package/2006/content-types"><Default Extension="rels" ContentType="application/vnd.openxmlformats-package.relationships+xml"/><Default Extension="xml" ContentType="application/xml"/><Override PartName="/word/document.xml" ContentType="application/vnd.openxmlformats-officedocument.wordprocessingml.document.main+xml"/></Types>');
+  zip.file('_rels/.rels', '<?xml version="1.0" encoding="UTF-8" standalone="yes"?><Relationships xmlns="http://schemas.openxmlformats.org/package/2006/relationships"><Relationship Id="rId1" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/officeDocument" Target="word/document.xml"/></Relationships>');
+  zip.file('word/document.xml', corpo);
+  return zip.generateAsync({type:'blob', mimeType:'application/vnd.openxmlformats-officedocument.wordprocessingml.document'});
+}
+async function salvarArquivo(nome, dados){
+  if (dl){
+    try { await dl.save({filename:nome, data:dados}); aviso('Arquivo entregue para salvar.'); }
+    catch (e){ if (!e || e.code !== 'declined') aviso('Não foi possível salvar o arquivo nesta tela. Use “Copiar texto”.'); }
+    return;
+  }
+  const blob = dados instanceof Blob ? dados : new Blob([dados], {type:'text/plain;charset=utf-8'});
+  const a = el('a', {href:URL.createObjectURL(blob), download:nome}); document.body.append(a); a.click(); a.remove();
+  setTimeout(() => URL.revokeObjectURL(a.href), 3000);
+}
+function nomeArq(ext){ return ({resposta:'resposta-a-acusacao', nulidade:'arguicao-de-nulidade', hc:'habeas-corpus'})[S.peca] + '.' + ext; }
+function vPeticao(){
+  const ts = tesesDaPeca(), todas = selecionadas(), foraDaPeca = todas.filter(t => !t.pecas.includes(S.peca));
+  const B = montar(); blocosAtuais = B;
+  const pend = B.reduce((s, b) => s + (b.x.match(/\[[^\]]+\]/g) || []).length, 0);
+  const doc = el('div', {class:'doc', id:'doc', contenteditable:'true', spellcheck:'true', role:'textbox', 'aria-multiline':'true', 'aria-label':'Minuta da peça. O texto pode ser editado.'});
+  pintar(doc, B);
+  const citados = new Map(); ts.forEach(t => precsCitados(t).forEach(p => citados.set(p.id, p)));
+  const conf = [...D.conferencia, ...[...citados.values()].map(p => ({id:'p-' + p.id, txt:'Conferir no inteiro teor: ' + p.citacao + '.', url:p.fonte}))];
+  const radio = (k, v, rot) => el('label', {class:'checkrow'}, el('input', {type:'radio', name:'o-' + k, id:'o-' + k + '-' + v, checked:S.opc[k] === v, onchange:() => { S.opc[k] = v; salvar(); redesenhar(); }}), rot);
+  const chk = (k, rot) => el('label', {class:'checkrow'}, el('input', {type:'checkbox', id:'o-' + k, checked:!!S.opc[k], onchange:e => { S.opc[k] = e.target.checked; salvar(); redesenhar(); }}), rot);
+  const copiar = async () => {
+    const txt = textoPuro(lerDoc());
+    try { await navigator.clipboard.writeText(txt); aviso('Texto copiado.'); }
+    catch (e){ const r = document.createRange(); r.selectNodeContents(document.getElementById('doc')); const s = getSelection(); s.removeAllRanges(); s.addRange(r); aviso('Texto selecionado. Use Ctrl+C ou o comando Copiar.'); }
+  };
+  const podeBaixar = LOCAL || !!dl;
+  return [
+    el('div', {class:'sec-h'}, el('h2', null, 'Gerar petição'), el('p', {class:'lead'}, 'Escolha a peça, aprove o plano de teses e precedentes e gere a minuta. O gerador só cita precedentes da base conferida. O que depender dos autos aparece entre colchetes, para você preencher.')),
+    el('fieldset', {class:'pecas', style:'border:0;padding:0;margin:0'}, el('legend', {class:'sr'}, 'Peça'), Object.entries(PECAS).map(([k, v]) => el('label', {class:'peca'}, el('input', {type:'radio', name:'peca', id:'peca-' + k, checked:S.peca === k, onchange:() => { S.peca = k; salvar(); redesenhar(); }}), el('strong', null, v.nome), el('span', {class:'small'}, v.sub)))),
+    S.peca === 'hc' ? el('div', {class:'note'}, el('b', null, 'Sobre o “trancamento da AIJ”. '), 'Tecnicamente, o que se tranca é a ação penal ou o inquérito. A audiência de instrução e julgamento é suspensa, em regra por liminar no habeas corpus, até que o tribunal decida. Esta peça pede as duas coisas. A sentença condenatória prejudica o pedido de trancamento por falta de justa causa; por isso, impetre antes dela.') : null,
+    el('div', {class:'cols'},
+      el('div', {class:'stack'},
+        el('div', {class:'card'}, el('h3', null, 'Plano da peça'),
+          ts.length ? el('ol', {class:'plano'}, ts.map(t => {
+            const nota = S.notas[t.id] || {}; const temFato = !!(nota.fato && nota.fato.trim());
+            const linha = (i, padrao) => { const p = P.get(i); if (!p) return null; const k = t.id + '|' + i; const on = padrao ? !S.fora[k] : S.fora[k] === false;
+              return el('label', {class:'checkrow small'}, el('input', {type:'checkbox', id:'pc-' + t.id + '-' + i, checked:on, onchange:e => { if (padrao){ if (e.target.checked) delete S.fora[k]; else S.fora[k] = true; } else { if (e.target.checked) S.fora[k] = false; else delete S.fora[k]; } salvar(); redesenhar(); }}), p.citacao); };
+            return el('li', null,
+              el('div', {class:'ph'}, el('b', null, t.titulo), pill(t.natureza, tom(t.natureza) + ' wrapok'), temFato ? pill('Fato descrito', 'ok') : pill('Falta descrever o fato', 'warn'), el('button', {class:'linkbtn', type:'button', onclick:() => { abertos.add(t.id); ir('vicios', 'tese-' + t.id); }}, 'abrir ficha')),
+              (t.precedentes.length || (t.opcionais || []).length) ? el('div', {class:'pp'}, t.precedentes.map(i => linha(i, true)), (t.opcionais || []).map(i => linha(i, false))) : el('span', {class:'small'}, 'Sem precedente vinculado: a tese se apoia no texto da Constituição e da lei.'));
+          })) : el('p', {class:'small'}, 'Nenhuma tese selecionada serve a esta peça. Marque as teses na aba “Analisar o processo” ou na aba “Vícios (art. 5º)”.'),
+          foraDaPeca.length ? el('p', {class:'small'}, 'Selecionadas, mas próprias de outra peça ou fase: ' + foraDaPeca.map(t => t.titulo).join('; ') + '.') : null),
+        el('div', {class:'btns'},
+          el('button', {class:'btn', type:'button', onclick:() => { redesenhar(); aviso('Minuta gerada de novo a partir do plano.'); }}, 'Gerar de novo'),
+          el('button', {class:'btn ghost', type:'button', onclick:copiar}, 'Copiar texto'),
+          podeBaixar ? el('button', {class:'btn ghost', type:'button', id:'b-docx', disabled:!window.JSZip, onclick:async () => { try { await salvarArquivo(nomeArq('docx'), await docx(lerDoc())); } catch (e){ aviso('Não foi possível montar o arquivo .docx.'); } }}, 'Baixar .docx') : null,
+          podeBaixar ? el('button', {class:'btn ghost', type:'button', id:'b-txt', onclick:() => salvarArquivo(nomeArq('txt'), textoPuro(lerDoc()))}, 'Baixar .txt') : null,
+          pend ? pill(pend + (pend === 1 ? ' campo a preencher' : ' campos a preencher'), 'warn') : pill('Sem campos pendentes', 'ok')),
+        el('p', {class:'small'}, 'O texto abaixo pode ser editado. “Gerar de novo” substitui as edições feitas na minuta.'),
+        doc),
+      el('aside', {class:'side'},
+        el('div', {class:'card'}, el('h3', null, 'Opções'),
+          el('h4', null, 'Endereçamento'), radio('enderecamento', 'forense', 'Praxe forense (“Excelentíssimo Senhor”)'), radio('enderecamento', 'manual', 'Manual de Redação (“Senhor Juiz”)'),
+          el('h4', null, 'Formatação do .docx'), radio('formato', 'forense', 'Times New Roman 12, entrelinha 1,5'), radio('formato', 'manual', 'Padrão ofício: Calibri 12, entrelinha simples'),
+          S.peca === 'hc' ? [el('h4', null, 'Habeas corpus'), chk('trancar', 'Pedir o trancamento da ação penal'), chk('liminar', 'Pedir liminar para suspender a audiência')] : null,
+          S.peca === 'nulidade' ? [el('h4', null, 'Audiência'), chk('suspender', 'Pedir a suspensão da audiência até a decisão')] : null),
+        S.peca === 'resposta' ? el('div', {class:'card'}, el('h3', null, 'Rol de testemunhas'),
+          el('p', {class:'small'}, 'O rol deve acompanhar a resposta (CPP, art. 396-A). Limite: oito por fato no rito ordinário e cinco no sumário (CPP, arts. 401 e 532).'),
+          S.testemunhas.map((w, i) => el('div', {class:'stack', style:'gap:6px'},
+            el('input', {type:'text', id:'w-n-' + i, value:w.nome, placeholder:'Nome', 'aria-label':'Nome da testemunha ' + (i + 1), onchange:e => { w.nome = e.target.value; salvar(); redesenhar(); }}),
+            el('input', {type:'text', id:'w-d-' + i, value:w.dados, placeholder:'Qualificação e endereço', 'aria-label':'Qualificação e endereço da testemunha ' + (i + 1), onchange:e => { w.dados = e.target.value; salvar(); redesenhar(); }}),
+            el('button', {class:'linkbtn small', type:'button', onclick:() => { S.testemunhas.splice(i, 1); salvar(); redesenhar(); }}, 'remover'))),
+          el('button', {class:'btn quiet', type:'button', onclick:() => { S.testemunhas.push({nome:'', dados:''}); salvar(); redesenhar(); }}, 'Adicionar testemunha')) : null,
+        el('div', {class:'card'}, el('h3', null, 'Conferência antes do protocolo'),
+          el('ul', {class:'checks'}, conf.map(x => el('li', null, el('label', null, el('input', {type:'checkbox', id:'cf-' + x.id, checked:!!S.conf[x.id], onchange:e => { S.conf[x.id] = e.target.checked; salvar(); }}), el('span', null, x.txt, x.url ? [' ', link(x.url, 'fonte')] : null)))))))),
+  ];
+}
+
+/* ---------- 7. fontes ---------- */
+function normaliza(s){ return s.normalize('NFD').replace(/[̀-ͯ]/g, '').toUpperCase(); }
+const IDX = (() => { const m = new Map(); for (const p of D.precedentes) for (const k of (p.chaves || [])) m.set(k, p); return m; })();
+const ORD = {PRIMEIRA:'1', SEGUNDA:'2', TERCEIRA:'3', QUARTA:'4', QUINTA:'5', SEXTA:'6', '1A':'1', '2A':'2', '3A':'3', '4A':'4', '5A':'5', '6A':'6'};
+function orgaoChave(s){ const m = /(PLENARIO|TRIBUNAL PLENO|\bPLENO\b)|(CORTE ESPECIAL)|(PRIMEIRA|SEGUNDA|TERCEIRA|QUARTA|QUINTA|SEXTA|[1-6]A)\s+(TURMA|SECAO)/.exec(normaliza(s || '').replace(/ª/g, 'A')); if (!m) return ''; if (m[1]) return 'PLENO'; if (m[2]) return 'CE'; return ORD[m[3]] + (m[4] === 'TURMA' ? 'T' : 'S'); }
+function verificar(txt){
+  const out = []; const visto = new Set();
+  const add = (pos, bruto, chave, extra) => { if (visto.has(pos + '|' + chave)) return; visto.add(pos + '|' + chave); out.push(Object.assign({pos, bruto, chave}, extra)); };
+  let m;
+  const rxP = /\b(HC|RHC|REsp|AREsp|EREsp|EAREsp|RE|ARE|ADI|ADC|ADPF|Rcl|Inq|AP|RMS|SL|Pet)s?\s*(?:n\.?\s*[ºo°]?\s*)?(\d{1,3}(?:\.\d{3})+|\d{3,7})/g;
+  const rxS = /S[úu]mulas?\s+(Vinculante\s+)?(?:n\.?\s*[ºo°]?\s*)?(\d{1,3})(?:[\s,]*(?:do|da)\s+(STF|STJ|Supremo|Superior))?/gi;
+  const rxT = /Tema\s+(Repetitivo\s+)?(?:n\.?\s*[ºo°]?\s*)?(\d{1,2}\.?\d{1,3}|\d{1,4})(?:[\s,]*(?:do|da|de|dos)\s+(STF|STJ|repercuss[ãa]o geral|recursos repetitivos|Supremo|Superior))?/gi;
+  const inicios = []; for (const rx of [rxP, rxS, rxT]){ rx.lastIndex = 0; while ((m = rx.exec(txt))) inicios.push(m.index); rx.lastIndex = 0; }
+  const janela = mm => { const fimM = mm.index + mm[0].length; let fim = mm.index + 260; for (const i of inicios) if (i >= fimM && i < fim) fim = i; for (const sep of [';', '\n']){ const k = txt.indexOf(sep, fimM); if (k !== -1 && k < fim) fim = k; } return txt.slice(mm.index, fim); };
+  while ((m = rxP.exec(txt))){
+    const chave = m[1].toUpperCase() + m[2].replace(/\./g, ''); const p = IDX.get(chave); const jan = janela(m); const div = [];
+    if (p){
+      const r = /Rel(?:ator|atora)?\.?(?:\s+(?:p\/|para)\s+(?:o\s+)?ac[óo]rd[ãa]o)?\s*:?\s*(?:o\s+|a\s+)?Min(?:istr[oa])?\.?\s+([A-ZÀ-Ú][\wÀ-ú.]+(?:\s+(?:de\s+|da\s+|do\s+|dos\s+)?[A-ZÀ-Ú][\wÀ-ú.]+){0,3})/.exec(jan);
+      if (r && p.relator){ const nomes = [p.relator, p.redator].filter(Boolean).map(normaliza); const dito = normaliza(r[1]); if (!nomes.some(n => n.split(/\s+/).filter(w => w.length > 2).some(w => dito.includes(w)))) div.push('relator indicado no texto (“' + r[1] + '”) difere do registrado na base (' + [p.relator, p.redator].filter(Boolean).join('; redator para o acórdão: ') + ')'); }
+      const o = orgaoChave(jan); if (o && p.orgao && orgaoChave(p.orgao) && o !== orgaoChave(p.orgao)) div.push('órgão julgador indicado no texto difere do registrado na base (' + p.orgao + ')');
+    }
+    add(m.index, m[0], chave, {p, div});
+  }
+  while ((m = rxS.exec(txt))){
+    const num = m[2]; let chaves;
+    if (m[1]) chaves = ['SV' + num]; else if (m[3]) chaves = ['SUM' + (/STF|Supremo/i.test(m[3]) ? 'STF' : 'STJ') + num]; else chaves = ['SUMSTF' + num, 'SUMSTJ' + num];
+    const achados = chaves.map(k => IDX.get(k)).filter(Boolean);
+    add(m.index, m[0], chaves.join('/'), {p:achados[0], div:[], obs:!m[1] && !m[3] && achados.length ? 'O texto não indica o tribunal. Na base: ' + achados.map(a => a.citacao).join(' e ') + '.' : ''});
+  }
+  while ((m = rxT.exec(txt))){
+    const num = m[2].replace(/\./g, ''); const antes = txt.slice(Math.max(0, m.index - 8), m.index);
+    const trib = m[3] ? (/STJ|Superior|repetitivos/i.test(m[3]) ? 'STJ' : 'STF') : m[1] ? 'STJ' : antes.includes('STJ') ? 'STJ' : antes.includes('STF') ? 'STF' : '';
+    const chaves = trib ? ['TEMA' + trib + num] : ['TEMASTF' + num, 'TEMASTJ' + num];
+    const achados = chaves.map(k => IDX.get(k)).filter(Boolean);
+    add(m.index, m[0], chaves.join('/'), {p:achados[0], div:[], obs:chaves.length > 1 && achados.length ? 'O texto não indica o tribunal. Na base: ' + achados.map(a => a.citacao).join(' e ') + '.' : ''});
+  }
+  return out.sort((a, b) => a.pos - b.pos);
+}
+function vFontes(){
+  const tribs = [['', 'Todos'], ...[...new Set(D.precedentes.map(p => p.tribunal))].map(t => [t, t])];
+  const passa = p => (!filtro.trib || p.tribunal === filtro.trib) && (!filtro.q || normaliza(p.citacao + ' ' + (p.sintese || '') + ' ' + (p.literal || '') + ' ' + (p.assuntos || []).join(' ')).includes(normaliza(filtro.q)));
+  const listar = () => { const l = D.precedentes.filter(passa); return l.length ? [el('ul', {class:'precs'}, l.map(p => itemPrec(p)))] : [el('p', {class:'small'}, 'Nada encontrado nesta base. Isso não significa que o precedente não exista: pesquise no tribunal.')]; };
+  const res = el('div', {class:'vres', id:'v-res', 'aria-live':'polite'});
+  const rodar = () => {
+    const txt = document.getElementById('v-txt').value; const r = verificar(txt);
+    if (!txt.trim()){ res.replaceChildren(el('p', {class:'small'}, 'Cole um texto para verificar.')); return; }
+    if (!r.length){ res.replaceChildren(el('p', {class:'small'}, 'Nenhuma citação de julgado, súmula ou tema foi reconhecida no texto.')); return; }
+    const ok = r.filter(x => x.p && !x.div.length).length, dv = r.filter(x => x.p && x.div.length).length, fora = r.filter(x => !x.p).length;
+    res.replaceChildren(el('p', null, el('b', null, String(r.length)), ' citações reconhecidas: ', pill(ok + ' na base conferida', 'ok'), ' ', dv ? pill(dv + ' com dados divergentes', 'seal') : null, ' ', fora ? pill(fora + ' fora da base', 'warn') : null),
+      ...r.map(x => el('div', {class:'it'}, el('div', null, el('b', {class:'mono'}, x.bruto), ' ', !x.p ? pill('Fora da base: conferir na fonte oficial antes de usar', 'warn wrapok') : x.div.length ? pill('Na base, com dados divergentes', 'seal wrapok') : pill('Na base conferida', 'ok')),
+        x.p ? el('div', {class:'small'}, x.p.citacao) : el('div', {class:'small'}, 'A oficina não tem registro desta citação. Ela pode existir. Localize o inteiro teor no site do tribunal; se não encontrar, retire-a da peça.'),
+        x.div.map(d => el('div', {class:'prec-n'}, 'Atenção: ' + d + '.')), x.obs ? el('div', {class:'small'}, x.obs) : null,
+        x.p ? el('div', {class:'prec-l'}, link(x.p.fonte, 'fonte consultada'), link(x.p.conferir, 'pesquisar no tribunal')) : null)));
+  };
+  return [
+    el('div', {class:'sec-h'}, el('h2', null, 'Fontes e conferência'), el('p', {class:'lead'}, 'Tudo o que a oficina cita está nesta base, com a fonte consultada e a data da conferência. Estar na base prova que o precedente existe e diz o que está resumido; a pertinência ao seu caso e a vigência na data do protocolo cabem a você.')),
+    el('div', {class:'card'}, el('h3', null, 'Verificador de citações'),
+      el('p', {class:'small'}, 'Cole qualquer texto jurídico, inclusive gerado por outra ferramenta. A oficina localiza julgados, súmulas e temas e compara com a base: confere a existência e, quando o texto indica, o relator e o órgão julgador.'),
+      el('label', {class:'sr', for:'v-txt'}, 'Texto a verificar'),
+      el('textarea', {id:'v-txt', placeholder:'Exemplo: “…conforme o HC 598.886/SC, Rel. Min. Rogerio Schietti Cruz, Sexta Turma, e a Súmula 523 do STF…”'}),
+      el('div', {class:'btns'}, el('button', {class:'btn', type:'button', onclick:rodar}, 'Verificar citações'), el('button', {class:'btn quiet', type:'button', onclick:() => { document.getElementById('v-txt').value = textoPuro(blocosAtuais || montar()); rodar(); }}, 'Verificar a minuta atual')),
+      res),
+    el('div', {class:'card'}, el('h3', null, 'Base de precedentes conferidos (' + D.precedentes.length + ')'),
+      el('div', {class:'filters'},
+        el('div', {class:'f'}, el('label', {for:'p-trib'}, 'Tribunal'), el('select', {id:'p-trib', onchange:e => { filtro.trib = e.target.value; document.getElementById('p-lista').replaceChildren(...listar()); }}, tribs.map(([v, t]) => el('option', {value:v, selected:filtro.trib === v}, t)))),
+        el('div', {class:'f'}, el('label', {for:'p-q'}, 'Buscar'), el('input', {type:'text', id:'p-q', value:filtro.q, placeholder:'número, assunto ou palavra', oninput:e => { filtro.q = e.target.value; document.getElementById('p-lista').replaceChildren(...listar()); }}))),
+      el('div', {id:'p-lista'}, listar())),
+    el('div', {class:'duo'},
+      el('div', {class:'card'}, el('h3', null, 'Onde pesquisar'), el('ul', {class:'plain'}, D.fontes.map(f => el('li', null, link(f.url, f.nome) || f.nome, ': ' + f.oferece)))),
+      el('div', {class:'card'}, el('h3', null, 'Como conferir uma citação'), el('ol', {class:'plain'}, D.comoConferir.map(x => el('li', null, x))))),
+    el('div', {class:'duo'},
+      el('div', {class:'card'}, el('h3', null, 'Doutrina de referência'), el('p', {class:'small'}, 'Obras para consulta. A oficina não reproduz trechos nem indica páginas: cite a doutrina a partir do exemplar que você tiver em mãos, com edição e página.'), el('ul', {class:'plain'}, D.doutrina.map(d => el('li', null, el('b', null, d.autor), '. ', el('i', null, d.obra), d.nota ? '. ' + d.nota : '')))),
+      el('div', {class:'card'}, el('h3', null, 'Regras sobre o uso de IA'), el('ul', {class:'plain'}, D.ia.map(x => el('li', null, el('b', null, x.norma + ': '), x.exige, x.url ? [' ', link(x.url, 'texto')] : null))))),
+    el('div', {class:'card'}, el('h3', null, 'O que esta oficina aproveitou de outros aplicativos'), el('div', {class:'tblwrap'}, el('table', null, el('thead', null, el('tr', null, el('th', null, 'Padrão observado'), el('th', null, 'Onde aparece'), el('th', null, 'Como foi aplicado aqui'))), el('tbody', null, D.padroes.map(x => el('tr', null, el('td', null, x.padrao), el('td', null, x.onde), el('td', null, x.aqui)))))))
+  ];
+}
+
+/* ---------- início ---------- */
+function rodape(){
+  document.getElementById('rodape').replaceChildren(
+    el('p', null, 'Base conferida em ' + br(D.meta.verificado_em) + ': ' + D.meta.teses + ' teses e ' + D.meta.precedentes + ' precedentes, súmulas e temas. A jurisprudência muda; confira a vigência antes de protocolar.'),
+    el('p', null, 'Esta ferramenta não substitui advogado nem defensor público. Não promete resultado: organiza o trabalho, expõe o fundamento e indica o que conferir.'));
+}
+function iniciar(dados){
+  carregar();
+  if (dados && dados.S) S = Object.assign(vazio(), dados.S);
+  rodape(); desenhar();
+  window.addEventListener('hashchange', () => { desenhar(); document.getElementById('painel').focus({preventScroll:true}); });
+  if (window.claude && window.claude.use) window.claude.use('downloads').then(ns => { dl = ns; if (abaAtual() === 'peticao') redesenhar(); }).catch(() => {});
+}
+const hot = window.claude && window.claude.hot;
+if (hot && hot.snapshot) hot.snapshot(() => ({S}));
+if (hot && hot.ready) hot.ready(iniciar); else iniciar((hot && hot.data) || {});
+})();
+</script>

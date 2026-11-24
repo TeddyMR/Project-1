@@ -74,7 +74,7 @@ def prescricao(fato: date, pena_max_anos: int, pena_max_meses: int = 0, recebime
 
     Regra aplicada: CP, art. 109 (prazos); art. 115 (redução à metade); art. 117, I
     (o recebimento da denúncia interrompe o prazo); art. 10 (o dia do começo se inclui).
-    Não considera causas de aumento ou de diminuição, outras causas interruptivas
+    Não considera causas de aumento ou de diminuição, a exceção do art. 115 para violência sexual contra a mulher, o termo inicial especial do art. 111, V, outras causas interruptivas
     (pronúncia, sentença), causas suspensivas (CP, art. 116; CPP, art. 366) nem a
     prescrição pela pena aplicada.
     """
@@ -127,7 +127,7 @@ def main() -> int:
         for t in r["trechos"]:
             print(f"Do {t['de']} ({br(t['inicio'])}) até {t['ate']} ({br(t['fim'])}): o último dia do prazo é {br(t['ultimo_dia'])}. "
                   + ("Em tese, PRESCRITO." if t["prescrito"] else "Não alcança o prazo."))
-        print("Cálculo pela pena máxima em abstrato. Não considera causas de aumento ou de diminuição, outras causas "
+        print("Cálculo pela pena máxima em abstrato. Não considera causas de aumento ou de diminuição, a exceção do art. 115 para violência sexual contra a mulher, o termo inicial especial do art. 111, V, outras causas "
               "interruptivas nem causas suspensivas. Confira antes de alegar.")
     return 0
 

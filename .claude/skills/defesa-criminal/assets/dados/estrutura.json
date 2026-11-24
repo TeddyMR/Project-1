@@ -1,88 +1,369 @@
 {
   "normas": {
-    "CF": {"primeira": "Constituição", "depois": "Constituição"},
-    "CPP": {"primeira": "Código de Processo Penal – CPP (Decreto-Lei nº 3.689, de 3 de outubro de 1941)", "depois": "CPP"},
-    "CP": {"primeira": "Código Penal – CP (Decreto-Lei nº 2.848, de 7 de dezembro de 1940)", "depois": "CP"},
-    "CADH": {"primeira": "Convenção Americana sobre Direitos Humanos – CADH (promulgada pelo Decreto nº 678, de 6 de novembro de 1992)", "depois": "CADH"},
-    "PIDCP": {"primeira": "Pacto Internacional sobre Direitos Civis e Políticos – PIDCP (promulgado pelo Decreto nº 592, de 6 de julho de 1992)", "depois": "PIDCP"},
-    "CCT": {"primeira": "Convenção contra a Tortura e Outros Tratamentos ou Penas Cruéis, Desumanos ou Degradantes (promulgada pelo Decreto nº 40, de 15 de fevereiro de 1991)", "depois": "Convenção contra a Tortura"},
-    "L9296": {"primeira": "Lei nº 9.296, de 24 de julho de 1996", "depois": "Lei nº 9.296, de 1996"},
-    "L12850": {"primeira": "Lei nº 12.850, de 2 de agosto de 2013", "depois": "Lei nº 12.850, de 2013"},
-    "L11343": {"primeira": "Lei nº 11.343, de 23 de agosto de 2006", "depois": "Lei nº 11.343, de 2006"},
-    "L8906": {"primeira": "Lei nº 8.906, de 4 de julho de 1994", "depois": "Lei nº 8.906, de 1994"},
-    "L9099": {"primeira": "Lei nº 9.099, de 26 de setembro de 1995", "depois": "Lei nº 9.099, de 1995"},
-    "L12965": {"primeira": "Lei nº 12.965, de 23 de abril de 2014", "depois": "Lei nº 12.965, de 2014"}
+    "CF": {
+      "primeira": "Constituição",
+      "depois": "Constituição"
+    },
+    "CPP": {
+      "primeira": "Código de Processo Penal – CPP (Decreto-Lei nº 3.689, de 3 de outubro de 1941)",
+      "depois": "CPP"
+    },
+    "CP": {
+      "primeira": "Código Penal – CP (Decreto-Lei nº 2.848, de 7 de dezembro de 1940)",
+      "depois": "CP"
+    },
+    "CADH": {
+      "primeira": "Convenção Americana sobre Direitos Humanos – CADH (promulgada pelo Decreto nº 678, de 6 de novembro de 1992)",
+      "depois": "CADH"
+    },
+    "PIDCP": {
+      "primeira": "Pacto Internacional sobre Direitos Civis e Políticos – PIDCP (promulgado pelo Decreto nº 592, de 6 de julho de 1992)",
+      "depois": "PIDCP"
+    },
+    "CCT": {
+      "primeira": "Convenção contra a Tortura e Outros Tratamentos ou Penas Cruéis, Desumanos ou Degradantes (promulgada pelo Decreto nº 40, de 15 de fevereiro de 1991)",
+      "depois": "Convenção contra a Tortura"
+    },
+    "L9296": {
+      "primeira": "Lei nº 9.296, de 24 de julho de 1996",
+      "depois": "Lei nº 9.296, de 1996"
+    },
+    "L12850": {
+      "primeira": "Lei nº 12.850, de 2 de agosto de 2013",
+      "depois": "Lei nº 12.850, de 2013"
+    },
+    "L11343": {
+      "primeira": "Lei nº 11.343, de 23 de agosto de 2006",
+      "depois": "Lei nº 11.343, de 2006"
+    },
+    "L8906": {
+      "primeira": "Lei nº 8.906, de 4 de julho de 1994",
+      "depois": "Lei nº 8.906, de 1994"
+    },
+    "L9099": {
+      "primeira": "Lei nº 9.099, de 26 de setembro de 1995",
+      "depois": "Lei nº 9.099, de 1995"
+    },
+    "L12965": {
+      "primeira": "Lei nº 12.965, de 23 de abril de 2014",
+      "depois": "Lei nº 12.965, de 2014"
+    }
   },
   "incisos": [
-    {"inc": "III", "rot": "art. 5º, III", "garantia": "Ninguém será submetido a tortura nem a tratamento desumano ou degradante."},
-    {"inc": "X", "rot": "art. 5º, X", "garantia": "Inviolabilidade da intimidade, da vida privada, da honra e da imagem."},
-    {"inc": "XI", "rot": "art. 5º, XI", "garantia": "Inviolabilidade do domicílio."},
-    {"inc": "XII", "rot": "art. 5º, XII", "garantia": "Sigilo da correspondência e das comunicações telegráficas, de dados e telefônicas."},
-    {"inc": "XXXVII", "rot": "art. 5º, XXXVII", "garantia": "Vedação de juízo ou tribunal de exceção."},
-    {"inc": "XXXIX", "rot": "art. 5º, XXXIX", "garantia": "Legalidade e anterioridade da lei penal."},
-    {"inc": "XL", "rot": "art. 5º, XL", "garantia": "A lei penal não retroage, salvo para beneficiar o réu."},
-    {"inc": "XLIX", "rot": "art. 5º, XLIX", "garantia": "Respeito à integridade física e moral do preso."},
-    {"inc": "LIII", "rot": "art. 5º, LIII", "garantia": "Juiz natural: processo e sentença pela autoridade competente."},
-    {"inc": "LIV", "rot": "art. 5º, LIV", "garantia": "Devido processo legal."},
-    {"inc": "LV", "rot": "art. 5º, LV", "garantia": "Contraditório e ampla defesa, com os meios e recursos a ela inerentes."},
-    {"inc": "LVI", "rot": "art. 5º, LVI", "garantia": "Inadmissibilidade das provas obtidas por meios ilícitos."},
-    {"inc": "LVII", "rot": "art. 5º, LVII", "garantia": "Presunção de inocência até o trânsito em julgado da sentença condenatória."},
-    {"inc": "LXI", "rot": "art. 5º, LXI", "garantia": "Prisão só em flagrante delito ou por ordem escrita e fundamentada da autoridade judiciária."},
-    {"inc": "LXII", "rot": "art. 5º, LXII", "garantia": "Comunicação imediata da prisão ao juiz e à família do preso."},
-    {"inc": "LXIII", "rot": "art. 5º, LXIII", "garantia": "Direito de permanecer calado e assistência da família e de advogado."},
-    {"inc": "LXV", "rot": "art. 5º, LXV", "garantia": "Relaxamento imediato da prisão ilegal."},
-    {"inc": "LXVI", "rot": "art. 5º, LXVI", "garantia": "Liberdade provisória, quando a lei a admitir."},
-    {"inc": "LXXIV", "rot": "art. 5º, LXXIV", "garantia": "Assistência jurídica integral e gratuita a quem comprovar insuficiência de recursos."},
-    {"inc": "LXXVIII", "rot": "art. 5º, LXXVIII", "garantia": "Razoável duração do processo."},
-    {"inc": "art. 93, IX", "rot": "art. 93, IX", "garantia": "Fundamentação de todas as decisões judiciais, sob pena de nulidade."},
-    {"inc": "art. 129, I", "rot": "art. 129, I", "garantia": "Ação penal pública privativa do Ministério Público, base da estrutura acusatória."}
+    {
+      "inc": "III",
+      "rot": "art. 5º, III",
+      "garantia": "Ninguém será submetido a tortura nem a tratamento desumano ou degradante."
+    },
+    {
+      "inc": "X",
+      "rot": "art. 5º, X",
+      "garantia": "Inviolabilidade da intimidade, da vida privada, da honra e da imagem."
+    },
+    {
+      "inc": "XI",
+      "rot": "art. 5º, XI",
+      "garantia": "Inviolabilidade do domicílio."
+    },
+    {
+      "inc": "XII",
+      "rot": "art. 5º, XII",
+      "garantia": "Sigilo da correspondência e das comunicações telegráficas, de dados e telefônicas."
+    },
+    {
+      "inc": "XV",
+      "rot": "art. 5º, XV",
+      "garantia": "Liberdade de locomoção no território nacional."
+    },
+    {
+      "inc": "XXXVII",
+      "rot": "art. 5º, XXXVII",
+      "garantia": "Vedação de juízo ou tribunal de exceção."
+    },
+    {
+      "inc": "XXXIX",
+      "rot": "art. 5º, XXXIX",
+      "garantia": "Legalidade e anterioridade da lei penal."
+    },
+    {
+      "inc": "XL",
+      "rot": "art. 5º, XL",
+      "garantia": "A lei penal não retroage, salvo para beneficiar o réu."
+    },
+    {
+      "inc": "XLIX",
+      "rot": "art. 5º, XLIX",
+      "garantia": "Respeito à integridade física e moral do preso."
+    },
+    {
+      "inc": "LIII",
+      "rot": "art. 5º, LIII",
+      "garantia": "Juiz natural: processo e sentença pela autoridade competente."
+    },
+    {
+      "inc": "LIV",
+      "rot": "art. 5º, LIV",
+      "garantia": "Devido processo legal."
+    },
+    {
+      "inc": "LV",
+      "rot": "art. 5º, LV",
+      "garantia": "Contraditório e ampla defesa, com os meios e recursos a ela inerentes."
+    },
+    {
+      "inc": "LVI",
+      "rot": "art. 5º, LVI",
+      "garantia": "Inadmissibilidade das provas obtidas por meios ilícitos."
+    },
+    {
+      "inc": "LVII",
+      "rot": "art. 5º, LVII",
+      "garantia": "Presunção de inocência até o trânsito em julgado da sentença condenatória."
+    },
+    {
+      "inc": "LXI",
+      "rot": "art. 5º, LXI",
+      "garantia": "Prisão só em flagrante delito ou por ordem escrita e fundamentada da autoridade judiciária."
+    },
+    {
+      "inc": "LXII",
+      "rot": "art. 5º, LXII",
+      "garantia": "Comunicação imediata da prisão ao juiz e à família do preso."
+    },
+    {
+      "inc": "LXIII",
+      "rot": "art. 5º, LXIII",
+      "garantia": "Direito de permanecer calado e assistência da família e de advogado."
+    },
+    {
+      "inc": "LXV",
+      "rot": "art. 5º, LXV",
+      "garantia": "Relaxamento imediato da prisão ilegal."
+    },
+    {
+      "inc": "LXVI",
+      "rot": "art. 5º, LXVI",
+      "garantia": "Liberdade provisória, quando a lei a admitir."
+    },
+    {
+      "inc": "LXXIV",
+      "rot": "art. 5º, LXXIV",
+      "garantia": "Assistência jurídica integral e gratuita a quem comprovar insuficiência de recursos."
+    },
+    {
+      "inc": "LXXVIII",
+      "rot": "art. 5º, LXXVIII",
+      "garantia": "Razoável duração do processo."
+    },
+    {
+      "inc": "LXXIX",
+      "rot": "art. 5º, LXXIX",
+      "garantia": "Proteção dos dados pessoais, inclusive nos meios digitais."
+    },
+    {
+      "inc": "art. 93, IX",
+      "rot": "art. 93, IX",
+      "garantia": "Fundamentação de todas as decisões judiciais, sob pena de nulidade."
+    },
+    {
+      "inc": "art. 129, I",
+      "rot": "art. 129, I",
+      "garantia": "Ação penal pública privativa do Ministério Público, base da estrutura acusatória."
+    }
   ],
   "bases": [
-    {"id": "abordagem", "rotulo": "Apreensão em abordagem ou revista"},
-    {"id": "domicilio", "rotulo": "Apreensão dentro de casa"},
-    {"id": "reconhecimento", "rotulo": "Reconhecimento pela vítima"},
-    {"id": "confissao", "rotulo": "Confissão"},
-    {"id": "policiais", "rotulo": "Palavra dos policiais"},
-    {"id": "digital", "rotulo": "Celular, mensagens e capturas de tela"},
-    {"id": "interceptacao", "rotulo": "Interceptação telefônica"},
-    {"id": "delacao", "rotulo": "Colaboração premiada"},
-    {"id": "inquerito", "rotulo": "Depoimentos do inquérito ou de “ouvir dizer”"},
-    {"id": "pericia", "rotulo": "Laudo pericial e material apreendido"},
-    {"id": "merito", "rotulo": "Enquadramento jurídico do fato"}
+    {
+      "id": "abordagem",
+      "rotulo": "Apreensão em abordagem ou revista"
+    },
+    {
+      "id": "domicilio",
+      "rotulo": "Apreensão dentro de casa"
+    },
+    {
+      "id": "reconhecimento",
+      "rotulo": "Reconhecimento pela vítima"
+    },
+    {
+      "id": "confissao",
+      "rotulo": "Confissão"
+    },
+    {
+      "id": "policiais",
+      "rotulo": "Palavra dos policiais"
+    },
+    {
+      "id": "digital",
+      "rotulo": "Celular, mensagens e capturas de tela"
+    },
+    {
+      "id": "interceptacao",
+      "rotulo": "Interceptação telefônica"
+    },
+    {
+      "id": "delacao",
+      "rotulo": "Colaboração premiada"
+    },
+    {
+      "id": "inquerito",
+      "rotulo": "Depoimentos do inquérito ou de “ouvir dizer”"
+    },
+    {
+      "id": "pericia",
+      "rotulo": "Laudo pericial e material apreendido"
+    },
+    {
+      "id": "merito",
+      "rotulo": "Enquadramento jurídico do fato"
+    }
   ],
   "metodo": [
-    {"pergunta": "A prova é lícita?", "explica": "Verifique como foi obtida. A prova colhida com violação de domicílio, de sigilo, do direito ao silêncio ou da integridade física é inadmissível e deve sair dos autos, com as que dela derivam."},
-    {"pergunta": "A prova é confiável?", "explica": "Verifique o método. Reconhecimento sem o procedimento legal, vestígio sem cadeia de custódia e arquivo digital sem garantia de integridade não permitem aferir a verdade do que afirmam."},
-    {"pergunta": "A prova passou pelo contraditório?", "explica": "A decisão não pode se apoiar só em elementos da investigação. Depoimentos não repetidos em juízo e relatos de “ouvir dizer” não bastam."},
-    {"pergunta": "A prova que resta é suficiente?", "explica": "Mesmo válida, a prova deve afastar a dúvida razoável sobre cada elemento do crime. O ônus é da acusação, e a dúvida favorece o acusado."}
+    {
+      "pergunta": "A prova é lícita?",
+      "explica": "Verifique como foi obtida. A prova colhida com violação de domicílio, de sigilo, do direito ao silêncio ou da integridade física é inadmissível e deve sair dos autos, com as que dela derivam."
+    },
+    {
+      "pergunta": "A prova é confiável?",
+      "explica": "Verifique o método. Reconhecimento sem o procedimento legal, vestígio sem cadeia de custódia e arquivo digital sem garantia de integridade não permitem aferir a verdade do que afirmam."
+    },
+    {
+      "pergunta": "A prova passou pelo contraditório?",
+      "explica": "A decisão não pode se apoiar só em elementos da investigação. Depoimentos não repetidos em juízo e relatos de “ouvir dizer” não bastam."
+    },
+    {
+      "pergunta": "A prova que resta é suficiente?",
+      "explica": "Mesmo válida, a prova deve afastar a dúvida razoável sobre cada elemento do crime. O ônus é da acusação, e a dúvida favorece o acusado."
+    }
   ],
   "sequencia": [
-    {"de": 10, "ate": 19, "titulo": "Juízo competente e imparcial", "porque": "Antes de discutir qualquer ato, verifique quem podia praticá-lo. O vício do juízo contamina os atos decisórios.", "efeito": "remessa ao juízo competente ou afastamento do juiz, com anulação dos atos decisórios."},
-    {"de": 20, "ate": 29, "titulo": "Relação processual válida", "porque": "Sem citação válida, defesa técnica e acesso à prova, o processo não se forma de modo regular.", "efeito": "anulação dos atos praticados sem a defesa e reabertura de prazos."},
-    {"de": 30, "ate": 39, "titulo": "Aptidão da denúncia e condições da ação", "porque": "A acusação deve descrever o fato e preencher as condições legais. O defeito impede o exame do mérito.", "efeito": "rejeição da denúncia (CPP, art. 395, I e II)."},
-    {"de": 40, "ate": 59, "titulo": "Provas ilícitas e inválidas", "porque": "Retire dos autos o que não pode ser valorado. A justa causa e o mérito se examinam só com a prova que resta.", "efeito": "desentranhamento da prova e das que dela derivam (CPP, art. 157)."},
-    {"de": 60, "ate": 62, "titulo": "Justa causa", "porque": "Excluída a prova inválida, verifique se resta suporte mínimo para a acusação.", "efeito": "rejeição da denúncia (CPP, art. 395, III) ou trancamento da ação penal."},
-    {"de": 63, "ate": 69, "titulo": "Vícios do procedimento e das decisões", "porque": "São irregularidades de atos posteriores ao recebimento da denúncia. Argua cada uma no momento previsto no art. 571 do CPP.", "efeito": "anulação e renovação do ato."},
-    {"de": 80, "ate": 83, "titulo": "Extinção da punibilidade", "porque": "Prescrição e decadência impedem a punição, qualquer que seja a prova.", "efeito": "absolvição sumária (CPP, art. 397, IV)."},
-    {"de": 84, "ate": 93, "titulo": "Mérito", "porque": "Atipicidade e excludentes evidentes dispensam a instrução. A insuficiência de prova se sustenta ao final.", "efeito": "absolvição sumária (CPP, art. 397, I a III) ou absolvição (CPP, art. 386)."},
-    {"de": 94, "ate": 99, "titulo": "Pedidos subsidiários", "porque": "Se a ação prosseguir, busque a solução menos gravosa.", "efeito": "desclassificação, acordo de não persecução penal ou suspensão condicional do processo."},
-    {"de": 70, "ate": 79, "titulo": "Liberdade do acusado", "porque": "A ilegalidade da prisão é pedido autônomo e urgente. Pode ser formulada a qualquer tempo, inclusive em petição separada.", "efeito": "relaxamento, revogação ou substituição da prisão."}
+    {
+      "de": 10,
+      "ate": 19,
+      "titulo": "Juízo competente e imparcial",
+      "porque": "Antes de discutir qualquer ato, verifique quem podia praticá-lo. O vício do juízo contamina os atos decisórios.",
+      "efeito": "remessa ao juízo competente ou afastamento do juiz, com anulação dos atos decisórios."
+    },
+    {
+      "de": 20,
+      "ate": 29,
+      "titulo": "Relação processual válida",
+      "porque": "Sem citação válida, defesa técnica e acesso à prova, o processo não se forma de modo regular.",
+      "efeito": "anulação dos atos praticados sem a defesa e reabertura de prazos."
+    },
+    {
+      "de": 30,
+      "ate": 39,
+      "titulo": "Aptidão da denúncia e condições da ação",
+      "porque": "A acusação deve descrever o fato e preencher as condições legais. O defeito impede o exame do mérito.",
+      "efeito": "rejeição da denúncia (CPP, art. 395, I e II)."
+    },
+    {
+      "de": 40,
+      "ate": 59,
+      "titulo": "Provas ilícitas e inválidas",
+      "porque": "Retire dos autos o que não pode ser valorado. A justa causa e o mérito se examinam só com a prova que resta.",
+      "efeito": "desentranhamento da prova e das que dela derivam (CPP, art. 157)."
+    },
+    {
+      "de": 60,
+      "ate": 62,
+      "titulo": "Justa causa",
+      "porque": "Excluída a prova inválida, verifique se resta suporte mínimo para a acusação.",
+      "efeito": "rejeição da denúncia (CPP, art. 395, III) ou trancamento da ação penal."
+    },
+    {
+      "de": 63,
+      "ate": 69,
+      "titulo": "Vícios do procedimento e das decisões",
+      "porque": "São irregularidades de atos posteriores ao recebimento da denúncia. Argua cada uma no momento previsto no art. 571 do CPP.",
+      "efeito": "anulação e renovação do ato."
+    },
+    {
+      "de": 80,
+      "ate": 83,
+      "titulo": "Extinção da punibilidade",
+      "porque": "Prescrição e decadência impedem a punição, qualquer que seja a prova.",
+      "efeito": "absolvição sumária (CPP, art. 397, IV)."
+    },
+    {
+      "de": 84,
+      "ate": 93,
+      "titulo": "Mérito",
+      "porque": "Atipicidade e excludentes evidentes dispensam a instrução. A insuficiência de prova se sustenta ao final.",
+      "efeito": "absolvição sumária (CPP, art. 397, I a III) ou absolvição (CPP, art. 386)."
+    },
+    {
+      "de": 94,
+      "ate": 99,
+      "titulo": "Pedidos subsidiários",
+      "porque": "Se a ação prosseguir, busque a solução menos gravosa.",
+      "efeito": "desclassificação, acordo de não persecução penal ou suspensão condicional do processo."
+    },
+    {
+      "de": 70,
+      "ate": 79,
+      "titulo": "Liberdade do acusado",
+      "porque": "A ilegalidade da prisão é pedido autônomo e urgente. Pode ser formulada a qualquer tempo, inclusive em petição separada.",
+      "efeito": "relaxamento, revogação ou substituição da prisão."
+    }
   ],
   "estrutura": [
-    {"passo": "Fato do processo", "explica": "Diga o que ocorreu e indique o documento e as folhas ou o ID. Sem o fato localizado, a tese fica abstrata."},
-    {"passo": "Norma violada", "explica": "Cite a Constituição, depois o tratado, depois a lei. Transcreva só o trecho necessário."},
-    {"passo": "Precedente", "explica": "Prefira, nesta ordem: súmula vinculante e tese de repercussão geral; súmula e tema repetitivo; Plenário e Seção; Turma. Diga o que foi decidido, sem ampliar."},
-    {"passo": "Prejuízo", "explica": "Mostre o que a defesa perdeu ou o que a acusação ganhou com o ato viciado. Faça isso também na nulidade absoluta."},
-    {"passo": "Resposta à réplica", "explica": "Antecipe o argumento da acusação e responda a ele. O juiz já o conhece."},
-    {"passo": "Pedido", "explica": "Peça a consequência exata: declarar, desentranhar, rejeitar, absolver, relaxar. Indique os atos alcançados."}
+    {
+      "passo": "Fato do processo",
+      "explica": "Diga o que ocorreu e indique o documento e as folhas ou o ID. Sem o fato localizado, a tese fica abstrata."
+    },
+    {
+      "passo": "Norma violada",
+      "explica": "Cite a Constituição, depois o tratado, depois a lei. Transcreva só o trecho necessário."
+    },
+    {
+      "passo": "Precedente",
+      "explica": "Prefira, nesta ordem: súmula vinculante e tese de repercussão geral; súmula e tema repetitivo; Plenário e Seção; Turma. Diga o que foi decidido, sem ampliar."
+    },
+    {
+      "passo": "Prejuízo",
+      "explica": "Mostre o que a defesa perdeu ou o que a acusação ganhou com o ato viciado. Faça isso também na nulidade absoluta."
+    },
+    {
+      "passo": "Resposta à réplica",
+      "explica": "Antecipe o argumento da acusação e responda a ele. O juiz já o conhece."
+    },
+    {
+      "passo": "Pedido",
+      "explica": "Peça a consequência exata: declarar, desentranhar, rejeitar, absolver, relaxar. Indique os atos alcançados."
+    }
   ],
   "preclusao": [
-    {"quando": "Na resposta à acusação", "oque": "rol de testemunhas e provas a produzir; exceções de incompetência territorial e de suspeição; inépcia da denúncia; falta de condição da ação e de justa causa; causas de absolvição sumária.", "base": "CPP, arts. 95, 108, 396-A e 397"},
-    {"quando": "No próprio ato, com registro em ata", "oque": "inversão da ordem de inquirição, pergunta indeferida, interrogatório antes das testemunhas, uso de algemas.", "base": "CPP, art. 571"},
-    {"quando": "Até as alegações finais", "oque": "nulidades relativas ocorridas na instrução.", "base": "CPP, arts. 571 e 572"},
-    {"quando": "A qualquer tempo", "oque": "nulidade absoluta, ilicitude da prova, extinção da punibilidade e ilegalidade da prisão. Não espere: a demora enfraquece a demonstração do prejuízo.", "base": "CPP, arts. 61 e 157; Constituição, art. 5º, LVI e LXV"},
-    {"quando": "Antes da sentença", "oque": "habeas corpus para trancar a ação penal por falta de justa causa. Depois da sentença condenatória, o pedido fica prejudicado.", "base": "Súmula 648 do STJ"},
-    {"quando": "Pode aguardar as alegações finais", "oque": "teses que dependem da prova a produzir, como a insuficiência de provas e a valoração de depoimentos.", "base": "escolha de estratégia da defesa"}
+    {
+      "quando": "Na resposta à acusação",
+      "oque": "rol de testemunhas e provas a produzir; exceções de incompetência territorial e de suspeição; inépcia da denúncia; falta de condição da ação e de justa causa; causas de absolvição sumária.",
+      "base": "CPP, arts. 95, 108, 396-A e 397"
+    },
+    {
+      "quando": "No próprio ato, com registro em ata",
+      "oque": "inversão da ordem de inquirição, pergunta indeferida, interrogatório antes das testemunhas, uso de algemas.",
+      "base": "CPP, art. 571"
+    },
+    {
+      "quando": "Até as alegações finais",
+      "oque": "nulidades relativas ocorridas na instrução.",
+      "base": "CPP, arts. 571 e 572"
+    },
+    {
+      "quando": "A qualquer tempo",
+      "oque": "nulidade absoluta, ilicitude da prova, extinção da punibilidade e ilegalidade da prisão. Não espere: a demora enfraquece a demonstração do prejuízo.",
+      "base": "CPP, arts. 61 e 157; Constituição, art. 5º, LVI e LXV"
+    },
+    {
+      "quando": "Antes da sentença",
+      "oque": "habeas corpus para trancar a ação penal por falta de justa causa. Depois da sentença condenatória, o pedido fica prejudicado.",
+      "base": "Súmula 648 do STJ"
+    },
+    {
+      "quando": "Pode aguardar as alegações finais",
+      "oque": "teses que dependem da prova a produzir, como a insuficiência de provas e a valoração de depoimentos.",
+      "base": "escolha de estratégia da defesa"
+    }
   ],
   "apresentacao": {
     "escrita": [
@@ -108,23 +389,68 @@
   },
   "estilo": {
     "atributos": [
-      {"nome": "Clareza e precisão", "regra": "Palavras simples, no sentido comum; termo técnico só quando for o nome do instituto. Frases curtas, em ordem direta. A mesma palavra para a mesma ideia, do começo ao fim. Explique a sigla na primeira vez."},
-      {"nome": "Objetividade", "regra": "Vá direto ao pedido e ao fundamento. Retire o que não ajuda a decidir."},
-      {"nome": "Concisão", "regra": "O máximo de informação com o mínimo de palavras. Corte adjetivos, advérbios de reforço e repetições. Não corte fatos nem fundamentos."},
-      {"nome": "Coesão e coerência", "regra": "Cada parágrafo decorre do anterior. Use conectivo só quando houver relação lógica real entre as frases."},
-      {"nome": "Impessoalidade", "regra": "Sem ataques à parte contrária, ao juiz ou à polícia. Descreva o ato e sua desconformidade com a lei."},
-      {"nome": "Formalidade e padronização", "regra": "Tratamento respeitoso e uniforme, a mesma estrutura em todas as peças e as normas citadas sempre do mesmo modo."},
-      {"nome": "Norma padrão da língua", "regra": "Gramática e pontuação corretas. Releia o texto inteiro antes de protocolar."}
+      {
+        "nome": "Clareza e precisão",
+        "regra": "Palavras simples, no sentido comum; termo técnico só quando for o nome do instituto. Frases curtas, em ordem direta. A mesma palavra para a mesma ideia, do começo ao fim. Explique a sigla na primeira vez."
+      },
+      {
+        "nome": "Objetividade",
+        "regra": "Vá direto ao pedido e ao fundamento. Retire o que não ajuda a decidir."
+      },
+      {
+        "nome": "Concisão",
+        "regra": "O máximo de informação com o mínimo de palavras. Corte adjetivos, advérbios de reforço e repetições. Não corte fatos nem fundamentos."
+      },
+      {
+        "nome": "Coesão e coerência",
+        "regra": "Cada parágrafo decorre do anterior. Use conectivo só quando houver relação lógica real entre as frases."
+      },
+      {
+        "nome": "Impessoalidade",
+        "regra": "Sem ataques à parte contrária, ao juiz ou à polícia. Descreva o ato e sua desconformidade com a lei."
+      },
+      {
+        "nome": "Formalidade e padronização",
+        "regra": "Tratamento respeitoso e uniforme, a mesma estrutura em todas as peças e as normas citadas sempre do mesmo modo."
+      },
+      {
+        "nome": "Norma padrão da língua",
+        "regra": "Gramática e pontuação corretas. Releia o texto inteiro antes de protocolar."
+      }
     ],
     "trocas": [
-      {"evite": "vem, mui respeitosamente, à presença de Vossa Excelência, expor e requerer", "prefira": "apresenta; requer"},
-      {"evite": "data venia; concessa maxima venia", "prefira": "retire a expressão"},
-      {"evite": "o ilustre e combativo representante do Parquet", "prefira": "o Ministério Público"},
-      {"evite": "é de clareza solar; salta aos olhos", "prefira": "apresente o fato e a prova"},
-      {"evite": "a exordial acusatória; a peça vestibular", "prefira": "a denúncia"},
-      {"evite": "o increpado; o indigitado", "prefira": "o acusado"},
-      {"evite": "no caso em tela; in casu", "prefira": "no caso"},
-      {"evite": "Lei 11.343/06", "prefira": "Lei nº 11.343, de 23 de agosto de 2006 (primeira citação); Lei nº 11.343, de 2006 (seguintes)"}
+      {
+        "evite": "vem, mui respeitosamente, à presença de Vossa Excelência, expor e requerer",
+        "prefira": "apresenta; requer"
+      },
+      {
+        "evite": "data venia; concessa maxima venia",
+        "prefira": "retire a expressão"
+      },
+      {
+        "evite": "o ilustre e combativo representante do Parquet",
+        "prefira": "o Ministério Público"
+      },
+      {
+        "evite": "é de clareza solar; salta aos olhos",
+        "prefira": "apresente o fato e a prova"
+      },
+      {
+        "evite": "a exordial acusatória; a peça vestibular",
+        "prefira": "a denúncia"
+      },
+      {
+        "evite": "o increpado; o indigitado",
+        "prefira": "o acusado"
+      },
+      {
+        "evite": "no caso em tela; in casu",
+        "prefira": "no caso"
+      },
+      {
+        "evite": "Lei 11.343/06",
+        "prefira": "Lei nº 11.343, de 23 de agosto de 2006 (primeira citação); Lei nº 11.343, de 2006 (seguintes)"
+      }
     ],
     "citacao": [
       "Na primeira citação, indique a norma com número e data completa (Lei nº 9.296, de 24 de julho de 1996). Nas seguintes, número e ano (Lei nº 9.296, de 1996).",
@@ -135,18 +461,66 @@
     ]
   },
   "fontes": [
-    {"nome": "STF: pesquisa de jurisprudência", "url": "https://jurisprudencia.stf.jus.br/pages/search", "oferece": "acórdãos, súmulas e teses de repercussão geral do Supremo."},
-    {"nome": "STJ: jurisprudência (SCON)", "url": "https://scon.stj.jus.br/SCON/", "oferece": "acórdãos, súmulas anotadas, Pesquisa Pronta e temas repetitivos."},
-    {"nome": "STJ: Informativo de Jurisprudência", "url": "https://processo.stj.jus.br/jurisprudencia/externo/informativo/", "oferece": "notas dos julgados recentes, com filtro por ramo e por órgão julgador."},
-    {"nome": "STJ: Jurisprudência em Teses", "url": "https://scon.stj.jus.br/SCON/jt/", "oferece": "teses por matéria, com os julgados que as sustentam (nulidades: edição 69; habeas corpus: edição 36; provas: edições 105 e 111)."},
-    {"nome": "Planalto: Portal da Legislação", "url": "https://www4.planalto.gov.br/legislacao/", "oferece": "Constituição, códigos, leis e decretos, com o texto atualizado."},
-    {"nome": "LexML Brasil", "url": "https://www.lexml.gov.br/", "oferece": "busca unificada de legislação, jurisprudência e doutrina."},
-    {"nome": "Banco Nacional de Precedentes (Pangea)", "url": "https://pangeabnp.pdpj.jus.br/", "oferece": "precedentes qualificados e súmulas de todos os tribunais."},
-    {"nome": "Corte Interamericana de Direitos Humanos", "url": "https://www.corteidh.or.cr/", "oferece": "sentenças e buscador de jurisprudência da Corte."},
-    {"nome": "Dizer o Direito", "url": "https://www.dizerodireito.com.br/", "oferece": "informativos do STF e do STJ comentados e o Buscador Dizer o Direito."},
-    {"nome": "Jusbrasil", "url": "https://www.jusbrasil.com.br/", "oferece": "busca ampla de jurisprudência, diários e peças. Use para localizar e confira no site do tribunal."},
-    {"nome": "Consultor Jurídico (Conjur)", "url": "https://www.conjur.com.br/", "oferece": "notícias e análises dos julgamentos."},
-    {"nome": "Migalhas", "url": "https://www.migalhas.com.br/", "oferece": "notícias e artigos. Fonte secundária, útil para acompanhar mudanças."}
+    {
+      "nome": "STF: pesquisa de jurisprudência",
+      "url": "https://jurisprudencia.stf.jus.br/pages/search",
+      "oferece": "acórdãos, súmulas e teses de repercussão geral do Supremo."
+    },
+    {
+      "nome": "STJ: jurisprudência (SCON)",
+      "url": "https://scon.stj.jus.br/SCON/",
+      "oferece": "acórdãos, súmulas anotadas, Pesquisa Pronta e temas repetitivos."
+    },
+    {
+      "nome": "STJ: Informativo de Jurisprudência",
+      "url": "https://processo.stj.jus.br/jurisprudencia/externo/informativo/",
+      "oferece": "notas dos julgados recentes, com filtro por ramo e por órgão julgador."
+    },
+    {
+      "nome": "STJ: Jurisprudência em Teses",
+      "url": "https://scon.stj.jus.br/SCON/jt/",
+      "oferece": "teses por matéria, com os julgados que as sustentam (nulidades: edição 69; habeas corpus: edição 36; provas: edições 105 e 111)."
+    },
+    {
+      "nome": "Planalto: Portal da Legislação",
+      "url": "https://www4.planalto.gov.br/legislacao/",
+      "oferece": "Constituição, códigos, leis e decretos, com o texto atualizado."
+    },
+    {
+      "nome": "LexML Brasil",
+      "url": "https://www.lexml.gov.br/",
+      "oferece": "busca unificada de legislação, jurisprudência e doutrina."
+    },
+    {
+      "nome": "Banco Nacional de Precedentes (Pangea)",
+      "url": "https://pangeabnp.pdpj.jus.br/",
+      "oferece": "precedentes qualificados e súmulas de todos os tribunais."
+    },
+    {
+      "nome": "Corte Interamericana de Direitos Humanos",
+      "url": "https://www.corteidh.or.cr/",
+      "oferece": "sentenças e buscador de jurisprudência da Corte."
+    },
+    {
+      "nome": "Dizer o Direito",
+      "url": "https://www.dizerodireito.com.br/",
+      "oferece": "informativos do STF e do STJ comentados e o Buscador Dizer o Direito."
+    },
+    {
+      "nome": "Jusbrasil",
+      "url": "https://www.jusbrasil.com.br/",
+      "oferece": "busca ampla de jurisprudência, diários e peças. Use para localizar e confira no site do tribunal."
+    },
+    {
+      "nome": "Consultor Jurídico (Conjur)",
+      "url": "https://www.conjur.com.br/",
+      "oferece": "notícias e análises dos julgamentos."
+    },
+    {
+      "nome": "Migalhas",
+      "url": "https://www.migalhas.com.br/",
+      "oferece": "notícias e artigos. Fonte secundária, útil para acompanhar mudanças."
+    }
   ],
   "comoConferir": [
     "Copie o número do processo, do tema ou do enunciado.",
@@ -157,31 +531,111 @@
     "Se não encontrar o julgado no site do tribunal, retire a citação da peça."
   ],
   "ia": [
-    {"norma": "Recomendação nº 001/2024 do Conselho Federal da OAB", "exige": "revisar integralmente o que a IA produz antes de apresentar em juízo; dar atenção especial à pesquisa de doutrina e de jurisprudência; proteger os dados do cliente; informá-lo por escrito e obter seu consentimento.", "url": "https://s.oab.org.br/arquivos/2024/11/80a03f8d-e4cb-4bac-a3ea-357009f77d3f.pdf"},
-    {"norma": "Resolução CNJ nº 615, de 11 de março de 2025", "exige": "dirige-se ao Poder Judiciário. Trata a IA generativa como apoio, com supervisão humana e responsabilidade integral do magistrado; veda o envio de dados sigilosos a modelos externos sem proteção; classifica como de alto risco a valoração de provas e a tipificação de fatos como crime. Revogou a Resolução CNJ nº 332, de 2020.", "url": "https://juslaboris.tst.jus.br/handle/20.500.12178/247151"},
-    {"norma": "Código de Processo Civil, arts. 77, 80 e 81", "exige": "impõe o dever de expor os fatos conforme a verdade. Tribunais têm aplicado multa por litigância de má-fé a quem cita julgado inexistente.", "url": "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2015/lei/l13105.htm"},
-    {"norma": "Caso recente no STJ", "exige": "segundo o Conjur, em maio de 2026 um ministro do STJ identificou, em habeas corpus, 16 julgados citados com erro de relator, de órgão ou de conteúdo, negou a liminar e comunicou o fato à OAB.", "url": "https://www.conjur.com.br/2026-mai-20/ministro-do-stj-identifica-hc-com-alucinacoes-de-ia-e-determina-comunicacao-a-oab/"}
+    {
+      "norma": "Recomendação nº 001/2024 do Conselho Federal da OAB",
+      "exige": "revisar integralmente o que a IA produz antes de apresentar em juízo; dar atenção especial à pesquisa de doutrina e de jurisprudência; proteger os dados do cliente; informá-lo por escrito e obter seu consentimento.",
+      "url": "https://s.oab.org.br/arquivos/2024/11/80a03f8d-e4cb-4bac-a3ea-357009f77d3f.pdf"
+    },
+    {
+      "norma": "Resolução CNJ nº 615, de 11 de março de 2025",
+      "exige": "dirige-se ao Poder Judiciário. Trata a IA generativa como apoio, com supervisão humana e responsabilidade integral do magistrado; veda o envio de dados sigilosos a modelos externos sem proteção; classifica como de alto risco a valoração de provas e a tipificação de fatos como crime. Revogou a Resolução CNJ nº 332, de 2020.",
+      "url": "https://juslaboris.tst.jus.br/handle/20.500.12178/247151"
+    },
+    {
+      "norma": "Código de Processo Civil, arts. 77, 80 e 81",
+      "exige": "impõe o dever de expor os fatos conforme a verdade. Tribunais têm aplicado multa por litigância de má-fé a quem cita julgado inexistente.",
+      "url": "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2015/lei/l13105.htm"
+    },
+    {
+      "norma": "Caso recente no STJ",
+      "exige": "segundo o Conjur, em maio de 2026 um ministro do STJ identificou, em habeas corpus, 16 julgados citados com erro de relator, de órgão ou de conteúdo, negou a liminar e comunicou o fato à OAB.",
+      "url": "https://www.conjur.com.br/2026-mai-20/ministro-do-stj-identifica-hc-com-alucinacoes-de-ia-e-determina-comunicacao-a-oab/"
+    }
   ],
   "padroes": [
-    {"padrao": "Citação com atalho para a fonte", "onde": "Jurídico AI, CoCounsel, Vincent AI, STJ Logos", "aqui": "Cada precedente traz a fonte consultada, a data da conferência e o atalho para a pesquisa no tribunal."},
-    {"padrao": "Verificador de citações em etapa separada", "onde": "Jus IA, Lexis+ (Shepard’s), LawX", "aqui": "Verificador próprio, que também compara relator e órgão julgador e aceita texto vindo de qualquer ferramenta."},
-    {"padrao": "Plano aprovado antes da redação", "onde": "Jurídico AI, CoCounsel", "aqui": "A aba “Gerar petição” mostra teses e precedentes; você marca o que entra antes de gerar."},
-    {"padrao": "Entrada guiada do caso", "onde": "JusDocs, ChatADV", "aqui": "Aba “Caso”, com os campos que alimentam prazo, prescrição e minuta."},
-    {"padrao": "Análise dos autos com lista do que falta", "onde": "LawX, ChatADV, Lexter", "aqui": "Roteiro por fase do processo, com o documento a consultar e a lista de pendências."},
-    {"padrao": "Rascunho editável e saída para Word", "onde": "ChatADV, LawX, STJ Logos", "aqui": "Minuta editável na página, cópia do texto e arquivo .docx."},
-    {"padrao": "Dizer que não encontrou, em vez de inventar", "onde": "Jurídico AI, ChatADV", "aqui": "O gerador só cita o que está na base conferida. Onde não há precedente, a ficha diz isso."},
-    {"padrao": "Prazos por regra explícita, com a conta à mostra", "onde": "ADVBOX (Justin-e)", "aqui": "Prazo da resposta e prescrição calculados por regra fixa, com cada passo exibido."},
-    {"padrao": "Aviso de revisão humana e lista de conferência", "onde": "CoCounsel, Jurídico AI, cartilha da OAB-RJ", "aqui": "Lista de conferência antes do protocolo, com um item para cada precedente citado."},
-    {"padrao": "Módulo de nulidades penais e de habeas corpus para trancamento", "onde": "não encontrado nos produtos visitados", "aqui": "Matriz do art. 5º, fichas de vícios com a réplica da acusação e três peças penais."}
+    {
+      "padrao": "Citação com atalho para a fonte",
+      "onde": "Jurídico AI, CoCounsel, Vincent AI, STJ Logos",
+      "aqui": "Cada precedente traz a fonte consultada, a data da conferência e o atalho para a pesquisa no tribunal."
+    },
+    {
+      "padrao": "Verificador de citações em etapa separada",
+      "onde": "Jus IA, Lexis+ (Shepard’s), LawX",
+      "aqui": "Verificador próprio, que também compara relator e órgão julgador e aceita texto vindo de qualquer ferramenta."
+    },
+    {
+      "padrao": "Plano aprovado antes da redação",
+      "onde": "Jurídico AI, CoCounsel",
+      "aqui": "A aba “Gerar petição” mostra teses e precedentes; você marca o que entra antes de gerar."
+    },
+    {
+      "padrao": "Entrada guiada do caso",
+      "onde": "JusDocs, ChatADV",
+      "aqui": "Aba “Caso”, com os campos que alimentam prazo, prescrição e minuta."
+    },
+    {
+      "padrao": "Análise dos autos com lista do que falta",
+      "onde": "LawX, ChatADV, Lexter",
+      "aqui": "Roteiro por fase do processo, com o documento a consultar e a lista de pendências."
+    },
+    {
+      "padrao": "Rascunho editável e saída para Word",
+      "onde": "ChatADV, LawX, STJ Logos",
+      "aqui": "Minuta editável na página, cópia do texto e arquivo .docx."
+    },
+    {
+      "padrao": "Dizer que não encontrou, em vez de inventar",
+      "onde": "Jurídico AI, ChatADV",
+      "aqui": "O gerador só cita o que está na base conferida. Onde não há precedente, a ficha diz isso."
+    },
+    {
+      "padrao": "Prazos por regra explícita, com a conta à mostra",
+      "onde": "ADVBOX (Justin-e)",
+      "aqui": "Prazo da resposta e prescrição calculados por regra fixa, com cada passo exibido."
+    },
+    {
+      "padrao": "Aviso de revisão humana e lista de conferência",
+      "onde": "CoCounsel, Jurídico AI, cartilha da OAB-RJ",
+      "aqui": "Lista de conferência antes do protocolo, com um item para cada precedente citado."
+    },
+    {
+      "padrao": "Módulo de nulidades penais e de habeas corpus para trancamento",
+      "onde": "não encontrado nos produtos visitados",
+      "aqui": "Matriz do art. 5º, fichas de vícios com a réplica da acusação e três peças penais."
+    }
   ],
   "conferencia": [
-    {"id": "c1", "txt": "Li a peça inteira e substituí todos os campos entre colchetes."},
-    {"id": "c2", "txt": "Conferi nomes, número do processo, juízo e datas com os autos."},
-    {"id": "c3", "txt": "Cada fato afirmado indica o documento e as folhas ou o ID."},
-    {"id": "c4", "txt": "Conferi o prazo no sistema do tribunal."},
-    {"id": "c5", "txt": "Ajustei gênero e número (acusado, acusada, acusados)."},
-    {"id": "c6", "txt": "Os documentos mencionados estão anexados."},
-    {"id": "c7", "txt": "O cliente foi informado do uso de ferramenta de apoio, como recomenda a OAB."},
-    {"id": "c8", "txt": "Advogado ou defensor público revisou a peça e a assina."}
+    {
+      "id": "c1",
+      "txt": "Li a peça inteira e substituí todos os campos entre colchetes."
+    },
+    {
+      "id": "c2",
+      "txt": "Conferi nomes, número do processo, juízo e datas com os autos."
+    },
+    {
+      "id": "c3",
+      "txt": "Cada fato afirmado indica o documento e as folhas ou o ID."
+    },
+    {
+      "id": "c4",
+      "txt": "Conferi o prazo no sistema do tribunal."
+    },
+    {
+      "id": "c5",
+      "txt": "Ajustei gênero e número (acusado, acusada, acusados)."
+    },
+    {
+      "id": "c6",
+      "txt": "Os documentos mencionados estão anexados."
+    },
+    {
+      "id": "c7",
+      "txt": "O cliente foi informado do uso de ferramenta de apoio, como recomenda a OAB."
+    },
+    {
+      "id": "c8",
+      "txt": "Advogado ou defensor público revisou a peça e a assina."
+    }
   ]
 }
